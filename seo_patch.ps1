@@ -1,4 +1,4 @@
-$htmlFiles = Get-ChildItem -Path "d:\1 hour in clg\exams" -Filter *.html -Recurse
+﻿$htmlFiles = Get-ChildItem -Path "d:\1 hour in clg\exams" -Filter *.html -Recurse
 
 foreach ($file in $htmlFiles) {
     $content = Get-Content $file.FullName -Raw
@@ -46,3 +46,4 @@ Write-Host "Updating sitemap..."
 
 Write-Host "Pushing to GitHub..."
 & "d:\1 hour in clg\push_all_to_github.ps1"
+

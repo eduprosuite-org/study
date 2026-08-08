@@ -1,4 +1,4 @@
-# PowerShell script to recursively upload ALL files to GitHub.
+﻿# PowerShell script to recursively upload ALL files to GitHub.
 # Repository: eduprosuite-org/study
 # Branch: main
 
@@ -117,6 +117,7 @@ foreach ($file in $files) {
 }
 
 Write-Host "Complete Workspace Deployment Finished!" -ForegroundColor Cyan
+
 
 
 

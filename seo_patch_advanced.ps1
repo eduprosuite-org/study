@@ -1,4 +1,4 @@
-$basePath = "d:\1 hour in clg"
+﻿$basePath = "d:\1 hour in clg"
 $baseUrl = "https://eduprosuite-org.github.io/study/"
 
 # 1. Update robots.txt
@@ -42,3 +42,4 @@ Write-Host "Injected canonical URLs into all HTML pages." -ForegroundColor Green
 # 3. Push to GitHub
 Write-Host "Pushing to GitHub..."
 & "d:\1 hour in clg\push_all_to_github.ps1"
+

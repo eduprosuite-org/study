@@ -1,4 +1,4 @@
-$file = "generate_plumbing_silo.ps1"
+﻿$file = "generate_plumbing_silo.ps1"
 $content = Get-Content $file -Raw -Encoding UTF8
 
 # Define the new resources list HTML to inject into the product page template
@@ -42,3 +42,4 @@ $utf8NoBOM = New-Object System.Text.UTF8Encoding($false)
 [System.IO.File]::WriteAllText((Join-Path $PSScriptRoot $file), $content, $utf8NoBOM)
 
 Write-Host "Generator updated with premium pricing and resources!"
+

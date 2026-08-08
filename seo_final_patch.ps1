@@ -1,4 +1,4 @@
-$basePath = "d:\1 hour in clg"
+﻿$basePath = "d:\1 hour in clg"
 
 Write-Host "1. Fixing Site Names JSON-LD (site-names.md.md)..."
 $indexPath = Join-Path $basePath "index.html"
@@ -48,3 +48,4 @@ Write-Host "Updated $count pages with semantic <ul> lists for AI Optimization." 
 
 Write-Host "3. Pushing changes to GitHub..."
 & "d:\1 hour in clg\push_all_to_github.ps1"
+

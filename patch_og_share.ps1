@@ -1,4 +1,4 @@
-# ============================================================
+﻿# ============================================================
 # patch_og_share.ps1
 # Adds Open Graph meta tags + Social Share Buttons to ALL
 # existing HTML files in the EduProSuite website.
@@ -199,3 +199,4 @@ Write-Host "Patched : $patched files" -ForegroundColor Green
 Write-Host "Skipped : $skipped files (already patched)" -ForegroundColor Gray
 Write-Host "============================" -ForegroundColor Yellow
 Write-Host "Done! OG tags + Social Share Buttons added to all HTML files." -ForegroundColor Cyan
+

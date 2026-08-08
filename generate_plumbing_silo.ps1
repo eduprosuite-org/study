@@ -1,4 +1,4 @@
-# PowerShell script to programmatically generate 31-page SEO silo structure for plumbing exam prep
+﻿# PowerShell script to programmatically generate 31-page SEO silo structure for plumbing exam prep
 $baseDir = Join-Path $PSScriptRoot "exams/plumbing-license-prep"
 
 $silos = @{
@@ -478,7 +478,7 @@ $hubHtml = @"
                  PlumbingLicense <span>Prep</span>
             </div>
             <nav aria-label="Main Navigation">
-                                <ul style="display: flex; gap: 1.5rem; list-style: none;">
+                                                <ul style="display: flex; gap: 1.5rem; list-style: none;">
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Home</a></li>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Journeyman</a></li>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/master-contractor/index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Master</a></li>
@@ -488,7 +488,7 @@ $hubHtml = @"
 
     <main>
         <div class="page-layout">
-                        <aside class="sidebar-left glass-card">
+                                    <aside class="sidebar-left glass-card">
                 <h3>Exam Categories</h3>
                 <ul>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html">Journeyman Exams</a></li>
@@ -557,8 +557,8 @@ $hubHtml = @"
         </div>
 </main>
 
-    <footer>
-                <div class="footer-content" style="flex-direction: column; gap: 1.5rem;">
+        <footer>
+        <div class="footer-content" style="flex-direction: column; gap: 1.5rem;">
             <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
                 <a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
                 <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html" style="color: var(--text-secondary); text-decoration: none;">Journeyman Exams</a>
@@ -566,7 +566,14 @@ $hubHtml = @"
                 <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/tradesman-other/index.html" style="color: var(--text-secondary); text-decoration: none;">Tradesman Exams</a>
                 <a href="$(if ($relPath) {$relPath} else {"../../"})wiki/index.html" style="color: var(--text-secondary); text-decoration: none;">Blog</a>
             </div>
-            <div>&copy; 2026 ExamPrep Portal.</div>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 0.75rem;">
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/ca-real-estate-math/index.html" style="color: var(--text-secondary); text-decoration: none;">CA Real Estate Math</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/vic-lea-electrician-prep/index.html" style="color: var(--text-secondary); text-decoration: none;">Vic LEA Electrician</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/sarasota-adu-permit-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Sarasota ADU Permits</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/gwinnett-home-occupation-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Gwinnett Home Occupation</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/douglas-co-residential-building-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Douglas County Building</a>
+            </div>
+            <div>Â© 2026 ExamPrep Portal. All rights reserved.</div>
         </div>
     </footer>
 </body>
@@ -631,7 +638,7 @@ function Get-SiloHubHtml($siloKey, $title, $desc, $items) {
                  PlumbingLicense <span>Prep</span>
             </div>
             <nav aria-label="Main Navigation">
-                                <ul style="display: flex; gap: 1.5rem; list-style: none;">
+                                                <ul style="display: flex; gap: 1.5rem; list-style: none;">
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Home</a></li>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Journeyman</a></li>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/master-contractor/index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Master</a></li>
@@ -641,7 +648,7 @@ function Get-SiloHubHtml($siloKey, $title, $desc, $items) {
 
     <main>
         <div class="page-layout">
-                        <aside class="sidebar-left glass-card">
+                                    <aside class="sidebar-left glass-card">
                 <h3>Exam Categories</h3>
                 <ul>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html">Journeyman Exams</a></li>
@@ -681,8 +688,8 @@ function Get-SiloHubHtml($siloKey, $title, $desc, $items) {
         </div>
 </main>
 
-    <footer>
-                <div class="footer-content" style="flex-direction: column; gap: 1.5rem;">
+        <footer>
+        <div class="footer-content" style="flex-direction: column; gap: 1.5rem;">
             <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
                 <a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
                 <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html" style="color: var(--text-secondary); text-decoration: none;">Journeyman Exams</a>
@@ -690,7 +697,14 @@ function Get-SiloHubHtml($siloKey, $title, $desc, $items) {
                 <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/tradesman-other/index.html" style="color: var(--text-secondary); text-decoration: none;">Tradesman Exams</a>
                 <a href="$(if ($relPath) {$relPath} else {"../../"})wiki/index.html" style="color: var(--text-secondary); text-decoration: none;">Blog</a>
             </div>
-            <div>&copy; 2026 ExamPrep Portal.</div>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 0.75rem;">
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/ca-real-estate-math/index.html" style="color: var(--text-secondary); text-decoration: none;">CA Real Estate Math</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/vic-lea-electrician-prep/index.html" style="color: var(--text-secondary); text-decoration: none;">Vic LEA Electrician</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/sarasota-adu-permit-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Sarasota ADU Permits</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/gwinnett-home-occupation-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Gwinnett Home Occupation</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/douglas-co-residential-building-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Douglas County Building</a>
+            </div>
+            <div>Â© 2026 ExamPrep Portal. All rights reserved.</div>
         </div>
     </footer>
 </body>
@@ -790,7 +804,7 @@ function Get-ProductIndexHtml($p) {
                  PlumbingLicense <span>Prep</span>
             </div>
             <nav aria-label="Course Navigation">
-                                <ul style="display: flex; gap: 1.5rem; list-style: none;">
+                                                <ul style="display: flex; gap: 1.5rem; list-style: none;">
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Home</a></li>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Journeyman</a></li>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/master-contractor/index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Master</a></li>
@@ -800,7 +814,7 @@ function Get-ProductIndexHtml($p) {
 
     <main>
         <div class="page-layout">
-                        <aside class="sidebar-left glass-card">
+                                    <aside class="sidebar-left glass-card">
                 <h3>Exam Categories</h3>
                 <ul>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html">Journeyman Exams</a></li>
@@ -873,8 +887,8 @@ function Get-ProductIndexHtml($p) {
         </div>
 </main>
 
-    <footer>
-                <div class="footer-content" style="flex-direction: column; gap: 1.5rem;">
+        <footer>
+        <div class="footer-content" style="flex-direction: column; gap: 1.5rem;">
             <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
                 <a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
                 <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html" style="color: var(--text-secondary); text-decoration: none;">Journeyman Exams</a>
@@ -882,7 +896,14 @@ function Get-ProductIndexHtml($p) {
                 <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/tradesman-other/index.html" style="color: var(--text-secondary); text-decoration: none;">Tradesman Exams</a>
                 <a href="$(if ($relPath) {$relPath} else {"../../"})wiki/index.html" style="color: var(--text-secondary); text-decoration: none;">Blog</a>
             </div>
-            <div>&copy; 2026 ExamPrep Portal.</div>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 0.75rem;">
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/ca-real-estate-math/index.html" style="color: var(--text-secondary); text-decoration: none;">CA Real Estate Math</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/vic-lea-electrician-prep/index.html" style="color: var(--text-secondary); text-decoration: none;">Vic LEA Electrician</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/sarasota-adu-permit-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Sarasota ADU Permits</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/gwinnett-home-occupation-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Gwinnett Home Occupation</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/douglas-co-residential-building-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Douglas County Building</a>
+            </div>
+            <div>Â© 2026 ExamPrep Portal. All rights reserved.</div>
         </div>
     </footer>
 </body>
@@ -912,7 +933,7 @@ function Get-ProductPracticeHtml($p) {
                  PlumbingLicense <span>Prep</span>
             </div>
             <nav aria-label="Course Navigation">
-                                <ul style="display: flex; gap: 1.5rem; list-style: none;">
+                                                <ul style="display: flex; gap: 1.5rem; list-style: none;">
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Home</a></li>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Journeyman</a></li>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/master-contractor/index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Master</a></li>
@@ -922,7 +943,7 @@ function Get-ProductPracticeHtml($p) {
 
     <main>
         <div class="page-layout">
-                        <aside class="sidebar-left glass-card">
+                                    <aside class="sidebar-left glass-card">
                 <h3>Exam Categories</h3>
                 <ul>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html">Journeyman Exams</a></li>
@@ -1056,8 +1077,8 @@ function Get-ProductPracticeHtml($p) {
         </div>
 </main>
 
-    <footer>
-                <div class="footer-content" style="flex-direction: column; gap: 1.5rem;">
+        <footer>
+        <div class="footer-content" style="flex-direction: column; gap: 1.5rem;">
             <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
                 <a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
                 <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html" style="color: var(--text-secondary); text-decoration: none;">Journeyman Exams</a>
@@ -1065,7 +1086,14 @@ function Get-ProductPracticeHtml($p) {
                 <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/tradesman-other/index.html" style="color: var(--text-secondary); text-decoration: none;">Tradesman Exams</a>
                 <a href="$(if ($relPath) {$relPath} else {"../../"})wiki/index.html" style="color: var(--text-secondary); text-decoration: none;">Blog</a>
             </div>
-            <div>&copy; 2026 ExamPrep Portal.</div>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 0.75rem;">
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/ca-real-estate-math/index.html" style="color: var(--text-secondary); text-decoration: none;">CA Real Estate Math</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/vic-lea-electrician-prep/index.html" style="color: var(--text-secondary); text-decoration: none;">Vic LEA Electrician</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/sarasota-adu-permit-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Sarasota ADU Permits</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/gwinnett-home-occupation-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Gwinnett Home Occupation</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/douglas-co-residential-building-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Douglas County Building</a>
+            </div>
+            <div>Â© 2026 ExamPrep Portal. All rights reserved.</div>
         </div>
     </footer>
 
@@ -1108,4 +1136,5 @@ foreach ($p in $products) {
 }
 
 Write-Host "PowerShell silo generation complete!" -ForegroundColor Green
+
 

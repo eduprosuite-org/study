@@ -1,4 +1,4 @@
-# update_prices.ps1 - Updates all exam prices in generated HTML files
+﻿# update_prices.ps1 - Updates all exam prices in generated HTML files
 $utf8NoBOM = New-Object System.Text.UTF8Encoding($false)
 $base = "D:\1 hour in clg"
 
@@ -29,3 +29,4 @@ foreach ($u in $updates) {
     }
 }
 Write-Host "`nAll prices updated!"
+

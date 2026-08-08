@@ -27,7 +27,7 @@ foreach ($file in $htmlFiles) {
 
         $sidebarHtml = @"
         <div class="page-layout">
-                        <aside class="sidebar-left glass-card">
+                                    <aside class="sidebar-left glass-card">
                 <h3>Exam Categories</h3>
                 <ul>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html">Journeyman Exams</a></li>
@@ -71,6 +71,7 @@ foreach ($file in $htmlFiles) {
 }
 
 Write-Host "Global layout applied to all HTML files successfully!" -ForegroundColor Green
+
 
 
 

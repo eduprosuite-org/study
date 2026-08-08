@@ -1,4 +1,4 @@
-# Fast Git Push Script
+﻿# Fast Git Push Script
 # Ensure Git cmd is in the PATH
 $env:PATH += ";C:\Program Files\Git\cmd"
 $repoUrl = "https://github.com/eduprosuite-org/study.git"
@@ -33,3 +33,4 @@ Write-Host "Pushing to GitHub..." -ForegroundColor Green
 git push origin main --force
 
 Write-Host "Done! Deployment finished in seconds." -ForegroundColor Green
+

@@ -1,4 +1,4 @@
-# ============================================================
+﻿# ============================================================
 # master_fix.ps1
 # 1. Strip UTF-8 BOM from every .html and .ps1 file
 # 2. Replace all non-ASCII chars with nothing (kills leftover emojis)
@@ -53,45 +53,23 @@ function Get-HeaderNav($rel) {
 # ---- Build the footer nav HTML ----
 function Get-Footer($rel) {
     return @"
-    <footer>
-        <div class="footer-content">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <strong>Exam Categories</strong>
-                    <ul>
-                        <li><a href="${rel}exams/plumbing-license-prep/journeyman/index.html">Journeyman Exams</a></li>
-                        <li><a href="${rel}exams/plumbing-license-prep/master-contractor/index.html">Master Contractor</a></li>
-                        <li><a href="${rel}exams/plumbing-license-prep/tradesman-other/index.html">Tradesman &amp; Inspector</a></li>
-                        <li><a href="${rel}exams/plumbing-license-prep/general/index.html">General &amp; Free Prep</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <strong>By State</strong>
-                    <ul>
-                        <li><a href="${rel}exams/plumbing-license-prep/journeyman/texas-prep/index.html">Texas Journeyman</a></li>
-                        <li><a href="${rel}exams/plumbing-license-prep/journeyman/va-prep/index.html">Virginia Journeyman</a></li>
-                        <li><a href="${rel}exams/plumbing-license-prep/journeyman/kansas-prep/index.html">Kansas Journeyman</a></li>
-                        <li><a href="${rel}exams/plumbing-license-prep/journeyman/ma-prep/index.html">Massachusetts Journeyman</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <strong>Resources</strong>
-                    <ul>
-                        <li><a href="${rel}wiki/index.html">Blog &amp; Articles</a></li>
-                        <li><a href="${rel}exams/plumbing-license-prep/general/free-prep/index.html">Free Practice Test</a></li>
-                        <li><a href="${rel}sitemap.xml">Sitemap</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <strong>Other Exams</strong>
-                    <ul>
-                        <li><a href="${rel}exams/ca-real-estate-math/index.html">CA Real Estate Math</a></li>
-                        <li><a href="${rel}exams/vic-lea-electrician-prep/index.html">Vic LEA Electrician</a></li>
-                        <li><a href="${rel}exams/sarasota-adu-permit-checklist/index.html">Sarasota ADU Permits</a></li>
-                    </ul>
-                </div>
+        <footer>
+        <div class="footer-content" style="flex-direction: column; gap: 1.5rem;">
+            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                <a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html" style="color: var(--text-secondary); text-decoration: none;">Journeyman Exams</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/master-contractor/index.html" style="color: var(--text-secondary); text-decoration: none;">Master Exams</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/tradesman-other/index.html" style="color: var(--text-secondary); text-decoration: none;">Tradesman Exams</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})wiki/index.html" style="color: var(--text-secondary); text-decoration: none;">Blog</a>
             </div>
-            <div class="footer-bottom">&copy; 2026 ExamPrep Portal. All rights reserved.</div>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 0.75rem;">
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/ca-real-estate-math/index.html" style="color: var(--text-secondary); text-decoration: none;">CA Real Estate Math</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/vic-lea-electrician-prep/index.html" style="color: var(--text-secondary); text-decoration: none;">Vic LEA Electrician</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/sarasota-adu-permit-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Sarasota ADU Permits</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/gwinnett-home-occupation-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Gwinnett Home Occupation</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/douglas-co-residential-building-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Douglas County Building</a>
+            </div>
+            <div>Â© 2026 ExamPrep Portal. All rights reserved.</div>
         </div>
     </footer>
 "@
@@ -121,9 +99,45 @@ foreach ($file in $htmlFiles) {
     $newHeader = "<header>`n" + (Get-HeaderNav $rel) + "`n    </header>"
     $text = [regex]::Replace($text, '(?s)<header>.*?</header>', $newHeader)
     
-    # Replace the entire <footer>...</footer> block
+    # Replace the entire     <footer>
+        <div class="footer-content" style="flex-direction: column; gap: 1.5rem;">
+            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                <a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html" style="color: var(--text-secondary); text-decoration: none;">Journeyman Exams</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/master-contractor/index.html" style="color: var(--text-secondary); text-decoration: none;">Master Exams</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/tradesman-other/index.html" style="color: var(--text-secondary); text-decoration: none;">Tradesman Exams</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})wiki/index.html" style="color: var(--text-secondary); text-decoration: none;">Blog</a>
+            </div>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 0.75rem;">
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/ca-real-estate-math/index.html" style="color: var(--text-secondary); text-decoration: none;">CA Real Estate Math</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/vic-lea-electrician-prep/index.html" style="color: var(--text-secondary); text-decoration: none;">Vic LEA Electrician</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/sarasota-adu-permit-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Sarasota ADU Permits</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/gwinnett-home-occupation-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Gwinnett Home Occupation</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/douglas-co-residential-building-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Douglas County Building</a>
+            </div>
+            <div>Â© 2026 ExamPrep Portal. All rights reserved.</div>
+        </div>
+    </footer> block
     $newFooter = Get-Footer $rel
-    $text = [regex]::Replace($text, '(?s)<footer>.*?</footer>', $newFooter)
+    $text = [regex]::Replace($text, '(?s)    <footer>
+        <div class="footer-content" style="flex-direction: column; gap: 1.5rem;">
+            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                <a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html" style="color: var(--text-secondary); text-decoration: none;">Journeyman Exams</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/master-contractor/index.html" style="color: var(--text-secondary); text-decoration: none;">Master Exams</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/tradesman-other/index.html" style="color: var(--text-secondary); text-decoration: none;">Tradesman Exams</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})wiki/index.html" style="color: var(--text-secondary); text-decoration: none;">Blog</a>
+            </div>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 0.75rem;">
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/ca-real-estate-math/index.html" style="color: var(--text-secondary); text-decoration: none;">CA Real Estate Math</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/vic-lea-electrician-prep/index.html" style="color: var(--text-secondary); text-decoration: none;">Vic LEA Electrician</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/sarasota-adu-permit-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Sarasota ADU Permits</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/gwinnett-home-occupation-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Gwinnett Home Occupation</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/douglas-co-residential-building-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Douglas County Building</a>
+            </div>
+            <div>Â© 2026 ExamPrep Portal. All rights reserved.</div>
+        </div>
+    </footer>', $newFooter)
     
     # Write back as UTF-8 WITHOUT BOM
     $utf8NoBOM = New-Object System.Text.UTF8Encoding($false)
@@ -133,3 +147,4 @@ foreach ($file in $htmlFiles) {
 }
 
 Write-Host "`nAll files cleaned and navigation updated!" -ForegroundColor Green
+
