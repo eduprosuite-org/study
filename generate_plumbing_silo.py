@@ -796,156 +796,28 @@ def make_product_index(p):
                 </section>
             </div>
 
-            <div class="stats-panel">
-                <div class="glass-card" style="position: sticky; top: 120px;">
-                <div class="glass-card" style="padding: 1.5rem; margin-top: 1.5rem;">
-                    <h3 class="filter-title" style="font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase; margin-bottom: 0.75rem; font-weight: 700;">High-Volume Resources</h3>
-                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
-                        <li><a href="../../../../exams/plumbing-license-prep/general/free-prep/index.html" style="color: var(--primary); text-decoration: none; font-size: 0.9rem; font-weight: 500;">Journeyman Plumber Practice Test Free</a></li>
-                        <li><a href="../../../../exams/plumbing-license-prep/journeyman/texas-prep/index.html" style="color: var(--primary); text-decoration: none; font-size: 0.9rem; font-weight: 500;">Texas Journeyman Plumber Exam Prep</a></li>
-                        <li><a href="../../../../exams/plumbing-license-prep/journeyman/va-prep/index.html" style="color: var(--primary); text-decoration: none; font-size: 0.9rem; font-weight: 500;">Virginia Journeyman Practice Test</a></li>
-                        <li><a href="../../../../exams/plumbing-license-prep/master-contractor/master-prep/index.html" style="color: var(--primary); text-decoration: none; font-size: 0.9rem; font-weight: 500;">Master Plumber Exam Study Guide</a></li>
-                        <li><a href="../../../../exams/plumbing-license-prep/general/code-cert-prep/index.html" style="color: var(--primary); text-decoration: none; font-size: 0.9rem; font-weight: 500;">Plumbing Code Certification Prep</a></li>
-                    </ul>
-                </div>
+                                    <div class="stats-panel">
+                        <div class="glass-card" style="padding: 1.5rem; margin-top: 1.5rem; border: 1px solid rgba(168, 85, 247, 0.2);">
+            <span class="resources-badge">Useful Resources</span>
+            
+            <div class="resources-subheading">Practice Exams ðŸ“</div>
+            <ul style="list-style: none; padding: 0; margin: 0 0 1rem 0; display: flex; flex-direction: column; gap: 0.4rem;">
+                <li><a href="../../../../exams/plumbing-license-prep/general/free-prep/index.html">Journeyman Plumber Practice Test Free</a></li>
+                <li><a href="../../../../exams/plumbing-license-prep/journeyman/texas-prep/index.html">Texas Journeyman Plumber Exam Prep</a></li>
+                <li><a href="../../../../exams/plumbing-license-prep/journeyman/va-prep/index.html">Virginia Journeyman Practice Test</a></li>
+                <li><a href="../../../../exams/plumbing-license-prep/general/code-cert-prep/index.html">IPC Plumbing Code Practice Test</a></li>
+                <li><a href="../../../../exams/plumbing-license-prep/general/free-prep/practice.html">Uniform Plumbing Code (UPC) Quiz</a></li>
+            </ul>
 
-                    <div style="text-align: center; margin-bottom: 1.5rem;">
-                        <span style="font-size: 0.9rem; color: var(--secondary); font-weight: 700; background: var(--secondary-glow); padding: 0.25rem 0.8rem; border-radius: 50px; text-transform: uppercase;">License Prep</span>
-                        {price_tag_html}
-                        <p style="color: var(--text-secondary); font-size: 0.9rem;">One-time purchase. Lifetime access. 30-day money-back guarantee.</p>
-                    </div>
-                    {paypal_section}
-                </div>
-            </div>
+            <div class="resources-subheading">Study Guides & Formulas ðŸ“š</div>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.4rem;">
+                <li><a href="../../../../wiki/plumbing/wiki-001.html">Journeyman Plumber Exam Questions PDF</a></li>
+                <li><a href="../../../../exams/plumbing-license-prep/journeyman/texas-prep/index.html">Plumbing Isometric Drawing Practice</a></li>
+                <li><a href="../../../../exams/plumbing-license-prep/master-contractor/master-prep/index.html">Master Plumber Exam Study Guide</a></li>
+                <li><a href="../../../../wiki/plumbing/wiki-003.html">Drainage & Vent Sizing Cheat Sheet</a></li>
+                <li><a href="../../../../exams/plumbing-license-prep/general/residential-prep/index.html">Plumbing Math Formulas Simulator</a></li>
+            </ul>
         </div>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div>© 2026 Plumbing License Prep.</div>
-            <div><a href="../../index.html" style="color: var(--text-secondary); text-decoration: none;">Back to Silo</a></div>
-        </div>
-    </footer>
-
-    <script>
-        if (document.getElementById('paypal-button-container')) {{
-            paypal.Buttons({{
-                createOrder: function(data, actions) {{
-                    return actions.order.create({{
-                        purchase_units: [{{
-                            amount: {{
-                                value: '19.99'
-                            }},
-                            description: '{p['name']} Course Details Purchase'
-                        }}]
-                    }});
-                }},
-                onApprove: function(data, actions) {{
-                    return actions.order.capture().then(function(details) {{
-                        document.getElementById('paypal-button-container').style.display = 'none';
-                        document.getElementById('payment-success-msg').style.display = 'block';
-                    }});
-                }}
-            }}).render('#paypal-button-container');
-        }}
-    </script>
-</body>
-</html>
-"""
-    return content
-
-# Product Practice simulator page generator
-def make_product_practice(p):
-    content = f"""<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free Interactive Quiz Simulator for {p['name']}. Practice Mock Tests and use the built-in non-programmable calculator.">
-    <title>{p['name']} Practice Simulator - Interactive Exam Prep</title>
-    <link rel="stylesheet" href="../../../../style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <div class="nav-container">
-            <div class="logo">
-                🔧 PlumbingLicense <span>Prep</span>
-            </div>
-            <nav aria-label="Course Navigation">
-                <ul style="display: flex; gap: 1.5rem; list-style: none;">
-                    <li><a href="../../../../index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Home</a></li>
-                    <li><a href="index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Course Details</a></li>
-                    <li><a href="practice.html" class="active" style="color: var(--primary); text-decoration: none; font-weight: 600;">Practice Simulator</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <!-- SEO Breadcrumbs -->
-        <nav aria-label="Breadcrumb" class="breadcrumbs" style="margin-bottom: 2rem; font-size: 0.9rem; color: var(--text-secondary);">
-            <a href="../../../../index.html" style="color: var(--primary); text-decoration: none;">Home</a> &gt; 
-            <a href="../../index.html" style="color: var(--primary); text-decoration: none;">Plumbing Hub</a> &gt; 
-            <a href="index.html" style="color: var(--primary); text-decoration: none;">{p['name']}</a> &gt; 
-            <span style="color: var(--text-primary);">Practice Simulator</span>
-        </nav>
-
-        <div class="dashboard-grid">
-            <div>
-                <div class="glass-card" style="padding: 1.5rem; margin-bottom: 1.5rem;">
-                    <h3 class="filter-title">Select Mode</h3>
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                        <button class="filter-btn active" id="mode-practice" onclick="setMode('practice')">Infinite Practice Mode</button>
-                        <button class="filter-btn" id="mode-mock" onclick="setMode('mock')">10-Question Mock Test</button>
-                    </div>
-                </div>
-
-                <div class="glass-card" id="quiz-board">
-                    <div class="quiz-header">
-                        <span class="category-tag" id="question-category">Category</span>
-                        <span class="progress-text" id="progress-count">Completed: 0</span>
-                    </div>
-
-                    <div class="question-text" id="question-box">
-                        Loading questions from CSV database...
-                    </div>
-
-                    <div class="options-container" id="options-container">
-                        <!-- Options will be generated dynamically -->
-                    </div>
-
-                    <div class="explanation-card" id="explanation-wrapper" style="display: none;">
-                        <div class="explanation-title">
-                            💡 Step-by-Step Explanation
-                        </div>
-                        <div class="explanation-text" id="explanation-text">
-                            Explanation content.
-                        </div>
-                    </div>
-
-                    <div class="actions-row" id="next-btn-container" style="display: none;">
-                        <button class="btn-primary" id="next-btn" onclick="nextQuestion()">
-                            Next Question ➜
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="stats-panel">
-                <div class="glass-card" style="padding: 1.5rem; margin-top: 1.5rem;">
-                    <h3 class="filter-title" style="font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase; margin-bottom: 0.75rem; font-weight: 700;">High-Volume Resources</h3>
-                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
-                        <li><a href="../../../../exams/plumbing-license-prep/general/free-prep/index.html" style="color: var(--primary); text-decoration: none; font-size: 0.9rem; font-weight: 500;">Journeyman Plumber Practice Test Free</a></li>
-                        <li><a href="../../../../exams/plumbing-license-prep/journeyman/texas-prep/index.html" style="color: var(--primary); text-decoration: none; font-size: 0.9rem; font-weight: 500;">Texas Journeyman Plumber Exam Prep</a></li>
-                        <li><a href="../../../../exams/plumbing-license-prep/journeyman/va-prep/index.html" style="color: var(--primary); text-decoration: none; font-size: 0.9rem; font-weight: 500;">Virginia Journeyman Practice Test</a></li>
-                        <li><a href="../../../../exams/plumbing-license-prep/master-contractor/master-prep/index.html" style="color: var(--primary); text-decoration: none; font-size: 0.9rem; font-weight: 500;">Master Plumber Exam Study Guide</a></li>
-                        <li><a href="../../../../exams/plumbing-license-prep/general/code-cert-prep/index.html" style="color: var(--primary); text-decoration: none; font-size: 0.9rem; font-weight: 500;">Plumbing Code Certification Prep</a></li>
-                    </ul>
-                </div>
-
                 <div class="glass-card" style="padding: 1.5rem;">
                     <h3 class="filter-title">My Progress</h3>
                     <div style="display: flex; flex-direction: column; gap: 0.8rem;">

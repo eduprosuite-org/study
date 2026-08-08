@@ -784,3 +784,46 @@ footer {
     }
 }
 
+.resources-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: var(--secondary);
+    font-weight: 700;
+    background: var(--secondary-glow);
+    padding: 0.25rem 0.6rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.75rem;
+}
+
+.resources-subheading {
+    font-size: 0.8rem;
+    color: white;
+    text-transform: uppercase;
+    margin: 1.25rem 0 0.5rem 0;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--bg-card-border);
+    padding-bottom: 0.25rem;
+}
+
+.sidebar-right ul li a, .stats-panel ul li a {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    border-left: 2px solid transparent;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.sidebar-right ul li a:hover, .stats-panel ul li a:hover {
+    background: var(--bg-card-hover);
+    color: white;
+    border-left-color: var(--secondary);
+}
+
+
