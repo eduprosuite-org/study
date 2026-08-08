@@ -510,25 +510,6 @@ footer {
     background: rgba(9, 13, 22, 0.6);
 }
 
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-}
-
-@media (max-width: 640px) {
-    .footer-content {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-    }
-}
-
 .score-badge {
     width: 100px;
     height: 100px;
@@ -628,11 +609,13 @@ footer {
 }
 
 .footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     gap: 2rem;
     padding: 2.5rem 0;
     border-bottom: 1px solid var(--bg-card-border);
+    overflow-x: auto;
 }
 
 .footer-col strong {
@@ -674,7 +657,8 @@ footer {
     .nav-list { flex-wrap: wrap; gap: 0.5rem; }
     .dropdown { position: static; border: none; background: var(--bg-card-hover); padding-left: 1rem; display: none; }
     .has-dropdown:hover .dropdown { display: block; }
-    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .footer-grid { flex-wrap: wrap; gap: 1.5rem; }
+    .footer-col { min-width: 140px; }
 }
 /* Page Layout with Left Sidebar */
 .page-layout {
