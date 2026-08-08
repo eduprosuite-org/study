@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Interactive Victoria LEA (LET/LEP) Practice Test Simulator. Practice AS/NZS 3000 electrical calculation questions.">
+    <title>Victoria LEA Practice Exam LET/LEP - Free Quiz Simulator</title>
+    <link rel="stylesheet" href="../../../style.css">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script type="application/ld-json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Victoria LEA Practice Exam LET/LEP - Free Quiz Simulator",
+      "description": "Free Interactive Victoria LEA Practice Test. Test your knowledge on maximum demand, voltage drop, and electrical safety standards."
+    }
+    </script>
+
+    <link rel="canonical" href="https://eduprosuite-org.github.io/study/exams/vic-lea-electrician-prep/practice-test/">
+</head>
+<body>
+
+    <!-- Semantic Header -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="../../../index.html" style="text-decoration:none;color:inherit;">ExamPrep<span>Portal</span></a>
+            </div>
+            <nav aria-label="Main Navigation" class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li><a href="../../../wiki/index.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-layout">
+                        <aside class="sidebar-left glass-card">
+                <h3>Specialized &amp; Niche Exams</h3>
+                <ul>
+                    <li><a href="../../ca-real-estate-math/index.html">California Real Estate Math</a></li>
+                    <li><a href="../../vic-lea-electrician-prep/index.html">Victoria LEA Electrician</a></li>
+                </ul>
+                <h3>Local Permit Checklists</h3>
+                <ul>
+                    <li><a href="../../sarasota-adu-permit-checklist/index.html">Sarasota ADU Permits</a></li>
+                    <li><a href="../../gwinnett-home-occupation-checklist/index.html">Gwinnett Home Occupation</a></li>
+                    <li><a href="../../douglas-co-residential-building-checklist/index.html">Douglas County CO Building</a></li>
+                </ul>
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li><a href="../../../wiki/index.html">Blog</a></li>
+                </ul>
+            </aside>
+            <div class="main-content">
+        <!-- Breadcrumbs -->
+        <nav aria-label="Breadcrumb" class="breadcrumbs" style="margin-bottom: 2rem; font-size: 0.9rem; color: var(--text-secondary);">
+            <a href="../../../index.html" style="color: var(--primary); text-decoration: none;">Home</a> &gt; 
+            <a href="../../../index.html#courses" style="color: var(--primary); text-decoration: none;">Exams</a> &gt; 
+            <a href="../index.html" style="color: var(--primary); text-decoration: none;">Victoria LEA Prep</a> &gt; 
+            <span style="color: var(--text-primary);">Practice Simulator</span>
+        </nav>
+
+        <div class="dashboard-grid">
+            <div>
+                <!-- Mock Quiz Board -->
+                <div class="glass-card" style="padding: 2.5rem;">
+                    <h2 style="font-size: 1.8rem; font-weight: 800; color: white; margin-bottom: 1.5rem;">Victoria LEA (LET) Practice Quiz</h2>
+                    
+                    <div id="quiz-container">
+                        <div style="margin-bottom: 2rem;">
+                            <span class="category-tag">CABLE SELECTION / VOLTAGE DROP</span>
+                            <h3 style="color: white; margin-top: 1rem; font-size: 1.2rem;" id="question-text">
+                                Question 1: What is the maximum allowable voltage drop for a standard installation operating at 230V single phase?
+                            </h3>
+                            <div style="display: flex; flex-direction: column; gap: 0.8rem; margin-top: 1.5rem;" id="options-container">
+                                <button class="filter-btn" style="width: 100%; text-align: left; padding: 1rem;" onclick="checkAnswer(1, '3%', false)">A) 3% (6.9V)</button>
+                                <button class="filter-btn" style="width: 100%; text-align: left; padding: 1rem;" onclick="checkAnswer(1, '5%', true)">B) 5% (11.5V)</button>
+                                <button class="filter-btn" style="width: 100%; text-align: left; padding: 1rem;" onclick="checkAnswer(1, '7%', false)">C) 7% (16.1V)</button>
+                                <button class="filter-btn" style="width: 100%; text-align: left; padding: 1rem;" onclick="checkAnswer(1, '10%', false)">D) 10% (23.0V)</button>
+                            </div>
+                            <div id="explanation" style="margin-top: 1.5rem; display: none; padding: 1.2rem; background: rgba(0,0,0,0.2); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+                                <h4 style="color: var(--success); margin: 0 0 0.5rem 0;">Correct Answer: B) 5% (11.5V)</h4>
+                                <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem;">Under AS/NZS 3000 Wiring Rules, Clause 3.6.2, the voltage drop between the point of supply and any point in an electrical installation must not exceed 5% of the nominal voltage.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-panel">
+                <div class="glass-card" style="padding: 1.5rem; margin-top: 1.5rem; border: 1px solid rgba(168, 85, 247, 0.2);">
+                    <span class="resources-badge">Useful Resources</span>
+                    <div class="resources-subheading">Assessment Practice </div>
+                    <ul style="list-style: none; padding: 0; margin: 0 0 1rem 0; display: flex; flex-direction: column; gap: 0.4rem;">
+                        <li><a href="../index.html">Licensed Electrician Assessment Victoria Prep</a></li>
+                        <li><a href="../study-guide/index.html">AS NZS 3000 Cable Sizing Study Guide</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+            <div class="page-layout" style="margin-top: 2rem; margin-bottom: 2rem;">
+        </div>
+    
+            <section class="niche-tags-container" style="max-width: 1200px; margin: 2rem auto; padding: 0 1.5rem;">
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 2rem;">
+            <h3 style="font-size: 1.15rem; color: white; font-weight: 700; margin: 0 0 1.2rem 0;">Explore Licensing &amp; Compliance Resources</h3>
+            <div class="niche-tags-list">
+                <a href="../../../exams/ca-real-estate-math/index.html" class="niche-tag-link">CA Real Estate Math Prep</a>
+                <a href="../../../exams/ca-real-estate-math/practice-test/index.html" class="niche-tag-link">Real Estate Practice Simulator</a>
+                <a href="../../../exams/ca-real-estate-math/study-guide/index.html" class="niche-tag-link">Real Estate Formulas Study Guide</a>
+                <a href="../../../exams/vic-lea-electrician-prep/index.html" class="niche-tag-link">Victoria LEA Electrician Prep</a>
+                <a href="../../../exams/vic-lea-electrician-prep/practice-test/index.html" class="niche-tag-link">LEA Practice Quiz LET/LEP</a>
+                <a href="../../../exams/vic-lea-electrician-prep/study-guide/index.html" class="niche-tag-link">AS NZS 3000 Study Guide</a>
+                <a href="../../../exams/sarasota-adu-permit-checklist/index.html" class="niche-tag-link">Sarasota ADU Permit Guide</a>
+                <a href="../../../exams/sarasota-adu-permit-checklist/zoning-guide/index.html" class="niche-tag-link">Sarasota Zoning Requirements</a>
+                <a href="../../../exams/gwinnett-home-occupation-checklist/index.html" class="niche-tag-link">Gwinnett Home Occupation</a>
+                <a href="../../../exams/gwinnett-home-occupation-checklist/zoning-requirements/index.html" class="niche-tag-link">Gwinnett UDO Zoning Rules</a>
+                <a href="../../../exams/douglas-co-residential-building-checklist/index.html" class="niche-tag-link">Douglas County Building Checklist</a>
+                <a href="../../../exams/douglas-co-residential-building-checklist/building-codes/index.html" class="niche-tag-link">Douglas County Building Codes</a>
+            </div>
+        </div>
+    </section><footer>
+        <div class="footer-content" style="flex-direction: column; gap: 1.5rem;">
+            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                <a href="../../../index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
+                <a href="../../../exams/plumbing-license-prep/journeyman/index.html" style="color: var(--text-secondary); text-decoration: none;">Journeyman Exams</a>
+                <a href="../../../exams/plumbing-license-prep/master-contractor/index.html" style="color: var(--text-secondary); text-decoration: none;">Master Exams</a>
+                <a href="../../../wiki/index.html" style="color: var(--text-secondary); text-decoration: none;">Blog</a>
+            </div>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 0.75rem;">
+                <a href="../../../exams/ca-real-estate-math/index.html" style="color: var(--text-secondary); text-decoration: none;">CA Real Estate Math</a>
+                <a href="../../../exams/vic-lea-electrician-prep/index.html" style="color: var(--text-secondary); text-decoration: none;">Vic LEA Electrician</a>
+                <a href="../../../exams/sarasota-adu-permit-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Sarasota ADU Permits</a>
+                <a href="../../../exams/gwinnett-home-occupation-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Gwinnett Home Occupation</a>
+                <a href="../../../exams/douglas-co-residential-building-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Douglas County Building</a>
+            </div>
+            <div>&copy; 2026 ExamPrep Portal. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        function checkAnswer(questionNum, selected, isCorrect) {
+            const explanation = document.getElementById('explanation');
+            explanation.style.display = 'block';
+            if (isCorrect) {
+                explanation.querySelector('h4').style.color = 'var(--success)';
+                explanation.querySelector('h4').innerText = 'Correct! ' + selected;
+            } else {
+                explanation.querySelector('h4').style.color = 'red';
+                explanation.querySelector('h4').innerText = 'Incorrect! ' + selected;
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+

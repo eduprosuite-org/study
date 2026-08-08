@@ -53,7 +53,8 @@ function parseCSV(text) {
 }
 
 // 2. Fetch Questions on Load
-fetch('questions.csv')
+const csvPath = document.currentScript ? document.currentScript.getAttribute('data-csv') || 'questions.csv' : 'questions.csv';
+fetch(csvPath)
     .then(response => response.text())
     .then(csvText => {
         questions = parseCSV(csvText);
