@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Interactive Quiz Simulator for Plumbing Contractor Exam Prep. Practice Mock Tests and use the built-in non-programmable calculator.">
+    <title>Plumbing Contractor Exam Prep Practice Simulator - Interactive Exam Prep</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Schema Structured Data: Course (SEO) -->
+    <script type="application/ld-json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Plumbing Contractor Exam Prep Practice Simulator - Interactive Exam Prep",
+      "description": "Free Interactive Quiz Simulator for Plumbing Contractor Exam Prep. Practice Mock Tests and use the built-in non-programmable calculator.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Exam Prep Portal",
+        "sameAs": "https://eduprosuite-org.github.io/study/"
+      }
+    }
+    </script>
+
+    <link rel="canonical" href="https://eduprosuite-org.github.io/study/exams/plumbing-license-prep/master-contractor/contractor-prep/practice.html">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="../../../../index.html" style="text-decoration:none;color:inherit;">ExamPrep<span>Portal</span></a>
+            </div>
+            <nav aria-label="Main Navigation" class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="../../../../index.html">Home</a></li>
+                    <li class="has-dropdown">
+                        <a href="../../../../exams/plumbing-license-prep/index.html">Plumbing Exams &#9660;</a>
+                        <ul class="dropdown">
+                            <li><a href="../../../../exams/plumbing-license-prep/journeyman/index.html">Journeyman Exams</a></li>
+                            <li><a href="../../../../exams/plumbing-license-prep/master-contractor/index.html">Master Contractor</a></li>
+                            <li><a href="../../../../exams/plumbing-license-prep/tradesman-other/index.html">Tradesman &amp; Inspector</a></li>
+                            <li><a href="../../../../exams/plumbing-license-prep/general/index.html">General &amp; Free Prep</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="../../../../exams/plumbing-license-prep/journeyman/index.html">By State &#9660;</a>
+                        <ul class="dropdown">
+                            <li><a href="../../../../exams/plumbing-license-prep/journeyman/texas-prep/index.html">Texas</a></li>
+                            <li><a href="../../../../exams/plumbing-license-prep/journeyman/va-prep/index.html">Virginia</a></li>
+                            <li><a href="../../../../exams/plumbing-license-prep/journeyman/kansas-prep/index.html">Kansas</a></li>
+                            <li><a href="../../../../exams/plumbing-license-prep/journeyman/ma-prep/index.html">Massachusetts</a></li>
+                            <li><a href="../../../../exams/plumbing-license-prep/journeyman/wssc-prep/index.html">WSSC (Maryland/DC)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../../wiki/index.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-layout">
+                        <aside class="sidebar-left glass-card">
+                <h3>Exam Categories</h3>
+                <ul>
+                    <li><a href="../../exams/plumbing-license-prep/journeyman/index.html">Journeyman Exams</a></li>
+                    <li><a href="../../exams/plumbing-license-prep/master-contractor/index.html">Master Exams</a></li>
+                    <li><a href="../../exams/plumbing-license-prep/tradesman-other/index.html">Tradesman Exams</a></li>
+                </ul>
+                <h3>Popular Products</h3>
+                <ul>
+                    <li><a href="../../exams/plumbing-license-prep/journeyman/texas-prep/index.html">Texas Journeyman</a></li>
+                    <li><a href="../../exams/plumbing-license-prep/journeyman/va-prep/index.html">Virginia Journeyman</a></li>
+                    <li><a href="../../exams/plumbing-license-prep/master-contractor/master-prep/index.html">Master Plumber</a></li>
+                    <li><a href="../../exams/plumbing-license-prep/general/code-cert-prep/index.html">Code Certification</a></li>
+                </ul>
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="../../wiki/index.html">Blog</a></li>
+                </ul>
+            </aside>
+            <div class="main-content">
+        <nav aria-label="Breadcrumb" class="breadcrumbs" style="margin-bottom: 2rem; font-size: 0.9rem; color: var(--text-secondary);">
+            <a href="../../../../index.html" style="color: var(--primary); text-decoration: none;">Home</a> &gt; 
+            <a href="../../index.html" style="color: var(--primary); text-decoration: none;">Plumbing Hub</a> &gt; 
+            <a href="index.html" style="color: var(--primary); text-decoration: none;">Plumbing Contractor Exam Prep</a> &gt; 
+            <span style="color: var(--text-primary);">Practice Simulator</span>
+        </nav>
+
+        <div class="dashboard-grid">
+            <div>
+                <div class="glass-card" style="padding: 1.5rem; margin-bottom: 1.5rem;">
+                    <h3 class="filter-title">Select Mode</h3>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <button class="filter-btn active" id="mode-practice" onclick="setMode('practice')">Infinite Practice Mode</button>
+                        <button class="filter-btn" id="mode-mock" onclick="setMode('mock')">10-Question Mock Test</button>
+                    </div>
+                </div>
+
+                <div class="glass-card" id="quiz-board">
+                    <div class="quiz-header">
+                        <span class="category-tag" id="question-category">Category</span>
+                        <span class="progress-text" id="progress-count">Completed: 0</span>
+                    </div>
+
+                    <div class="question-text" id="question-box">
+                        Loading questions from CSV database...
+                    </div>
+
+                    <div class="options-container" id="options-container">
+                        <!-- Options will be generated dynamically -->
+                    </div>
+
+                    <div class="explanation-card" id="explanation-wrapper" style="display: none;">
+                        <div class="explanation-title">
+                             Step-by-Step Explanation
+                        </div>
+                        <div class="explanation-text" id="explanation-text">
+                            Explanation content.
+                        </div>
+                    </div>
+
+                    <div class="actions-row" id="next-btn-container" style="display: none;">
+                        <button class="btn-primary" id="next-btn" onclick="nextQuestion()">Next Question </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-panel">
+                <div class="glass-card" style="padding: 1.5rem;">
+                    <h3 class="filter-title">My Progress</h3>
+                    <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+                        <div class="stat-item">
+                            <div class="stat-icon"></div>
+                            <div class="stat-details">
+                                <h4>Answered</h4>
+                                <p id="stat-total">0</p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon success"></div>
+                            <div class="stat-details">
+                                <h4>Correct</h4>
+                                <p id="stat-correct">0</p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon"></div>
+                            <div class="stat-details">
+                                <h4>Accuracy</h4>
+                                <p id="stat-accuracy">0%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-primary" id="reset-stats-btn" onclick="resetStats()" style="width: 100%; margin-top: 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid var(--bg-card-border); box-shadow: none; padding: 0.8rem;">Reset Progress</button>
+                </div>
+
+                <div class="glass-card" style="padding: 1.5rem;">
+                    <h3 class="filter-title" style="text-align: center; margin-bottom: 1rem;">Exam Calculator</h3>
+                    <div class="calculator-container" style="margin: 0 auto; max-width: 100%; box-shadow: none; border: none; padding: 0;">
+                        <div class="calculator-screen" style="padding: 1rem; margin-bottom: 1rem;">
+                            <div class="calc-prev-operand" style="font-size: 0.8rem; min-height: 1.2rem;"></div>
+                            <div class="calc-curr-operand" style="font-size: 1.5rem; min-height: 2.2rem;">0</div>
+                        </div>
+                        <div class="calculator-grid" style="gap: 0.5rem;">
+                            <button class="calc-btn action" onclick="calcAction('clear')">AC</button>
+                            <button class="calc-btn action" onclick="calcAction('delete')">DEL</button>
+                            <button class="calc-btn operator" onclick="calcOp('')"></button>
+                            <button class="calc-btn operator" onclick="calcOp('')"></button>
+                            
+                            <button class="calc-btn" onclick="calcNum('7')">7</button>
+                            <button class="calc-btn" onclick="calcNum('8')">8</button>
+                            <button class="calc-btn" onclick="calcNum('9')">9</button>
+                            <button class="calc-btn operator" onclick="calcOp('-')">-</button>
+                            
+                            <button class="calc-btn" onclick="calcNum('4')">4</button>
+                            <button class="calc-btn" onclick="calcNum('5')">5</button>
+                            <button class="calc-btn" onclick="calcNum('6')">6</button>
+                            <button class="calc-btn operator" onclick="calcOp('+')">+</button>
+                            
+                            <button class="calc-btn" onclick="calcNum('1')">1</button>
+                            <button class="calc-btn" onclick="calcNum('2')">2</button>
+                            <button class="calc-btn" onclick="calcNum('3')">3</button>
+                            <button class="calc-btn equals" onclick="calcAction('equals')">=</button>
+                            
+                            <button class="calc-btn" style="grid-column: span 2; aspect-ratio: auto;" onclick="calcNum('0')">0</button>
+                            <button class="calc-btn" onclick="calcNum('.')">.</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                </div>
+        </div>
+</main>
+
+        <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <strong>Exam Categories</strong>
+                    <ul>
+                        <li><a href="../../../../exams/plumbing-license-prep/journeyman/index.html">Journeyman Exams</a></li>
+                        <li><a href="../../../../exams/plumbing-license-prep/master-contractor/index.html">Master Contractor</a></li>
+                        <li><a href="../../../../exams/plumbing-license-prep/tradesman-other/index.html">Tradesman &amp; Inspector</a></li>
+                        <li><a href="../../../../exams/plumbing-license-prep/general/index.html">General &amp; Free Prep</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <strong>By State</strong>
+                    <ul>
+                        <li><a href="../../../../exams/plumbing-license-prep/journeyman/texas-prep/index.html">Texas Journeyman</a></li>
+                        <li><a href="../../../../exams/plumbing-license-prep/journeyman/va-prep/index.html">Virginia Journeyman</a></li>
+                        <li><a href="../../../../exams/plumbing-license-prep/journeyman/kansas-prep/index.html">Kansas Journeyman</a></li>
+                        <li><a href="../../../../exams/plumbing-license-prep/journeyman/ma-prep/index.html">Massachusetts Journeyman</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <strong>Resources</strong>
+                    <ul>
+                        <li><a href="../../../../wiki/index.html">Blog &amp; Articles</a></li>
+                        <li><a href="../../../../exams/plumbing-license-prep/general/free-prep/index.html">Free Practice Test</a></li>
+                        <li><a href="../../../../sitemap.xml">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <strong>Other Exams</strong>
+                    <ul>
+                        <li><a href="../../../../exams/ca-real-estate-math/index.html">CA Real Estate Math</a></li>
+                        <li><a href="../../../../exams/vic-lea-electrician-prep/index.html">Vic LEA Electrician</a></li>
+                        <li><a href="../../../../exams/sarasota-adu-permit-checklist/index.html">Sarasota ADU Permits</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; 2026 ExamPrep Portal. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="../../../../quiz-engine.js"></script>
+</body>
+</html>
+
