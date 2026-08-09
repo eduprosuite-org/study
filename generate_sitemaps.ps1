@@ -2,7 +2,7 @@
 # Scans index.html pages under wifi, link, vcard, pdf, social, and the root homepage.
 # Ignores exams/ and wiki/ to keep study portal separated.
 
-$SiteBaseUrl = "https://eduprosuite.github.io/qrcode/"
+$SiteBaseUrl = "https://eduprosuite-org.github.io/qrcode/"
 $RootDir = "d:\1 hour in clg\"
 
 # Get all index.html files under target folders
@@ -93,7 +93,7 @@ Disallow: /backups-study/
 Disallow: /scratch/
 Disallow: /Google Dev Search Central Official SEO MD files/
 
-Sitemap: https://eduprosuite.github.io/qrcode/sitemap_index.xml
+Sitemap: https://eduprosuite-org.github.io/qrcode/sitemap_index.xml
 "@
 
 $robotsPath = Join-Path $RootDir "robots.txt"

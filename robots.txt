@@ -6,4 +6,4 @@ Disallow: /backups-study/
 Disallow: /scratch/
 Disallow: /Google Dev Search Central Official SEO MD files/
 
-Sitemap: https://eduprosuite.github.io/qrcode/sitemap_index.xml
+Sitemap: https://eduprosuite-org.github.io/qrcode/sitemap_index.xml

@@ -216,7 +216,7 @@ function getQRValue() {
         case 'text':
             return document.getElementById('input-text').value || "Hello World";
         case 'url':
-            let url = document.getElementById('input-url').value || "https://eduprosuite.github.io/qrcode/";
+            let url = document.getElementById('input-url').value || "https://eduprosuite-org.github.io/qrcode/";
             if (url && !/^https?:\/\//i.test(url)) {
                 url = "https://" + url;
             }
@@ -255,7 +255,7 @@ function getQRValue() {
             const message = document.getElementById('wa-message').value || "";
             return `https://wa.me/${phoneNum}?text=${encodeURIComponent(message)}`;
         default:
-            return "https://eduprosuite.github.io/qrcode/";
+            return "https://eduprosuite-org.github.io/qrcode/";
     }
 }
 

@@ -2,7 +2,7 @@
 # Generates a 5-level directory silo structure with optimized meta, sidebars, sitemaps, and schemas.
 # Avoids editing any files in exams/plumbing-license-prep.
 
-$SiteBaseUrl = "https://eduprosuite.github.io/qrcode/"
+$SiteBaseUrl = "https://eduprosuite-org.github.io/qrcode/"
 
 # Define the taxonomy database
 $Pages = @()
@@ -1543,7 +1543,7 @@ foreach ($Page in $Pages) {
                             <div id="fields-url" class="form-group-fields" style="display: $displayUrlStyle;">
                                 <div class="input-group">
                                     <label for="input-url">Destination Link / Website URL</label>
-                                    <input type="url" id="input-url" class="form-input" placeholder="e.g. www.example.com/file.pdf" value="https://eduprosuite.github.io/qrcode/">
+                                    <input type="url" id="input-url" class="form-input" placeholder="e.g. www.example.com/file.pdf" value="https://eduprosuite-org.github.io/qrcode/">
                                 </div>
                             </div>
                             

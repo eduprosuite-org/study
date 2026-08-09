@@ -1,7 +1,7 @@
 # Silo and Technical SEO Validation Script for QR Code Web Application
 # Performs strict validation of canonicals, styles, scripts, sidebars, schemas, sitemaps, and protections.
 
-$SiteBaseUrl = "https://eduprosuite.github.io/qrcode/"
+$SiteBaseUrl = "https://eduprosuite-org.github.io/qrcode/"
 $RootDir = "d:\1 hour in clg\"
 $TargetCategories = @("wifi", "link", "vcard", "pdf", "social")
 
@@ -174,7 +174,7 @@ if (Test-Path -Path $robotsPath) {
     $sitemapLineMatch = [regex]::Match($robotsContent, "Sitemap:\s*(https?://[^\s]+)")
     if ($sitemapLineMatch.Success) {
         $robotsSitemap = $sitemapLineMatch.Groups[1].Value
-        $expectedIndex = "https://eduprosuite.github.io/qrcode/sitemap_index.xml"
+        $expectedIndex = "https://eduprosuite-org.github.io/qrcode/sitemap_index.xml"
         if ($robotsSitemap -eq $expectedIndex) {
             Write-ValidationResult -TestName "Robots.txt Sitemap Link" -Success $true -Message "Robots.txt correctly points to $expectedIndex."
         } else {
