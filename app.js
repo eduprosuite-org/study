@@ -1,513 +1,429 @@
-// Core Application Logic for California Real Estate Exam Math Practice Tool
+// Global state
+let qrInstance = null;
+let uploadedLogo = null;
+let currentMode = 'url'; // text, url, wifi, vcard, whatsapp
 
-// Tab Navigation
-const tabButtons = document.querySelectorAll('.tab-btn');
-const tabContents = document.querySelectorAll('.tab-content');
-
-tabButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-        const targetTab = btn.getAttribute('data-tab');
-        
-        tabButtons.forEach(b => b.classList.remove('active'));
-        tabContents.forEach(c => c.classList.remove('active'));
-        
-        btn.classList.add('active');
-        document.getElementById(`${targetTab}-tab`).classList.add('active');
-    });
-});
-
-// Calculator Logic
-class Calculator {
-    constructor() {
-        this.prevOperandEl = document.querySelector('.calc-prev-operand');
-        this.currOperandEl = document.querySelector('.calc-curr-operand');
-        this.clear();
-    }
-
-    clear() {
-        this.currOperand = '0';
-        this.prevOperand = '';
-        this.operation = undefined;
-        this.updateDisplay();
-    }
-
-    delete() {
-        if (this.currOperand === '0') return;
-        this.currOperand = this.currOperand.toString().slice(0, -1);
-        if (this.currOperand === '') this.currOperand = '0';
-        this.updateDisplay();
-    }
-
-    appendNumber(number) {
-        if (number === '.' && this.currOperand.includes('.')) return;
-        if (this.currOperand === '0' && number !== '.') {
-            this.currOperand = number.toString();
-        } else {
-            this.currOperand = this.currOperand.toString() + number.toString();
-        }
-        this.updateDisplay();
-    }
-
-    chooseOperation(operation) {
-        if (this.currOperand === '') return;
-        if (this.prevOperand !== '') {
-            this.compute();
-        }
-        this.operation = operation;
-        this.prevOperand = this.currOperand;
-        this.currOperand = '';
-        this.updateDisplay();
-    }
-
-    compute() {
-        let computation;
-        const prev = parseFloat(this.prevOperand);
-        const current = parseFloat(this.currOperand);
-        if (isNaN(prev) || isNaN(current)) return;
-
-        switch (this.operation) {
-            case '+':
-                computation = prev + current;
-                break;
-            case '-':
-                computation = prev - current;
-                break;
-            case '×':
-                computation = prev * current;
-                break;
-            case '÷':
-                if (current === 0) {
-                    computation = 'Error';
-                } else {
-                    computation = prev / current;
-                }
-                break;
-            default:
-                return;
-        }
-
-        this.currOperand = computation.toString();
-        this.operation = undefined;
-        this.prevOperand = '';
-        this.updateDisplay();
-    }
-
-    updateDisplay() {
-        this.currOperandEl.innerText = this.currOperand;
-        if (this.operation != null) {
-            this.prevOperandEl.innerText = `${this.prevOperand} ${this.operation}`;
-        } else {
-            this.prevOperandEl.innerText = '';
-        }
-    }
-}
-
-const calculator = new Calculator();
-
-document.querySelectorAll('.calc-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        const action = btn.getAttribute('data-action');
-        const num = btn.getAttribute('data-num');
-        const op = btn.getAttribute('data-op');
-
-        if (num !== null) calculator.appendNumber(num);
-        if (op !== null) calculator.chooseOperation(op);
-        if (action === 'clear') calculator.clear();
-        if (action === 'delete') calculator.delete();
-        if (action === 'equals') calculator.compute();
-    });
-});
-
-// Quiz Engine State
-let currentQuestion = null;
-let selectedCategory = 'all';
-let stats = {
-    total: 0,
-    correct: 0
-};
-
-// Math Formulas & Cheat Sheet Data
-const formulasData = [
-    {
-        title: "Commission Formula",
-        equation: "Commission = Sales Price × Rate",
-        desc: "Calculates the total commission earned from a sale. Remember, commissions are typically split between listing and selling brokers, and then with their sales agents.",
-        example: "A home sells for <strong>$400,000</strong> with a <strong>6%</strong> commission. Commission = $400,000 × 0.06 = <strong>$24,000</strong>.",
-        icon: "💰"
-    },
-    {
-        title: "Loan-to-Value (LTV) Ratio",
-        equation: "LTV = Loan Amount ÷ Property Value",
-        desc: "Determines the percentage of a property's value that is financed by a mortgage loan. Lenders use this to measure risk.",
-        example: "A buyer borrows <strong>$320,000</strong> to buy a <strong>$400,000</strong> home. LTV = $320,000 ÷ $400,000 = 0.80 or <strong>80%</strong>.",
-        icon: "📈"
-    },
-    {
-        title: "Capitalization Rate (Cap Rate)",
-        equation: "Cap Rate = Net Operating Income ÷ Value",
-        desc: "Used to estimate an investor's return on investment. Debt services (mortgage payments) are NOT subtracted to get Net Operating Income (NOI).",
-        example: "A commercial building has an NOI of <strong>$50,000</strong> and is worth <strong>$625,000</strong>. Cap Rate = $50,000 ÷ $625,000 = 0.08 or <strong>8%</strong>.",
-        icon: "🏢"
-    },
-    {
-        title: "Gross Rent Multiplier (GRM)",
-        equation: "GRM = Property Price ÷ Gross Monthly Rent",
-        desc: "An index used to estimate the value of residential income properties. Value = Gross Rent × GRM.",
-        example: "A duplex sells for <strong>$300,000</strong> and rents for <strong>$2,500/mo</strong>. Monthly GRM = $300,000 ÷ $2,500 = <strong>120</strong>.",
-        icon: "🏠"
-    },
-    {
-        title: "Land Measurement (Acreage)",
-        equation: "1 Acre = 43,560 Square Feet",
-        desc: "A fundamental conversion rate. Memorize the number 43,560 ('Four old ladies driving down Interstate 80 at 55 mph' is a popular mnemonic: 4, 3, 5, 6, 0).",
-        example: "A lot measures <strong>150 ft by 290 ft</strong>. Total area = 43,500 sq ft. Acreage = 43,500 ÷ 43,560 = <strong>0.999 Acres</strong>.",
-        icon: "📐"
-    },
-    {
-        title: "Property Tax (California Prop 13)",
-        equation: "Annual Tax = Assessed Value × Tax Rate",
-        desc: "In California, Proposition 13 limits base property tax to 1% of the assessed value, plus additional local bonds/assessments.",
-        example: "A house has an assessed value of <strong>$500,000</strong>. At a base rate of <strong>1%</strong>, the tax is $500,000 × 0.01 = <strong>$5,000</strong>.",
-        icon: "🏛️"
-    }
+// Site pages index for search discovery
+const sitePages = [
+    { title: "QR Code Generator Homepage", path: "" },
+    { title: "WiFi QR Code Generator & Setup Guide", path: "wifi/" },
+    { title: "WiFi Connection Setup Guide", path: "wifi/setup/" },
+    { title: "Android WiFi QR Code Connection Guide", path: "wifi/setup/android/" },
+    { title: "Free Android Home WiFi QR Code Generator Tool", path: "wifi/setup/android/home-network/free-tool/" },
+    { title: "Create Android Home WiFi Network QR Code", path: "wifi/setup/android/home-network/qr-generator/" },
+    { title: "Scan and Share Android WiFi QR Codes", path: "wifi/setup/android/home-network/share-scanner/" },
+    { title: "Connect to Android WiFi QR Codes Step-by-Step", path: "wifi/setup/android/home-network/connect-guide/" },
+    { title: "Link to QR Code Generator Online", path: "link/" },
+    { title: "URL to QR Code Generator Guide", path: "link/url-generator/" },
+    { title: "Free Link to QR Code Generator Tool", path: "link/url-generator/free/" },
+    { title: "Free QR Code Generator from Link No Signup", path: "link/url-generator/free/no-signup/" },
+    { title: "Free Unlimited Link QR Code Generator", path: "link/url-generator/free/unlimited/" },
+    { title: "Create Free Dynamic QR Codes for Links", path: "link/url-generator/free/dynamic/" },
+    { title: "Custom Link QR Code Generator with Logo", path: "link/url-generator/free/custom-logo/" },
+    { title: "vCard QR Code Generator & Business Card Maker", path: "vcard/" },
+    { title: "QR Code Business Card Creator", path: "vcard/business-card/" },
+    { title: "Free QR Code Business Card Maker", path: "vcard/business-card/free/" },
+    { title: "Free Digital Business Card QR Code with Logo", path: "vcard/business-card/free/digital-profile/" },
+    { title: "Create Free Contact Info QR Codes", path: "vcard/business-card/free/contact-qr/" },
+    { title: "Free VCF / vCard Link QR Code Generator", path: "vcard/business-card/free/vcf-generator/" },
+    { title: "Mobile vCard Business Card QR Code Generator", path: "vcard/business-card/free/mobile-vcard/" },
+    { title: "PDF to QR Code Converter & Document Generator", path: "pdf/" },
+    { title: "Document to QR Code Generator Guide", path: "pdf/document-generator/" },
+    { title: "Free PDF to QR Code Generator Online", path: "pdf/document-generator/free/" },
+    { title: "Free PDF QR Code Generator for Google Drive Documents", path: "pdf/document-generator/free/google-drive/" },
+    { title: "Convert Dropbox PDF Links to QR Code Free", path: "pdf/document-generator/free/dropbox-link/" },
+    { title: "Create Permanent PDF QR Codes No Expiration", path: "pdf/document-generator/free/no-expiration/" },
+    { title: "Online File Converter to QR Code Tool", path: "pdf/document-generator/free/file-converter/" },
+    { title: "Social Media QR Code Generator & App Guides", path: "social/" },
+    { title: "Messaging App QR Code Generator", path: "social/messaging/" },
+    { title: "WhatsApp QR Code Generator & Link Maker", path: "social/messaging/whatsapp/" },
+    { title: "WhatsApp Chat Link QR Code Generator with Custom Logo", path: "social/messaging/whatsapp/chat-link/" },
+    { title: "Create Free WhatsApp QR Codes Online", path: "social/messaging/whatsapp/qr-generator/" },
+    { title: "WhatsApp Phone Number QR Code Generator", path: "social/messaging/whatsapp/contact-number/" },
+    { title: "WhatsApp Business API QR Code Generator Tool", path: "social/messaging/whatsapp/business-api/" }
 ];
 
-// Populate Formula Cards
-const formulasGrid = document.querySelector('.formulas-grid');
-if (formulasGrid) {
-    formulasGrid.innerHTML = formulasData.map(f => `
-        <div class="formula-card">
-            <div class="formula-header">
-                <span class="formula-title">${f.title}</span>
-                <span class="formula-icon">${f.icon}</span>
-            </div>
-            <div class="formula-body">
-                <div class="formula-equation">${f.equation}</div>
-                <p class="formula-desc">${f.desc}</p>
-                <div class="formula-example">${f.example}</div>
-            </div>
-        </div>
-    `).join('');
-}
+document.addEventListener('DOMContentLoaded', () => {
+    // Determine relative prefix
+    const prefix = typeof relPrefix !== 'undefined' ? relPrefix : '';
+    
+    // Initialize QR Code generator if elements exist
+    const canvasElement = document.getElementById('qr-canvas');
+    if (canvasElement) {
+        initQRGenerator();
+    }
 
-// Random Number Helpers
-function getRandom(min, max, step = 1) {
-    const range = (max - min) / step;
-    return min + Math.floor(Math.random() * range) * step;
-}
+    // Set up FAQ Accordion
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(q => {
+        q.addEventListener('click', () => {
+            const parent = q.parentElement;
+            parent.classList.toggle('active');
+        });
+    });
 
-// Question Generators for Infinite Practice
-const generators = {
-    commissions: [
-        function() {
-            const price = getRandom(200000, 800000, 10000);
-            const rate = getRandom(4, 7, 0.5);
-            const ans = price * (rate / 100);
-            return {
-                category: "Commissions",
-                question: `A broker lists and sells a home for $${price.toLocaleString()}. If the listing agreement specifies a ${rate}% commission rate, how much commission does the broker earn?`,
-                options: [ans, ans * 0.9, ans * 1.1, price * ((rate - 1) / 100)].map(v => `$${Math.round(v).toLocaleString()}`),
-                correctIndex: 0,
-                explanation: `Apply the commission formula:<br>
-                <strong>Commission = Sales Price &times; Commission Rate</strong><br>
-                Convert the percentage to a decimal: ${rate}% = ${rate / 100}<br>
-                $${price.toLocaleString()} &times; ${rate / 100} = <strong>$${Math.round(ans).toLocaleString()}</strong>.`
-            };
-        },
-        function() {
-            const price = getRandom(300000, 900000, 50000);
-            const totalRate = getRandom(5, 6, 1);
-            const splitRatio = 50; // 50/50 split
-            const agentSplit = getRandom(60, 80, 10);
-            const totalCommission = price * (totalRate / 100);
-            const coOpCommission = totalCommission * (splitRatio / 100);
-            const ans = coOpCommission * (agentSplit / 100);
+    // Set up Header Search
+    const searchInput = document.getElementById('header-search');
+    const searchDropdown = document.getElementById('search-dropdown');
+    
+    if (searchInput && searchDropdown) {
+        searchInput.addEventListener('input', () => {
+            const query = searchInput.value.toLowerCase().trim();
+            if (!query) {
+                searchDropdown.style.display = 'none';
+                return;
+            }
 
-            return {
-                category: "Commissions",
-                question: `A house sells for $${price.toLocaleString()}. The commission is ${totalRate}%, split evenly (50/50) between the listing broker and the cooperating selling broker. If the selling broker's salesperson receives ${agentSplit}% of their broker's share, how much does the salesperson earn?`,
-                options: [ans, coOpCommission, totalCommission, totalCommission * (agentSplit / 100)].map(v => `$${Math.round(v).toLocaleString()}`),
-                correctIndex: 0,
-                explanation: `Let's break this down step-by-step:<br>
-                1. Calculate total commission: $${price.toLocaleString()} &times; ${totalRate / 100} = $${Math.round(totalCommission).toLocaleString()}<br>
-                2. Calculate the selling broker's co-op share (50%): $${Math.round(totalCommission).toLocaleString()} &times; 0.50 = $${Math.round(coOpCommission).toLocaleString()}<br>
-                3. Calculate the salesperson's portion (${agentSplit}%): $${Math.round(coOpCommission).toLocaleString()} &times; ${agentSplit / 100} = <strong>$${Math.round(ans).toLocaleString()}</strong>.`
-            };
-        }
-    ],
-    ltv: [
-        function() {
-            const value = getRandom(250000, 600000, 10000);
-            const ltv = getRandom(70, 90, 5);
-            const loan = value * (ltv / 100);
-            const downpayment = value - loan;
-            return {
-                category: "LTV & Loan Interest",
-                question: `A lender approves a loan with a ${ltv}% Loan-to-Value (LTV) ratio on a property valued at $${value.toLocaleString()}. How much down payment will the buyer need to make at closing?`,
-                options: [downpayment, loan, value * 0.1, value * 0.2].map(v => `$${Math.round(v).toLocaleString()}`),
-                correctIndex: 0,
-                explanation: `The Loan-to-Value ratio determines the loan amount:<br>
-                <strong>Loan Amount = Property Value &times; LTV Ratio</strong><br>
-                $${value.toLocaleString()} &times; ${ltv / 100} = $${Math.round(loan).toLocaleString()}<br><br>
-                The down payment is the remaining value not financed:<br>
-                <strong>Down Payment = Property Value - Loan Amount</strong><br>
-                $${value.toLocaleString()} - $${Math.round(loan).toLocaleString()} = <strong>$${Math.round(downpayment).toLocaleString()}</strong>.`
-            };
-        },
-        function() {
-            const loan = getRandom(150000, 450000, 10000);
-            const rate = getRandom(5, 8, 0.25);
-            const yearlyInterest = loan * (rate / 100);
-            const monthlyInterest = yearlyInterest / 12;
-            return {
-                category: "LTV & Loan Interest",
-                question: `An investor takes out an interest-only mortgage loan of $${loan.toLocaleString()} at an annual interest rate of ${rate}%. What will be their monthly interest payment?`,
-                options: [monthlyInterest, yearlyInterest, monthlyInterest * 1.1, yearlyInterest / 10].map(v => `$${Math.round(v).toLocaleString()}`),
-                correctIndex: 0,
-                explanation: `First, calculate the annual interest payment:<br>
-                <strong>Annual Interest = Loan Amount &times; Annual Interest Rate</strong><br>
-                $${loan.toLocaleString()} &times; ${rate / 100} = $${Math.round(yearlyInterest).toLocaleString()}<br><br>
-                Next, divide by 12 to find the monthly interest payment:<br>
-                <strong>Monthly Interest = Annual Interest &divide; 12</strong><br>
-                $${Math.round(yearlyInterest).toLocaleString()} &divide; 12 = <strong>$${Math.round(monthlyInterest).toLocaleString()}</strong>.`
-            };
-        }
-    ],
-    caprate: [
-        function() {
-            const grossIncome = getRandom(80000, 150000, 5000);
-            const expenses = getRandom(25000, 45000, 1000);
-            const value = getRandom(500000, 1000000, 50000);
-            const noi = grossIncome - expenses;
-            const capRate = (noi / value) * 100;
-            const formattedCap = Math.round(capRate * 100) / 100;
+            const matches = sitePages.filter(p => p.title.toLowerCase().includes(query));
+            searchDropdown.innerHTML = '';
+            
+            if (matches.length === 0) {
+                searchDropdown.innerHTML = '<div class="no-results">No pages found</div>';
+            } else {
+                matches.forEach(m => {
+                    const link = document.createElement('a');
+                    link.href = prefix + m.path;
+                    link.textContent = m.title;
+                    searchDropdown.appendChild(link);
+                });
+            }
+            searchDropdown.style.display = 'block';
+        });
 
-            // Generate options with variations of correct/incorrect math
-            const incorrect1 = Math.round(((grossIncome) / value) * 100 * 100) / 100; // forgetting to subtract expenses
-            const incorrect2 = Math.round(((grossIncome + expenses) / value) * 100 * 100) / 100;
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!searchInput.contains(e.target) && !searchDropdown.contains(e.target)) {
+                searchDropdown.style.display = 'none';
+            }
+        });
+    }
+});
 
-            return {
-                category: "Cap Rate & Valuation",
-                question: `An office building generates a gross annual income of $${grossIncome.toLocaleString()}. The annual operating expenses (excluding debt service) total $${expenses.toLocaleString()}. If the property is valued at $${value.toLocaleString()}, what is the capitalization rate (Cap Rate)?`,
-                options: [`${formattedCap}%`, `${incorrect1}%`, `${incorrect2}%`, `${Math.round(formattedCap * 0.8 * 100)/100}%`],
-                correctIndex: 0,
-                explanation: `First, determine Net Operating Income (NOI). Note that debt services/mortgage payments are NEVER subtracted from operating expenses:<br>
-                <strong>NOI = Gross Income - Operating Expenses</strong><br>
-                $${grossIncome.toLocaleString()} - $${expenses.toLocaleString()} = $${noi.toLocaleString()}<br><br>
-                Next, calculate Cap Rate:<br>
-                <strong>Cap Rate = NOI &divide; Property Value</strong><br>
-                $${noi.toLocaleString()} &divide; $${value.toLocaleString()} = ${noi / value} = <strong>${formattedCap}%</strong>.`
-            };
-        },
-        function() {
-            const noi = getRandom(40000, 90000, 5000);
-            const capRatePercent = getRandom(6, 9, 0.5);
-            const value = noi / (capRatePercent / 100);
+// Initialize the QR Generator controls
+function initQRGenerator() {
+    // Mode Switch tabs
+    const tabButtons = document.querySelectorAll('.qr-tab-btn');
+    tabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            tabButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            currentMode = btn.dataset.mode;
+            
+            // Toggle form views
+            document.querySelectorAll('.form-group-fields').forEach(f => f.style.display = 'none');
+            const targetForm = document.getElementById(`fields-${currentMode}`);
+            if (targetForm) {
+                targetForm.style.display = 'block';
+            }
+            
+            generateQRCode();
+        });
+    });
 
-            return {
-                category: "Cap Rate & Valuation",
-                question: `An apartment complex has a Net Operating Income (NOI) of $${noi.toLocaleString()} per year. If capitalization rates in this market are ${capRatePercent}%, what is the estimated market value of the property?`,
-                options: [value, value * 0.9, value * 1.1, noi * capRatePercent].map(v => `$${Math.round(v).toLocaleString()}`),
-                correctIndex: 0,
-                explanation: `To find the value using Cap Rate, use the formula:<br>
-                <strong>Property Value = Net Operating Income (NOI) &divide; Cap Rate</strong><br>
-                Convert the percentage to a decimal: ${capRatePercent}% = ${capRatePercent / 100}<br>
-                $${noi.toLocaleString()} &divide; ${capRatePercent / 100} = <strong>$${Math.round(value).toLocaleString()}</strong>.`
-            };
-        }
-    ],
-    grm: [
-        function() {
-            const price = getRandom(240000, 480000, 10000);
-            const monthlyRent = getRandom(2000, 4000, 100);
-            const grm = Math.round((price / monthlyRent) * 10) / 10;
-            return {
-                category: "GRM & Valuation",
-                question: `A residential duplex sold for $${price.toLocaleString()}. If the total monthly gross rental income for both units combined is $${monthlyRent.toLocaleString()}, what is the monthly Gross Rent Multiplier (GRM)?`,
-                options: [grm, Math.round(grm * 12 * 10) / 10, Math.round(grm * 0.8 * 10) / 10, Math.round((price / (monthlyRent / 2)) * 10) / 10].map(v => v.toString()),
-                correctIndex: 0,
-                explanation: `The monthly Gross Rent Multiplier (GRM) is calculated as:<br>
-                <strong>GRM = Purchase Price &divide; Gross Monthly Rent</strong><br>
-                $${price.toLocaleString()} &divide; $${monthlyRent.toLocaleString()} = <strong>${grm}</strong>.`
-            };
-        },
-        function() {
-            const monthlyRent = getRandom(1500, 3500, 100);
-            const grm = getRandom(110, 140, 5);
-            const val = monthlyRent * grm;
-            return {
-                category: "GRM & Valuation",
-                question: `A property generates a gross monthly rent of $${monthlyRent.toLocaleString()}. If the Gross Rent Multiplier (GRM) for similar properties in the area is ${grm}, what is the estimated value of the property?`,
-                options: [val, val * 12, val * 0.8, monthlyRent * 12 * grm].map(v => `$${Math.round(v).toLocaleString()}`),
-                correctIndex: 0,
-                explanation: `To estimate property value using a monthly GRM:<br>
-                <strong>Estimated Value = Gross Monthly Rent &times; GRM</strong><br>
-                $${monthlyRent.toLocaleString()} &times; ${grm} = <strong>$${Math.round(val).toLocaleString()}</strong>.`
-            };
-        }
-    ],
-    landarea: [
-        function() {
-            const acres = getRandom(2, 8, 0.5);
-            const sqft = acres * 43560;
-            return {
-                category: "Land Area & Measurements",
-                question: `A developer buys a parcel of land containing ${acres} acres. How many square feet does the developer own?`,
-                options: [sqft, acres * 40000, acres * 48000, sqft - 5000].map(v => `${Math.round(v).toLocaleString()} sq ft`),
-                correctIndex: 0,
-                explanation: `A standard conversion key is:<br>
-                <strong>1 Acre = 43,560 square feet</strong><br>
-                Multiply the number of acres by 43,560:<br>
-                ${acres} acres &times; 43,560 sq ft = <strong>${Math.round(sqft).toLocaleString()} square feet</strong>.`
-            };
-        },
-        function() {
-            const width = getRandom(150, 400, 10);
-            const depth = getRandom(250, 600, 10);
-            const area = width * depth;
-            const acres = Math.round((area / 43560) * 100) / 100;
-            return {
-                category: "Land Area & Measurements",
-                question: `A rectangular commercial lot measures ${width} feet wide by ${depth} feet deep. Approximately how many acres are in this lot?`,
-                options: [`${acres} Acres`, `${Math.round(acres * 1.2 * 100)/100} Acres`, `${Math.round(acres * 0.8 * 100)/100} Acres`, `${Math.round((area / 40000) * 100)/100} Acres`],
-                correctIndex: 0,
-                explanation: `First, calculate the total square footage of the rectangular lot:<br>
-                <strong>Area = Width &times; Depth</strong><br>
-                ${width} ft &times; ${depth} ft = ${area.toLocaleString()} sq ft<br><br>
-                Next, divide by 43,560 to convert square feet to acres:<br>
-                <strong>Acres = Total Sq Ft &divide; 43,560</strong><br>
-                ${area.toLocaleString()} &divide; 43,560 = <strong>${acres} Acres</strong>.`
-            };
-        }
-    ]
-};
+    // Form inputs change trigger regeneration
+    const inputs = document.querySelectorAll('.form-input, .color-input, .range-input');
+    inputs.forEach(input => {
+        input.addEventListener('input', generateQRCode);
+    });
 
-// Start Quiz Session
-function generateQuestion() {
-    let activeCategories = [];
-    if (selectedCategory === 'all') {
-        activeCategories = Object.keys(generators);
-    } else {
-        activeCategories = [selectedCategory];
+    // Logo upload drag & drop
+    const dropzone = document.getElementById('logo-dropzone');
+    const logoFile = document.getElementById('logo-file');
+    
+    if (dropzone && logoFile) {
+        dropzone.addEventListener('click', () => logoFile.click());
+        
+        dropzone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropzone.classList.add('dragover');
+        });
+        
+        dropzone.addEventListener('dragleave', () => {
+            dropzone.classList.remove('dragover');
+        });
+        
+        dropzone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropzone.classList.remove('dragover');
+            if (e.dataTransfer.files.length > 0) {
+                handleLogoFile(e.dataTransfer.files[0]);
+            }
+        });
+        
+        logoFile.addEventListener('change', () => {
+            if (logoFile.files.length > 0) {
+                handleLogoFile(logoFile.files[0]);
+            }
+        });
+    }
+
+    // Remove logo button
+    const removeLogoBtn = document.getElementById('remove-logo-btn');
+    if (removeLogoBtn) {
+        removeLogoBtn.addEventListener('click', () => {
+            uploadedLogo = null;
+            document.getElementById('logo-preview-container').style.display = 'none';
+            document.getElementById('logo-file').value = '';
+            generateQRCode();
+        });
+    }
+
+    // Download handlers
+    const downloadPngBtn = document.getElementById('download-png');
+    if (downloadPngBtn) {
+        downloadPngBtn.addEventListener('click', downloadPNG);
     }
     
-    // Pick random category from active selection
-    const randomCategory = activeCategories[Math.floor(Math.random() * activeCategories.length)];
-    const categoryGenerators = generators[randomCategory];
-    
-    // Pick random generator from selected category
-    const generator = categoryGenerators[Math.floor(Math.random() * categoryGenerators.length)];
-    
-    // Create the question state
-    const rawQuestion = generator();
-    
-    // Format options: round numbers, randomize option placement
-    const correctVal = rawQuestion.options[0];
-    let randomizedOptions = [...rawQuestion.options];
-    
-    // Fisher-Yates Shuffle
-    for (let i = randomizedOptions.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [randomizedOptions[i], randomizedOptions[j]] = [randomizedOptions[j], randomizedOptions[i]];
+    const downloadSvgBtn = document.getElementById('download-svg');
+    if (downloadSvgBtn) {
+        downloadSvgBtn.addEventListener('click', downloadSVG);
+    }
+
+    // Initial draw
+    generateQRCode();
+}
+
+// Handle Logo image loading
+function handleLogoFile(file) {
+    if (!file.type.match('image.*')) {
+        alert('Please select an image file (PNG, JPG, SVG).');
+        return;
     }
     
-    // Locate the new index of correct option
-    const newCorrectIndex = randomizedOptions.indexOf(correctVal);
-    
-    currentQuestion = {
-        category: rawQuestion.category,
-        question: rawQuestion.question,
-        options: randomizedOptions,
-        correctIndex: newCorrectIndex,
-        explanation: rawQuestion.explanation
+    const reader = new FileReader();
+    reader.onload = (e) => {
+        const img = new Image();
+        img.src = e.target.result;
+        img.onload = () => {
+            uploadedLogo = img;
+            // Update preview
+            const previewImg = document.getElementById('logo-preview-img');
+            const previewContainer = document.getElementById('logo-preview-container');
+            if (previewImg && previewContainer) {
+                previewImg.src = img.src;
+                previewContainer.style.display = 'flex';
+            }
+            generateQRCode();
+        };
     };
-    
-    renderQuestion();
+    reader.readAsDataURL(file);
 }
 
-function renderQuestion() {
-    // Render Category Header and Progress
-    document.getElementById('question-category').innerText = currentQuestion.category;
-    document.getElementById('progress-count').innerText = `Completed: ${stats.total}`;
-    
-    // Render Question Text
-    document.getElementById('question-box').innerText = currentQuestion.question;
-    
-    // Render Options
-    const optionsContainer = document.getElementById('options-container');
-    optionsContainer.innerHTML = currentQuestion.options.map((opt, index) => `
-        <button class="option-btn" onclick="checkAnswer(${index})" data-index="${index}">
-            <span>${opt}</span>
-            <span class="option-marker">${String.fromCharCode(65 + index)}</span>
-        </button>
-    `).join('');
-    
-    // Hide Explanation and Next Button initially
-    document.getElementById('explanation-wrapper').style.display = 'none';
-    document.getElementById('next-btn-container').style.display = 'none';
+// Get the formatted payload string for QR Code
+function getQRValue() {
+    switch (currentMode) {
+        case 'text':
+            return document.getElementById('input-text').value || "Hello World";
+        case 'url':
+            let url = document.getElementById('input-url').value || "https://eduprosuite.github.io/qrcode/";
+            if (url && !/^https?:\/\//i.test(url)) {
+                url = "https://" + url;
+            }
+            return url;
+        case 'wifi':
+            const ssid = document.getElementById('wifi-ssid').value || "WiFi-Network";
+            const pass = document.getElementById('wifi-pass').value || "";
+            const enc = document.getElementById('wifi-enc').value || "WPA";
+            const hidden = document.getElementById('wifi-hidden').checked ? 'H:true;' : '';
+            return `WIFI:S:${ssid};T:${enc};P:${pass};${hidden};`;
+        case 'vcard':
+            const first = document.getElementById('vcard-first').value || "John";
+            const last = document.getElementById('vcard-last').value || "Doe";
+            const phone = document.getElementById('vcard-phone').value || "";
+            const email = document.getElementById('vcard-email').value || "";
+            const org = document.getElementById('vcard-org').value || "";
+            const title = document.getElementById('vcard-title').value || "";
+            const web = document.getElementById('vcard-web').value || "";
+            const addr = document.getElementById('vcard-addr').value || "";
+            
+            return [
+                "BEGIN:VCARD",
+                "VERSION:3.0",
+                `N:${last};${first};;;`,
+                `FN:${first} ${last}`,
+                org ? `ORG:${org}` : '',
+                title ? `TITLE:${title}` : '',
+                phone ? `TEL;TYPE=CELL:${phone}` : '',
+                email ? `EMAIL:${email}` : '',
+                web ? `URL:${web}` : '',
+                addr ? `ADR:;;${addr};;;;` : '',
+                "END:VCARD"
+            ].filter(Boolean).join("\n");
+        case 'whatsapp':
+            const phoneNum = document.getElementById('wa-phone').value.replace(/[^0-9]/g, '') || "1234567890";
+            const message = document.getElementById('wa-message').value || "";
+            return `https://wa.me/${phoneNum}?text=${encodeURIComponent(message)}`;
+        default:
+            return "https://eduprosuite.github.io/qrcode/";
+    }
 }
 
-window.checkAnswer = function(selectedIndex) {
-    const buttons = document.querySelectorAll('.option-btn');
-    const correctIdx = currentQuestion.correctIndex;
+// Generate the QR Code and render to canvas
+function generateQRCode() {
+    const value = getQRValue();
+    const size = parseInt(document.getElementById('qr-size').value) || 300;
+    const fgColor = document.getElementById('qr-fg').value || "#000000";
+    const bgColor = document.getElementById('qr-bg').value || "#ffffff";
+    const canvas = document.getElementById('qr-canvas');
     
-    buttons.forEach((btn, idx) => {
-        btn.disabled = true;
-        if (idx === correctIdx) {
-            btn.classList.add('correct');
-        } else if (idx === selectedIndex) {
-            btn.classList.add('incorrect');
+    if (!canvas) return;
+    
+    // Instantiate or update QRious
+    if (!qrInstance) {
+        qrInstance = new QRious({
+            element: canvas,
+            value: value,
+            size: size,
+            level: 'H', // Always use High error correction to allow center logo placement
+            foreground: fgColor,
+            background: bgColor
+        });
+    } else {
+        qrInstance.set({
+            value: value,
+            size: size,
+            foreground: fgColor,
+            background: bgColor
+        });
+    }
+
+    // Draw custom logo in the center if uploaded
+    if (uploadedLogo) {
+        const ctx = canvas.getContext('2d');
+        const logoSize = size * 0.22; // Scale logo to 22% of QR code size
+        const x = (size - logoSize) / 2;
+        const y = (size - logoSize) / 2;
+        
+        // Draw white card background for the logo
+        ctx.fillStyle = bgColor;
+        ctx.beginPath();
+        ctx.roundRect(x - 4, y - 4, logoSize + 8, logoSize + 8, 6);
+        ctx.fill();
+        
+        // Draw logo image
+        ctx.drawImage(uploadedLogo, x, y, logoSize, logoSize);
+    }
+}
+
+// Helper: Download Canvas as PNG image
+function downloadPNG() {
+    const canvas = document.getElementById('qr-canvas');
+    if (!canvas) return;
+    
+    const link = document.createElement('a');
+    link.download = 'qrcode.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+}
+
+// Helper: Convert Canvas to Vector SVG and download
+function downloadSVG() {
+    const canvas = document.getElementById('qr-canvas');
+    if (!canvas) return;
+    
+    const fgColor = document.getElementById('qr-fg').value || "#000000";
+    const bgColor = document.getElementById('qr-bg').value || "#ffffff";
+    
+    // Sample canvas to build native vector grid
+    const ctx = canvas.getContext('2d');
+    const width = canvas.width;
+    const height = canvas.height;
+    
+    // Read pixel data
+    const imgData = ctx.getImageData(0, 0, width, height).data;
+    
+    // Helper function to check if pixel is dark
+    const isPixelDark = (x, y) => {
+        const idx = (y * width + x) * 4;
+        const r = imgData[idx];
+        const g = imgData[idx + 1];
+        const b = imgData[idx + 2];
+        const a = imgData[idx + 3];
+        if (a < 128) return false; // transparent
+        return (r + g + b) / 3 < 128; // dark average
+    };
+
+    // Scan for margin and finder pattern to find module size
+    let startX = -1;
+    let startY = -1;
+    
+    // Scan diagonally to find the first dark pixel (top-left of finder pattern)
+    for (let i = 0; i < Math.min(width, height); i++) {
+        if (isPixelDark(i, i)) {
+            startX = i;
+            startY = i;
+            break;
         }
-    });
-    
-    // Update Score Stats
-    stats.total++;
-    if (selectedIndex === correctIdx) {
-        stats.correct++;
     }
     
-    updateStatsDisplay();
+    if (startX === -1) {
+        // Fallback to basic search if diagonal fails
+        outer: for (let y = 0; y < height; y++) {
+            for (let x = 0; x < width; x++) {
+                if (isPixelDark(x, y)) {
+                    startX = x;
+                    startY = y;
+                    break outer;
+                }
+            }
+        }
+    }
     
-    // Render Explanation
-    const explanationText = document.getElementById('explanation-text');
-    explanationText.innerHTML = currentQuestion.explanation;
-    document.getElementById('explanation-wrapper').style.display = 'block';
+    let moduleSize = 1;
+    if (startX !== -1) {
+        // Measure top-left finder pattern width (7 modules wide)
+        let endX = startX;
+        while (endX < width && isPixelDark(endX, startY)) {
+            endX++;
+        }
+        const borderWidth = endX - startX;
+        moduleSize = borderWidth / 7;
+    }
     
-    // Show Next Button
-    document.getElementById('next-btn-container').style.display = 'flex';
-};
-
-function updateStatsDisplay() {
-    document.getElementById('stat-total').innerText = stats.total;
-    document.getElementById('stat-correct').innerText = stats.correct;
+    const modulesCount = Math.round((width - 2 * startX) / moduleSize);
     
-    const percentage = stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 0;
-    document.getElementById('stat-accuracy').innerText = `${percentage}%`;
+    // Construct SVG string
+    let svgContent = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}">`;
+    // Background rect
+    svgContent += `<rect width="100%" height="100%" fill="${bgColor}" />`;
+    
+    // Draw cells
+    for (let row = 0; row < modulesCount; row++) {
+        for (let col = 0; col < modulesCount; col++) {
+            const px = Math.round(startX + col * moduleSize + moduleSize / 2);
+            const py = Math.round(startY + row * moduleSize + moduleSize / 2);
+            
+            if (isPixelDark(px, py)) {
+                const rx = startX + col * moduleSize;
+                const ry = startY + row * moduleSize;
+                // Add cell rect, overlapping slightly to prevent seams
+                svgContent += `<rect x="${rx.toFixed(2)}" y="${ry.toFixed(2)}" width="${(moduleSize + 0.1).toFixed(2)}" height="${(moduleSize + 0.1).toFixed(2)}" fill="${fgColor}" />`;
+            }
+        }
+    }
+    
+    // Draw logo overlay if present
+    if (uploadedLogo) {
+        const logoSize = width * 0.22;
+        const lx = (width - logoSize) / 2;
+        const ly = (height - logoSize) / 2;
+        
+        // Draw background white card in SVG
+        svgContent += `<rect x="${(lx - 4).toFixed(2)}" y="${(ly - 4).toFixed(2)}" width="${(logoSize + 8).toFixed(2)}" height="${(logoSize + 8).toFixed(2)}" fill="${bgColor}" rx="6" ry="6" />`;
+        
+        // Embed logo in SVG as base64 image data
+        svgContent += `<image x="${lx.toFixed(2)}" y="${ly.toFixed(2)}" width="${logoSize.toFixed(2)}" height="${logoSize.toFixed(2)}" href="${uploadedLogo.src}" />`;
+    }
+    
+    svgContent += `</svg>`;
+    
+    // Download SVG
+    const blob = new Blob([svgContent], { type: 'image/svg+xml' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.download = 'qrcode.svg';
+    link.href = url;
+    link.click();
+    URL.revokeObjectURL(url);
 }
-
-// Next Button Click
-document.getElementById('next-btn').addEventListener('click', () => {
-    generateQuestion();
-});
-
-// Category Filter Clicks
-document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        selectedCategory = btn.getAttribute('data-category');
-        generateQuestion();
-    });
-});
-
-// Reset Score Click
-document.getElementById('reset-stats-btn').addEventListener('click', () => {
-    stats.total = 0;
-    stats.correct = 0;
-    updateStatsDisplay();
-    generateQuestion();
-});
-
-// Initialize on load
-generateQuestion();
-updateStatsDisplay();

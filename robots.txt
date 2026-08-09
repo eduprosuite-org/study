@@ -1,4 +1,9 @@
 ﻿User-agent: *
 Allow: /
+Disallow: /app.js
+Disallow: /style.css
+Disallow: /backups-study/
+Disallow: /scratch/
+Disallow: /Google Dev Search Central Official SEO MD files/
 
-Sitemap: https://eduprosuite-org.github.io/study/sitemap.xml
+Sitemap: https://eduprosuite.github.io/qrcode/sitemap_index.xml
