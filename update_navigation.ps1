@@ -34,6 +34,7 @@ foreach ($file in $allFiles) {
     $nicheFolders = @(
         "ca-real-estate-math",
         "vic-lea-electrician-prep",
+        "plumbing-aptitude-test",
         "sarasota-adu-permit-checklist",
         "gwinnett-home-occupation-checklist",
         "douglas-co-residential-building-checklist"
@@ -52,6 +53,7 @@ foreach ($file in $allFiles) {
                 <ul>
                     <li><a href="$($relPath)exams/ca-real-estate-math/index.html">California Real Estate Math</a></li>
                     <li><a href="$($relPath)exams/vic-lea-electrician-prep/index.html">Victoria LEA Electrician</a></li>
+                    <li><a href="$($relPath)exams/plumbing-aptitude-test/index.html">Plumbing Aptitude Test</a></li>
                 </ul>
                 <h3>Local Permit Checklists</h3>
                 <ul>
@@ -75,6 +77,7 @@ foreach ($file in $allFiles) {
                     <li><a href="$($relPath)exams/plumbing-license-prep/journeyman/index.html">Journeyman Exams</a></li>
                     <li><a href="$($relPath)exams/plumbing-license-prep/master-contractor/index.html">Master Exams</a></li>
                     <li><a href="$($relPath)exams/plumbing-license-prep/tradesman-other/index.html">Tradesman Exams</a></li>
+                    <li><a href="$($relPath)exams/plumbing-aptitude-test/index.html">Plumbing Aptitude Prep</a></li>
                 </ul>
                 <h3>Popular Products</h3>
                 <ul>
@@ -106,6 +109,7 @@ foreach ($file in $allFiles) {
             <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 0.75rem;">
                 <a href="$($relPath)exams/ca-real-estate-math/index.html" style="color: var(--text-secondary); text-decoration: none;">CA Real Estate Math</a>
                 <a href="$($relPath)exams/vic-lea-electrician-prep/index.html" style="color: var(--text-secondary); text-decoration: none;">Vic LEA Electrician</a>
+                <a href="$($relPath)exams/plumbing-aptitude-test/index.html" style="color: var(--text-secondary); text-decoration: none;">Plumbing Aptitude</a>
                 <a href="$($relPath)exams/sarasota-adu-permit-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Sarasota ADU Permits</a>
                 <a href="$($relPath)exams/gwinnett-home-occupation-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Gwinnett Home Occupation</a>
                 <a href="$($relPath)exams/douglas-co-residential-building-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Douglas County Building</a>
@@ -127,6 +131,7 @@ foreach ($file in $allFiles) {
             <div class="niche-tags-list">
                 <a href="$($relPath)exams/ca-real-estate-math/index.html" class="niche-tag-link">CA Real Estate Math Prep</a>
                 <a href="$($relPath)exams/vic-lea-electrician-prep/index.html" class="niche-tag-link">Victoria LEA Electrician Prep</a>
+                <a href="$($relPath)exams/plumbing-aptitude-test/index.html" class="niche-tag-link">Plumbing Aptitude Prep</a>
                 <a href="$($relPath)exams/sarasota-adu-permit-checklist/index.html" class="niche-tag-link">Sarasota ADU Permit Guide</a>
                 <a href="$($relPath)exams/gwinnett-home-occupation-checklist/index.html" class="niche-tag-link">Gwinnett Home Occupation Checklist</a>
                 <a href="$($relPath)exams/douglas-co-residential-building-checklist/index.html" class="niche-tag-link">Douglas County Building Checklist</a>

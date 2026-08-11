@@ -8,6 +8,9 @@ $urlsPages = @("")
 $urlsExams = @(
     "exams/ca-real-estate-math/"
     "exams/ca-real-estate-math/practice.html"
+    "exams/plumbing-aptitude-test/"
+    "exams/plumbing-aptitude-test/practice-test/"
+    "exams/plumbing-aptitude-test/study-guide/"
     "exams/sarasota-adu-permit-checklist/"
     "exams/gwinnett-home-occupation-checklist/"
     "exams/douglas-co-residential-building-checklist/"
@@ -48,6 +51,8 @@ $urlsExams = @(
 # 3. Wiki
 $urlsWiki = @(
     "wiki/"
+    "wiki/plumbing-aptitude/"
+    "wiki/plumbing-aptitude/how-to-pass-plumbing-aptitude-test/"
     "wiki/plumbing/wiki-001.html"
     "wiki/plumbing/wiki-002.html"
     "wiki/plumbing/wiki-003.html"
@@ -100,3 +105,4 @@ $sitemapIndexXml += '</sitemapindex>'
 $indexPath = Join-Path $PSScriptRoot "sitemap.xml"
 [System.IO.File]::WriteAllText($indexPath, $sitemapIndexXml)
 Write-Host "sitemap.xml (Index) generated successfully!" -ForegroundColor Green
+

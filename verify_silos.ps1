@@ -1,4 +1,4 @@
-# Silo and Technical SEO Validation Script for QR Code Web Application
+﻿# Silo and Technical SEO Validation Script for QR Code Web Application
 # Performs strict validation of canonicals, styles, scripts, sidebars, schemas, sitemaps, and protections.
 
 $SiteBaseUrl = "https://eduprosuite-org.github.io/qrcode/"
@@ -194,3 +194,4 @@ if ($global:AllPassed) {
     Write-Host " Programmatic SEO Audits Failed. Review details above. " -BackgroundColor Red -ForegroundColor White
 }
 Write-Host "=========================================="
+

@@ -1,4 +1,4 @@
-# Silo Generator Script for QR Code Web Application
+﻿# Silo Generator Script for QR Code Web Application
 # Generates a 5-level directory silo structure with optimized meta, sidebars, sitemaps, and schemas.
 # Avoids editing any files in exams/plumbing-license-prep.
 
@@ -1728,46 +1728,24 @@ foreach ($Page in $Pages) {
     </main>
 
     <!-- Footer Area -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-grid">
-                <div class="footer-col" style="grid-column: span 1;">
-                    <h4>QRCodeHub</h4>
-                    <p style="font-size:0.85rem; color:var(--text-secondary);">Interactive client-side QR code generator providing customized, print-ready vector SVG and PNG downloads with zero limits.</p>
-                    <a href="$($prefix)index.html" style="font-weight:700; color:var(--primary);">Go back to Homepage</a>
-                </div>
-                <div class="footer-col">
-                    <h4>QR Code Types</h4>
-                    <ul>
-                        <li><a href="$($prefix)wifi/index.html">WiFi Network</a></li>
-                        <li><a href="$($prefix)link/index.html">Link / Website URL</a></li>
-                        <li><a href="$($prefix)vcard/index.html">vCard Contact Card</a></li>
-                        <li><a href="$($prefix)pdf/index.html">PDF Document</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Sitemaps</h4>
-                    <ul>
-                        <li><a href="$($prefix)sitemap_index.xml">Sitemap Index</a></li>
-                        <li><a href="$($prefix)sitemap-wifi.xml">WiFi Sitemap</a></li>
-                        <li><a href="$($prefix)sitemap-link.xml">Link Sitemap</a></li>
-                        <li><a href="$($prefix)sitemap-vcard.xml">vCard Sitemap</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Legal &amp; Info</h4>
-                    <ul>
-                        <li><a href="$($prefix)index.html">Privacy Policy</a></li>
-                        <li><a href="$($prefix)index.html">Terms of Service</a></li>
-                        <li><a href="$($prefix)index.html">Contact Us</a></li>
-                        <li><a href="$($prefix)index.html">About Developer</a></li>
-                    </ul>
-                </div>
+        <footer>
+        <div class="footer-content" style="flex-direction: column; gap: 1.5rem;">
+            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                <a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html" style="color: var(--text-secondary); text-decoration: none;">Journeyman Exams</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/master-contractor/index.html" style="color: var(--text-secondary); text-decoration: none;">Master Exams</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/tradesman-other/index.html" style="color: var(--text-secondary); text-decoration: none;">Tradesman Exams</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})wiki/index.html" style="color: var(--text-secondary); text-decoration: none;">Blog</a>
             </div>
-            <div class="footer-bottom">
-                <div>&copy; 2026 QRCodeHub Portal. Built for eduprosuite. All rights reserved.</div>
-                <div>Hosted statically on GitHub Pages. Proximity to GSC verification ready.</div>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 0.75rem;">
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/ca-real-estate-math/index.html" style="color: var(--text-secondary); text-decoration: none;">CA Real Estate Math</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/vic-lea-electrician-prep/index.html" style="color: var(--text-secondary); text-decoration: none;">Vic LEA Electrician</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-aptitude-test/index.html" style="color: var(--text-secondary); text-decoration: none;">Plumbing Aptitude</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/sarasota-adu-permit-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Sarasota ADU Permits</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/gwinnett-home-occupation-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Gwinnett Home Occupation</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/douglas-co-residential-building-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Douglas County Building</a>
             </div>
+            <div>Â© 2026 ExamPrep Portal. All rights reserved.</div>
         </div>
     </footer>
 
@@ -1785,3 +1763,4 @@ foreach ($Page in $Pages) {
 }
 
 Write-Host "`nAll 41 directory pages generated successfully!"
+

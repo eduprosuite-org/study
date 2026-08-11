@@ -21,3 +21,4 @@ foreach ($file in $allFiles) {
 Write-Host "Encoding fixed!"
 
 
+

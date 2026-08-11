@@ -43,3 +43,4 @@ Write-Host "Injected canonical URLs into all HTML pages." -ForegroundColor Green
 Write-Host "Pushing to GitHub..."
 & "d:\1 hour in clg\push_all_to_github.ps1"
 
+

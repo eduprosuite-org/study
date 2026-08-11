@@ -1,4 +1,4 @@
-# Sitemap and Robots.txt Generator for QR Code Web Application
+﻿# Sitemap and Robots.txt Generator for QR Code Web Application
 # Scans index.html pages under wifi, link, vcard, pdf, social, and the root homepage.
 # Ignores exams/ and wiki/ to keep study portal separated.
 
@@ -99,3 +99,4 @@ Sitemap: https://eduprosuite-org.github.io/qrcode/sitemap_index.xml
 $robotsPath = Join-Path $RootDir "robots.txt"
 [System.IO.File]::WriteAllText($robotsPath, $robotsTxt, [System.Text.Encoding]::UTF8)
 Write-Host "Generated Robots.txt: $robotsPath"
+

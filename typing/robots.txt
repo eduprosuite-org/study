@@ -1,0 +1,6 @@
+﻿User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /temp/
+
+Sitemap: https://eduprosuite-org.github.io/typing/sitemap_index.xml

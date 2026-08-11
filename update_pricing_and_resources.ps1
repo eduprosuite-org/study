@@ -43,3 +43,4 @@ $utf8NoBOM = New-Object System.Text.UTF8Encoding($false)
 
 Write-Host "Generator updated with premium pricing and resources!"
 
+

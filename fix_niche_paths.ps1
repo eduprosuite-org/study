@@ -1,4 +1,4 @@
-# Correctly fix all niche pages with exact relative paths based on depth
+﻿# Correctly fix all niche pages with exact relative paths based on depth
 # Hub pages (exams/FOLDER/index.html) = depth 2, relPath = "../"
 # Sub pages (exams/FOLDER/SUB/index.html) = depth 3, relPath = "../../"
 
@@ -34,22 +34,24 @@ function Build-NicheSidebar($toExams, $toRoot) {
 }
 
 function Build-NicheFooter($rr) {
-    return "<footer>
-        <div class=`"footer-content`" style=`"flex-direction: column; gap: 1.5rem;`">
-            <div style=`"display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;`">
-                <a href=`"${rr}index.html`" style=`"color: var(--text-secondary); text-decoration: none;`">Home</a>
-                <a href=`"${rr}exams/plumbing-license-prep/journeyman/index.html`" style=`"color: var(--text-secondary); text-decoration: none;`">Journeyman Exams</a>
-                <a href=`"${rr}exams/plumbing-license-prep/master-contractor/index.html`" style=`"color: var(--text-secondary); text-decoration: none;`">Master Exams</a>
-                <a href=`"${rr}wiki/index.html`" style=`"color: var(--text-secondary); text-decoration: none;`">Blog</a>
+    return "    <footer>
+        <div class="footer-content" style="flex-direction: column; gap: 1.5rem;">
+            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                <a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html" style="color: var(--text-secondary); text-decoration: none;">Journeyman Exams</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/master-contractor/index.html" style="color: var(--text-secondary); text-decoration: none;">Master Exams</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/tradesman-other/index.html" style="color: var(--text-secondary); text-decoration: none;">Tradesman Exams</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})wiki/index.html" style="color: var(--text-secondary); text-decoration: none;">Blog</a>
             </div>
-            <div style=`"display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 0.75rem;`">
-                <a href=`"${rr}exams/ca-real-estate-math/index.html`" style=`"color: var(--text-secondary); text-decoration: none;`">CA Real Estate Math</a>
-                <a href=`"${rr}exams/vic-lea-electrician-prep/index.html`" style=`"color: var(--text-secondary); text-decoration: none;`">Vic LEA Electrician</a>
-                <a href=`"${rr}exams/sarasota-adu-permit-checklist/index.html`" style=`"color: var(--text-secondary); text-decoration: none;`">Sarasota ADU Permits</a>
-                <a href=`"${rr}exams/gwinnett-home-occupation-checklist/index.html`" style=`"color: var(--text-secondary); text-decoration: none;`">Gwinnett Home Occupation</a>
-                <a href=`"${rr}exams/douglas-co-residential-building-checklist/index.html`" style=`"color: var(--text-secondary); text-decoration: none;`">Douglas County Building</a>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 0.75rem;">
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/ca-real-estate-math/index.html" style="color: var(--text-secondary); text-decoration: none;">CA Real Estate Math</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/vic-lea-electrician-prep/index.html" style="color: var(--text-secondary); text-decoration: none;">Vic LEA Electrician</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-aptitude-test/index.html" style="color: var(--text-secondary); text-decoration: none;">Plumbing Aptitude</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/sarasota-adu-permit-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Sarasota ADU Permits</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/gwinnett-home-occupation-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Gwinnett Home Occupation</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/douglas-co-residential-building-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Douglas County Building</a>
             </div>
-            <div>&copy; 2026 ExamPrep Portal. All rights reserved.</div>
+            <div>Â© 2026 ExamPrep Portal. All rights reserved.</div>
         </div>
     </footer>"
 }
@@ -107,7 +109,26 @@ foreach ($file in $htmlFiles) {
 
     # Build and replace sidebar
     $sidebar = Build-NicheSidebar $toExams $toRoot
-    $content = $content -replace '(?s)<aside class="sidebar-left glass-card">.*?</aside>', $sidebar
+    $content = $content -replace '(?s)            <aside class="sidebar-left glass-card">
+                <h3>Exam Categories</h3>
+                <ul>
+                    <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html">Journeyman Exams</a></li>
+                    <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/master-contractor/index.html">Master Exams</a></li>
+                    <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/tradesman-other/index.html">Tradesman Exams</a></li>
+                    <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-aptitude-test/index.html">Plumbing Aptitude Prep</a></li>
+                </ul>
+                <h3>Popular Products</h3>
+                <ul>
+                    <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/texas-prep/index.html">Texas Journeyman</a></li>
+                    <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/va-prep/index.html">Virginia Journeyman</a></li>
+                    <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/master-contractor/master-prep/index.html">Master Plumber</a></li>
+                    <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/general/code-cert-prep/index.html">Code Certification</a></li>
+                </ul>
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="$(if ($relPath) {$relPath} else {"../../"})wiki/index.html">Blog</a></li>
+                </ul>
+            </aside>', $sidebar
 
     # Remove old tags sections
     $content = $content -replace '(?s)<section class="niche-tags-container".*?</section>\s*', ''
@@ -117,10 +138,30 @@ foreach ($file in $htmlFiles) {
 
     # Build and replace footer
     $footer = Build-NicheFooter $toRoot
-    $content = $content -replace '(?s)<footer>.*?</footer>', ($tags + $footer)
+    $content = $content -replace '(?s)    <footer>
+        <div class="footer-content" style="flex-direction: column; gap: 1.5rem;">
+            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                <a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html" style="color: var(--text-secondary); text-decoration: none;">Journeyman Exams</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/master-contractor/index.html" style="color: var(--text-secondary); text-decoration: none;">Master Exams</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/tradesman-other/index.html" style="color: var(--text-secondary); text-decoration: none;">Tradesman Exams</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})wiki/index.html" style="color: var(--text-secondary); text-decoration: none;">Blog</a>
+            </div>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 0.75rem;">
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/ca-real-estate-math/index.html" style="color: var(--text-secondary); text-decoration: none;">CA Real Estate Math</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/vic-lea-electrician-prep/index.html" style="color: var(--text-secondary); text-decoration: none;">Vic LEA Electrician</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-aptitude-test/index.html" style="color: var(--text-secondary); text-decoration: none;">Plumbing Aptitude</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/sarasota-adu-permit-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Sarasota ADU Permits</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/gwinnett-home-occupation-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Gwinnett Home Occupation</a>
+                <a href="$(if ($relPath) {$relPath} else {"../../"})exams/douglas-co-residential-building-checklist/index.html" style="color: var(--text-secondary); text-decoration: none;">Douglas County Building</a>
+            </div>
+            <div>Â© 2026 ExamPrep Portal. All rights reserved.</div>
+        </div>
+    </footer>', ($tags + $footer)
 
     Set-Content -Path $file.FullName -Value $content -Encoding UTF8
     Write-Host "Fixed [$depth depth]: $relToRoot" -ForegroundColor Cyan
 }
 
 Write-Host "`nAll niche pages fixed!" -ForegroundColor Green
+

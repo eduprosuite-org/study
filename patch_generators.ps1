@@ -12,12 +12,13 @@ foreach ($gen in $generators) {
     # We find <main ...> and replace it with <main ...><div class="page-layout"><aside...><div class="main-content">
     $sidebarStr = @"
         <div class="page-layout">
-                                    <aside class="sidebar-left glass-card">
+                                                <aside class="sidebar-left glass-card">
                 <h3>Exam Categories</h3>
                 <ul>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html">Journeyman Exams</a></li>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/master-contractor/index.html">Master Exams</a></li>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/tradesman-other/index.html">Tradesman Exams</a></li>
+                    <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-aptitude-test/index.html">Plumbing Aptitude Prep</a></li>
                 </ul>
                 <h3>Popular Products</h3>
                 <ul>
@@ -45,6 +46,7 @@ foreach ($gen in $generators) {
 }
 
 Write-Host "Generators patched successfully!" -ForegroundColor Cyan
+
 
 
 
