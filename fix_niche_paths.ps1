@@ -34,7 +34,7 @@ function Build-NicheSidebar($toExams, $toRoot) {
 }
 
 function Build-NicheFooter($rr) {
-    return "        <footer>
+    return "            <footer>
         <div class="footer-content" style="flex-direction: column; gap: 1.5rem;">
             <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
                 <a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
@@ -109,7 +109,7 @@ foreach ($file in $htmlFiles) {
 
     # Build and replace sidebar
     $sidebar = Build-NicheSidebar $toExams $toRoot
-    $content = $content -replace '(?s)                        <aside class="sidebar-left glass-card">
+    $content = $content -replace '(?s)                                    <aside class="sidebar-left glass-card">
                 <h3>Exam Categories</h3>
                 <ul>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html">Journeyman Exams</a></li>
@@ -138,7 +138,7 @@ foreach ($file in $htmlFiles) {
 
     # Build and replace footer
     $footer = Build-NicheFooter $toRoot
-    $content = $content -replace '(?s)        <footer>
+    $content = $content -replace '(?s)            <footer>
         <div class="footer-content" style="flex-direction: column; gap: 1.5rem;">
             <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
                 <a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
@@ -164,5 +164,6 @@ foreach ($file in $htmlFiles) {
 }
 
 Write-Host "`nAll niche pages fixed!" -ForegroundColor Green
+
 
 

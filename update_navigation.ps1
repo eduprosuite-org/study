@@ -1,4 +1,4 @@
-$htmlFiles = Get-ChildItem -Path $PSScriptRoot -Filter *.html -Recurse | Where-Object { $_.FullName -notmatch "\\\.git\\" -and $_.FullName -notmatch "\\scratch\\" -and $_.FullName -notmatch "exams\\plumbing-license-prep" }
+$htmlFiles = Get-ChildItem -Path $PSScriptRoot -Filter *.html -Recurse | Where-Object { ($_.FullName -match "exams\\" -or $_.FullName -match "wiki\\") -and $_.FullName -notmatch "\\\.git\\" -and $_.FullName -notmatch "\\scratch\\" -and $_.FullName -notmatch "exams\\plumbing-license-prep" }
 $ps1Files = Get-ChildItem -Path $PSScriptRoot -Filter *.ps1 | Where-Object { $_.Name -notmatch "fix_all.ps1" -and $_.Name -notmatch "update_navigation.ps1" }
 
 $allFiles = $htmlFiles + $ps1Files

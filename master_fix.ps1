@@ -53,7 +53,7 @@ function Get-HeaderNav($rel) {
 # ---- Build the footer nav HTML ----
 function Get-Footer($rel) {
     return @"
-                <footer>
+                    <footer>
         <div class="footer-content" style="flex-direction: column; gap: 1.5rem;">
             <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
                 <a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
@@ -100,7 +100,7 @@ foreach ($file in $htmlFiles) {
     $newHeader = "<header>`n" + (Get-HeaderNav $rel) + "`n    </header>"
     $text = [regex]::Replace($text, '(?s)<header>.*?</header>', $newHeader)
     
-    # Replace the entire             <footer>
+    # Replace the entire                 <footer>
         <div class="footer-content" style="flex-direction: column; gap: 1.5rem;">
             <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
                 <a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
@@ -121,7 +121,7 @@ foreach ($file in $htmlFiles) {
         </div>
     </footer> block
     $newFooter = Get-Footer $rel
-    $text = [regex]::Replace($text, '(?s)            <footer>
+    $text = [regex]::Replace($text, '(?s)                <footer>
         <div class="footer-content" style="flex-direction: column; gap: 1.5rem;">
             <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
                 <a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
@@ -150,6 +150,7 @@ foreach ($file in $htmlFiles) {
 }
 
 Write-Host "`nAll files cleaned and navigation updated!" -ForegroundColor Green
+
 
 
 

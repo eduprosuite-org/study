@@ -478,7 +478,7 @@ $hubHtml = @"
                  PlumbingLicense <span>Prep</span>
             </div>
             <nav aria-label="Main Navigation">
-                                                                                <ul style="display: flex; gap: 1.5rem; list-style: none;">
+                                                                                                <ul style="display: flex; gap: 1.5rem; list-style: none;">
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Home</a></li>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Journeyman</a></li>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/master-contractor/index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Master</a></li>
@@ -488,7 +488,7 @@ $hubHtml = @"
 
     <main>
         <div class="page-layout">
-                                                            <aside class="sidebar-left glass-card">
+                                                                        <aside class="sidebar-left glass-card">
                 <h3>Exam Categories</h3>
                 <ul>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html">Journeyman Exams</a></li>
@@ -558,7 +558,7 @@ $hubHtml = @"
         </div>
 </main>
 
-                <footer>
+                    <footer>
         <div class="footer-content" style="flex-direction: column; gap: 1.5rem;">
             <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
                 <a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
@@ -640,7 +640,7 @@ function Get-SiloHubHtml($siloKey, $title, $desc, $items) {
                  PlumbingLicense <span>Prep</span>
             </div>
             <nav aria-label="Main Navigation">
-                                                                                <ul style="display: flex; gap: 1.5rem; list-style: none;">
+                                                                                                <ul style="display: flex; gap: 1.5rem; list-style: none;">
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Home</a></li>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Journeyman</a></li>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/master-contractor/index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Master</a></li>
@@ -650,7 +650,7 @@ function Get-SiloHubHtml($siloKey, $title, $desc, $items) {
 
     <main>
         <div class="page-layout">
-                                                            <aside class="sidebar-left glass-card">
+                                                                        <aside class="sidebar-left glass-card">
                 <h3>Exam Categories</h3>
                 <ul>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html">Journeyman Exams</a></li>
@@ -691,7 +691,7 @@ function Get-SiloHubHtml($siloKey, $title, $desc, $items) {
         </div>
 </main>
 
-                <footer>
+                    <footer>
         <div class="footer-content" style="flex-direction: column; gap: 1.5rem;">
             <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
                 <a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
@@ -808,7 +808,7 @@ function Get-ProductIndexHtml($p) {
                  PlumbingLicense <span>Prep</span>
             </div>
             <nav aria-label="Course Navigation">
-                                                                                <ul style="display: flex; gap: 1.5rem; list-style: none;">
+                                                                                                <ul style="display: flex; gap: 1.5rem; list-style: none;">
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Home</a></li>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Journeyman</a></li>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/master-contractor/index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Master</a></li>
@@ -818,7 +818,7 @@ function Get-ProductIndexHtml($p) {
 
     <main>
         <div class="page-layout">
-                                                            <aside class="sidebar-left glass-card">
+                                                                        <aside class="sidebar-left glass-card">
                 <h3>Exam Categories</h3>
                 <ul>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html">Journeyman Exams</a></li>
@@ -892,7 +892,7 @@ function Get-ProductIndexHtml($p) {
         </div>
 </main>
 
-                <footer>
+                    <footer>
         <div class="footer-content" style="flex-direction: column; gap: 1.5rem;">
             <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
                 <a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
@@ -939,7 +939,7 @@ function Get-ProductPracticeHtml($p) {
                  PlumbingLicense <span>Prep</span>
             </div>
             <nav aria-label="Course Navigation">
-                                                                                <ul style="display: flex; gap: 1.5rem; list-style: none;">
+                                                                                                <ul style="display: flex; gap: 1.5rem; list-style: none;">
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Home</a></li>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Journeyman</a></li>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/master-contractor/index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Master</a></li>
@@ -949,7 +949,7 @@ function Get-ProductPracticeHtml($p) {
 
     <main>
         <div class="page-layout">
-                                                            <aside class="sidebar-left glass-card">
+                                                                        <aside class="sidebar-left glass-card">
                 <h3>Exam Categories</h3>
                 <ul>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html">Journeyman Exams</a></li>
@@ -1084,7 +1084,7 @@ function Get-ProductPracticeHtml($p) {
         </div>
 </main>
 
-                <footer>
+                    <footer>
         <div class="footer-content" style="flex-direction: column; gap: 1.5rem;">
             <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
                 <a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
@@ -1144,6 +1144,7 @@ foreach ($p in $products) {
 }
 
 Write-Host "PowerShell silo generation complete!" -ForegroundColor Green
+
 
 
 

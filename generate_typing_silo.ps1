@@ -2140,7 +2140,7 @@ foreach ($page in $pages) {
         $(if($page.IsTool -eq $true){$rightSidebarHtml})
     </div>
 
-            <footer>
+                <footer>
         <div class="footer-content" style="flex-direction: column; gap: 1.5rem;">
             <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
                 <a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
@@ -2263,5 +2263,6 @@ $sitemapSpeedContent | Out-File -FilePath $sitemapSpeedPath -Encoding utf8 -Forc
 Write-Host "Created sitemap-speed-tests.xml successfully." -ForegroundColor Green
 
 Write-Host "All files written and technical SEO configurations finalized." -ForegroundColor Cyan
+
 
 
