@@ -1,4 +1,4 @@
-$baseUrl = "https://eduprosuite-org.github.io/study/"
+﻿$baseUrl = "https://eduprosuite-org.github.io/study/"
 $date = Get-Date -Format "yyyy-MM-dd"
 
 # 1. Pages (Root)
@@ -105,4 +105,5 @@ $sitemapIndexXml += '</sitemapindex>'
 $indexPath = Join-Path $PSScriptRoot "sitemap.xml"
 [System.IO.File]::WriteAllText($indexPath, $sitemapIndexXml)
 Write-Host "sitemap.xml (Index) generated successfully!" -ForegroundColor Green
+
 

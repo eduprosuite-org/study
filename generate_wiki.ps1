@@ -46,7 +46,7 @@ foreach ($article in $articles) {
                  PlumbingLicense <span>Encyclopedia</span>
             </div>
             <nav>
-                                                                <ul style="display: flex; gap: 1.5rem; list-style: none;">
+                                                                                <ul style="display: flex; gap: 1.5rem; list-style: none;">
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Home</a></li>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Journeyman</a></li>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/master-contractor/index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Master</a></li>
@@ -56,7 +56,7 @@ foreach ($article in $articles) {
 
     <main class="container" style="padding-top: 2rem;">
         <div class="page-layout">
-                                                <aside class="sidebar-left glass-card">
+                                                            <aside class="sidebar-left glass-card">
                 <h3>Exam Categories</h3>
                 <ul>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html">Journeyman Exams</a></li>
@@ -146,7 +146,7 @@ foreach ($article in $articles) {
         </div>
 </main>
 
-            <footer>
+                <footer>
         <div class="footer-content" style="flex-direction: column; gap: 1.5rem;">
             <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
                 <a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
@@ -193,7 +193,7 @@ $hubHtml = @"
         <div class="nav-container">
             <div class="logo"> PlumbingLicense <span>Wiki</span></div>
             <nav>
-                                                                <ul style="display: flex; gap: 1.5rem; list-style: none;">
+                                                                                <ul style="display: flex; gap: 1.5rem; list-style: none;">
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Home</a></li>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Journeyman</a></li>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/master-contractor/index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Master</a></li>
@@ -202,7 +202,7 @@ $hubHtml = @"
                 </ul></nav></div></header>
     <main class="container" style="padding-top: 4rem;">
         <div class="page-layout">
-                                                <aside class="sidebar-left glass-card">
+                                                            <aside class="sidebar-left glass-card">
                 <h3>Exam Categories</h3>
                 <ul>
                     <li><a href="$(if ($relPath) {$relPath} else {"../../"})exams/plumbing-license-prep/journeyman/index.html">Journeyman Exams</a></li>
@@ -251,6 +251,7 @@ $hubHtml += @"
 Set-Content -Path $hubPath -Value $hubHtml -Encoding UTF8
 Write-Host "Generated Wiki Hub: $hubPath" -ForegroundColor Cyan
 Write-Host "Wiki Generation Complete!" -ForegroundColor Yellow
+
 
 
 

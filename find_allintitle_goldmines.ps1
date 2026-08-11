@@ -137,3 +137,4 @@ Write-Host "Done! Report saved to: $outputFile" -ForegroundColor Green
 Write-Host "`n=== Goldmine Keywords Found ===" -ForegroundColor Green
 $results | Where-Object { $_.IsGoldmine -eq $true } | Sort-Object AllInTitleCount | Format-Table -AutoSize
 
+

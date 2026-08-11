@@ -1728,7 +1728,7 @@ foreach ($Page in $Pages) {
     </main>
 
     <!-- Footer Area -->
-        <footer>
+            <footer>
         <div class="footer-content" style="flex-direction: column; gap: 1.5rem;">
             <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
                 <a href="$(if ($relPath) {$relPath} else {"../../"})index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
@@ -1763,4 +1763,5 @@ foreach ($Page in $Pages) {
 }
 
 Write-Host "`nAll 41 directory pages generated successfully!"
+
 

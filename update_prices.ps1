@@ -31,3 +31,4 @@ foreach ($u in $updates) {
 Write-Host "`nAll prices updated!"
 
 
+
