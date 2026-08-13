@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Master the Journeyman Plumber Exam and build deep trade knowledge. Access structured guides on plumbing math, IPC/UPC code compliance, DWV systems, blueprint reading, and PSI/Pearson VUE testing strategies. Engineered with expert E-E-A-T signals.">
-    <title>Journeyman Plumber Exam Prep & Trade Knowledge: The Ultimate Pillar Guide</title>
+    <meta name="description" content="Explore the Plumbing License Encyclopedia. Access high-density directories of plumbing math, codes, safety standards, blueprints, DWV design, and journeyman licensing exam resources. Built under strict Google Search Central SEO guidelines.">
+    <title>Plumbing License Encyclopedia &amp; Reference Hub | ExamPrep Portal</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://eduprosuite-org.github.io/study/wiki/">
@@ -12,18 +12,17 @@
     <!-- Social Preview Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://eduprosuite-org.github.io/study/wiki/index.html">
-    <meta property="og:title" content="Journeyman Plumber Exam Prep & Trade Knowledge: The Ultimate Pillar Guide">
-    <meta property="og:description" content="Master the Journeyman Plumber Exam and build deep trade knowledge. Access structured guides on plumbing math, IPC/UPC code compliance, DWV systems, blueprint reading, and PSI/Pearson VUE testing strategies.">
+    <meta property="og:title" content="Plumbing License Encyclopedia &amp; Reference Hub | ExamPrep Portal">
+    <meta property="og:description" content="Access a high-density, searchable directory of plumbing mathematics, UPC/IPC code clearances, venting methods, isometric drafting, and journeyman licensing test strategies.">
     <meta property="og:image" content="https://eduprosuite-org.github.io/study/og-banner.jpg">
     <meta property="og:site_name" content="ExamPrep Portal">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Journeyman Plumber Exam Prep & Trade Knowledge: The Ultimate Pillar Guide">
-    <meta name="twitter:description" content="Master the Journeyman Plumber Exam and build deep trade knowledge. Access structured guides on plumbing math, IPC/UPC code compliance, DWV systems, blueprint reading, and PSI/Pearson VUE testing strategies.">
+    <meta name="twitter:title" content="Plumbing License Encyclopedia &amp; Reference Hub | ExamPrep Portal">
+    <meta name="twitter:description" content="Access a high-density, searchable directory of plumbing mathematics, UPC/IPC code clearances, venting methods, isometric drafting, and journeyman licensing test strategies.">
     <meta name="twitter:image" content="https://eduprosuite-org.github.io/study/og-banner.jpg">
 
-    <!-- CSS styles for the specific pillar elements -->
+    <!-- Custom CSS for the MathWorld-Style High-Density Grid Directory -->
     <style>
-        /* ===== Custom Styles for Pillar Content ===== */
         .pillar-header {
             margin-bottom: 2.5rem;
             position: relative;
@@ -48,121 +47,95 @@
             line-height: 1.6;
         }
 
-        .sub-category-block {
+        /* MathWorld Directory Layout */
+        .directory-container {
             margin-top: 2rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--bg-card-border);
+            margin-bottom: 3.5rem;
         }
 
-        .sub-category-block h3 {
-            font-size: 1.25rem;
+        .directory-category-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
             color: #ffffff;
-            margin-bottom: 1rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            font-weight: 700;
+            justify-content: space-between;
         }
 
-        .sub-category-block h3::before {
-            content: '';
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background-color: var(--primary);
+        .directory-category-title span.count-badge {
+            font-size: 0.8rem;
+            font-weight: 600;
+            background: rgba(99, 102, 241, 0.15);
+            color: var(--primary);
+            padding: 2px 10px;
+            border-radius: 50px;
+            border: 1px solid rgba(99, 102, 241, 0.2);
         }
 
-        .article-card-grid {
+        .directory-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.25rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.75rem 1.5rem;
+            margin-bottom: 2.5rem;
         }
 
-        .article-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--bg-card-border);
-            border-radius: 12px;
-            padding: 1.25rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        @media (max-width: 900px) {
+            .directory-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
-        .article-card:hover {
-            background: rgba(255, 255, 255, 0.04);
-            transform: translateX(4px);
-            border-color: rgba(99, 102, 241, 0.25);
+        @media (max-width: 600px) {
+            .directory-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
-        .article-meta {
+        .directory-item {
             display: flex;
             align-items: center;
-            gap: 12px;
-            margin-bottom: 0.5rem;
+            gap: 8px;
+            padding: 6px 0;
+            transition: all 0.2s ease;
         }
 
-        .difficulty-badge {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            font-weight: 700;
-            padding: 2px 8px;
-            border-radius: 4px;
-            letter-spacing: 0.05em;
-        }
-
-        .difficulty-badge.beginner {
-            background: rgba(16, 185, 129, 0.1);
-            color: var(--success);
-            border: 1px solid rgba(16, 185, 129, 0.2);
-        }
-
-        .difficulty-badge.intermediate {
-            background: rgba(6, 182, 212, 0.1);
-            color: var(--accent);
-            border: 1px solid rgba(6, 182, 212, 0.2);
-        }
-
-        .difficulty-badge.advanced {
-            background: rgba(168, 85, 247, 0.1);
-            color: var(--secondary);
-            border: 1px solid rgba(168, 85, 247, 0.2);
-        }
-
-        .read-time {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-        }
-
-        .article-card h4 {
-            font-size: 1.15rem;
-            color: #ffffff;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .article-card p {
-            color: var(--text-secondary);
-            font-size: 0.925rem;
-            margin-bottom: 1rem;
-            line-height: 1.5;
-        }
-
-        .article-link {
-            font-size: 0.9rem;
-            font-weight: 600;
+        /* Custom MathWorld-Style List Icon */
+        .directory-icon {
+            color: var(--primary);
+            font-size: 0.8rem;
             display: inline-flex;
             align-items: center;
-            gap: 4px;
-            color: var(--primary);
+            justify-content: center;
+            opacity: 0.75;
         }
 
-        .article-link span {
-            transition: transform 0.2s ease;
+        .directory-link {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
-        .article-link:hover span {
-            transform: translateX(4px);
+        .directory-link:hover {
+            color: #ffffff;
+            text-decoration: underline;
         }
 
+        .directory-item:hover .directory-icon {
+            color: var(--accent);
+            opacity: 1;
+            transform: translateX(2px);
+        }
+
+        /* Inline CTAs and Widgets */
         .inline-banner {
             background: linear-gradient(90deg, rgba(99, 102, 241, 0.08) 0%, rgba(168, 85, 247, 0.08) 100%);
             border: 1px solid rgba(168, 85, 247, 0.15);
@@ -401,7 +374,14 @@
         </div>
     </header>
 
-    <main class="container" style="padding-top: 4rem;">
+    <main class="container" style="padding-top: 2rem;">
+        
+        <!-- Breadcrumb Trail (MathWorld Style) -->
+        <nav aria-label="Breadcrumb" class="breadcrumbs" style="margin-bottom: 2rem; font-size: 0.9rem; color: var(--text-secondary);">
+            <a href="../index.html" style="color: var(--primary); text-decoration: none;">Home</a> &gt; 
+            <span style="color: var(--text-primary);">Wiki</span>
+        </nav>
+
         <div class="page-layout">
             
             <!-- LEFT COLUMN: SIDEBAR SITE NAVIGATION -->
@@ -424,15 +404,15 @@
                 </ul>
             </aside>
 
-            <!-- MIDDLE COLUMN: MAJOR SEO PILLARS & CONTENT -->
+            <!-- MIDDLE COLUMN: HIGH-DENSITY GRID DIRECTORY -->
             <div class="main-content">
                 
                 <!-- PILLAR INTRODUCTION -->
                 <div class="pillar-header">
-                    <span class="pillar-badge">Topical Hub &amp; Study Portal</span>
-                    <h1 style="font-size: 2.6rem; font-weight: 800; color: white; margin-bottom: 0.5rem;">Journeyman Plumber Exam Prep &amp; Trade Knowledge</h1>
+                    <span class="pillar-badge">Reference Directory &amp; Silo Map</span>
+                    <h1 style="font-size: 2.6rem; font-weight: 800; color: white; margin-bottom: 0.5rem;">Plumbing License Encyclopedia</h1>
                     <p class="pillar-desc">
-                        Welcome to the ultimate technical resource for aspiring journeyman plumbers. This structured, search-optimized guide mapping local codes (IPC/UPC), core arithmetic, blueprint configurations, and actual licensing test strategies is engineered to move you from field apprentice to credentialed industry expert.
+                        A high-density search index and study guide for trade certification candidates. Click on any topic below to open code rules, arithmetic examples, and blueprint interpretations.
                     </p>
                     <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.75rem;">
                         Curated by John Masterson, Principal Trade Compliance Advisor. Fact Checked and GSC verified.
@@ -440,75 +420,29 @@
                 </div>
 
                 <!-- ================= CATEGORY 1: PLUMBING MATH ================= -->
-                <section id="math-pillar" style="margin-bottom: 3rem;">
-                    <div class="pillar-header">
-                        <span class="pillar-badge">Category 01</span>
-                        <h2 style="font-size: 1.8rem; color: white; font-weight: 700;">Plumbing Math &amp; Trade Calculations</h2>
-                        <p class="pillar-desc">
-                            The backbone of licensing testing. You cannot pass a journeyman board exam without masterfully manipulating fractions, calculating liquid volume pressure, and sketching offset triangles.
-                        </p>
-                    </div>
-
-                    <!-- Sub-category 1: Basic Calculations -->
-                    <div class="sub-category-block">
-                        <h3>Basic Arithmetic &amp; Piping Fractions</h3>
-                        <div class="article-card-grid">
-                            <article class="article-card">
-                                <div class="article-meta">
-                                    <span class="difficulty-badge beginner">Beginner</span>
-                                    <span class="read-time">6 Min Read</span>
-                                </div>
-                                <h4>Mastering Fractions and Decimals in Plumbing Calculations</h4>
-                                <p>
-                                    A practical guide detailing how to read fitting fractions and convert raw measurements on a standard tape measure. Master common denominators required to calculate fitment spreads without a calculator.
-                                </p>
-                                <a href="plumbing/fractions-decimals-basics/index.html" class="article-link">
-                                    Read Article <span>&rarr;</span>
-                                </a>
-                            </article>
+                <div id="math-pillar" class="directory-container">
+                    <h2 class="directory-category-title">
+                        Plumbing Math &amp; Trade Calculations <span class="count-badge">4 Articles</span>
+                    </h2>
+                    <div class="directory-grid">
+                        <div class="directory-item">
+                            <span class="directory-icon">&#9656;</span>
+                            <a href="plumbing/fractions-decimals-basics/index.html" class="directory-link">Fractions &amp; Decimals (Basics)</a>
+                        </div>
+                        <div class="directory-item">
+                            <span class="directory-icon">&#9656;</span>
+                            <a href="plumbing/pipe-grade-slope-fall/index.html" class="directory-link">Pipe Grade, Slope &amp; Fall Rates</a>
+                        </div>
+                        <div class="directory-item">
+                            <span class="directory-icon">&#9656;</span>
+                            <a href="plumbing/45-degree-rolling-offsets/index.html" class="directory-link">45-Degree Rolling Offsets</a>
+                        </div>
+                        <div class="directory-item">
+                            <span class="directory-icon">&#9656;</span>
+                            <a href="plumbing-aptitude/how-to-pass-plumbing-aptitude-test/index.html" class="directory-link">Plumbing Apprentice Aptitude Math</a>
                         </div>
                     </div>
-
-                    <!-- Sub-category 2: Intermediate Calculations -->
-                    <div class="sub-category-block">
-                        <h3>Slope, Drainage Grade &amp; Fall Rates</h3>
-                        <div class="article-card-grid">
-                            <article class="article-card">
-                                <div class="article-meta">
-                                    <span class="difficulty-badge intermediate">Intermediate</span>
-                                    <span class="read-time">8 Min Read</span>
-                                </div>
-                                <h4>Calculating Pipe Grade, Slope, and Fall Rates</h4>
-                                <p>
-                                    Gravity-drainage systems require precision. Learn how to calculate uniform fall rates using standard grade ratios (1/8", 1/4", and 1/2" per foot) to comply with plumbing codes and prevent blockages.
-                                </p>
-                                <a href="plumbing/pipe-grade-slope-fall/index.html" class="article-link">
-                                    Read Article <span>&rarr;</span>
-                                </a>
-                            </article>
-                        </div>
-                    </div>
-
-                    <!-- Sub-category 3: Advanced Calculations -->
-                    <div class="sub-category-block">
-                        <h3>Advanced Offsets &amp; Triangulation</h3>
-                        <div class="article-card-grid">
-                            <article class="article-card">
-                                <div class="article-meta">
-                                    <span class="difficulty-badge advanced">Advanced</span>
-                                    <span class="read-time">12 Min Read</span>
-                                </div>
-                                <h4>Mastering 45-Degree Rolling Offsets and Triangulation</h4>
-                                <p>
-                                    Solve complex runs across multiple dimensions. This tutorial covers the exact mathematical formulas, Pythagorean theorem applications, and dry-run exercises for calculating <a href="plumbing/45-degree-rolling-offsets/index.html" style="color:var(--accent); font-weight:600;">mastering 45-degree rolling offsets</a> using the standard 1.414 multiplier.
-                                </p>
-                                <a href="plumbing/45-degree-rolling-offsets/index.html" class="article-link">
-                                    Read Article <span>&rarr;</span>
-                                </a>
-                            </article>
-                        </div>
-                    </div>
-                </section>
+                </div>
 
                 <!-- INLINE CTA BANNER: PLUMBING MATH MASTERCLASS -->
                 <div class="inline-banner">
@@ -522,217 +456,67 @@
                 </div>
 
                 <!-- ================= CATEGORY 2: CODES & SAFETY ================= -->
-                <section id="code-pillar" style="margin-bottom: 3rem;">
-                    <div class="pillar-header">
-                        <span class="pillar-badge">Category 02</span>
-                        <h2 style="font-size: 1.8rem; color: white; font-weight: 700;">Plumbing Codes &amp; Safety Standards (IPC &amp; UPC)</h2>
-                        <p class="pillar-desc">
-                            Navigating regional mandates is critical. Board exams directly assess structural rules from the International Plumbing Code (IPC) and Uniform Plumbing Code (UPC), coupled with OSHA site compliance.
-                        </p>
-                    </div>
-
-                    <!-- Sub-category 1: Fixture Clearances -->
-                    <div class="sub-category-block">
-                        <h3>Fixture Clearance &amp; Space Regulations</h3>
-                        <div class="article-card-grid">
-                            <article class="article-card">
-                                <div class="article-meta">
-                                    <span class="difficulty-badge beginner">Beginner</span>
-                                    <span class="read-time">5 Min Read</span>
-                                </div>
-                                <h4>Standard Clearances, Access Openings, and Minimum Fixture Space Requirements</h4>
-                                <p>
-                                    A baseline breakdown of fixture layout mandates. Explains center-line constraints, accessibility thresholds, and standard water closet clearances to ensure absolute compliance on rough-in inspections.
-                                </p>
-                                <a href="plumbing/fixture-clearances-accessibility-rules/index.html" class="article-link">
-                                    Read Article <span>&rarr;</span>
-                                </a>
-                            </article>
+                <div id="code-pillar" class="directory-container">
+                    <h2 class="directory-category-title">
+                        Plumbing Codes &amp; Safety Standards (IPC &amp; UPC) <span class="count-badge">3 Articles</span>
+                    </h2>
+                    <div class="directory-grid">
+                        <div class="directory-item">
+                            <span class="directory-icon">&#9656;</span>
+                            <a href="plumbing/fixture-clearances-accessibility-rules/index.html" class="directory-link">Fixture Clearance &amp; Space Rules</a>
+                        </div>
+                        <div class="directory-item">
+                            <span class="directory-icon">&#9656;</span>
+                            <a href="plumbing/sizing-vent-systems-ipc-upc/index.html" class="directory-link">Sizing Vent Systems (Code Venting)</a>
+                        </div>
+                        <div class="directory-item">
+                            <span class="directory-icon">&#9656;</span>
+                            <a href="plumbing/gas-piping-venting-safety-standards/index.html" class="directory-link">Gas Piping &amp; Safety Compliance</a>
                         </div>
                     </div>
-
-                    <!-- Sub-category 2: Code Venting -->
-                    <div class="sub-category-block">
-                        <h3>Code-Compliant Venting Systems</h3>
-                        <div class="article-card-grid">
-                            <article class="article-card">
-                                <div class="article-meta">
-                                    <span class="difficulty-badge intermediate">Intermediate</span>
-                                    <span class="read-time">9 Min Read</span>
-                                </div>
-                                <h4>Sizing Vent Systems and Code-Compliant Venting Methods</h4>
-                                <p>
-                                    Venting protects trap seals. Master the structural criteria of wet venting, common venting, and circuit venting, plus calculating maximum vent length limitations based on Drainage Fixture Units (DFUs).
-                                </p>
-                                <a href="plumbing/sizing-vent-systems-ipc-upc/index.html" class="article-link">
-                                    Read Article <span>&rarr;</span>
-                                </a>
-                            </article>
-                        </div>
-                    </div>
-
-                    <!-- Sub-category 3: Gas & Hazardous Materials -->
-                    <div class="sub-category-block">
-                        <h3>Gas Piping &amp; Fuel Gas Code Compliance</h3>
-                        <div class="article-card-grid">
-                            <article class="article-card">
-                                <div class="article-meta">
-                                    <span class="difficulty-badge advanced">Advanced</span>
-                                    <span class="read-time">11 Min Read</span>
-                                </div>
-                                <h4>Interpreting Hazardous Materials and Gas Piping Regulations</h4>
-                                <p>
-                                    High-stakes piping code requirements. Review structural standards for pressure testing fuel gas lines, material constraints for natural gas distributions, and OSHA trench safety rules for underground lines.
-                                </p>
-                                <a href="plumbing/gas-piping-venting-safety-standards/index.html" class="article-link">
-                                    Read Article <span>&rarr;</span>
-                                </a>
-                            </article>
-                        </div>
-                    </div>
-                </section>
+                </div>
 
                 <!-- ================= CATEGORY 3: SYSTEMS & BLUEPRINTS ================= -->
-                <section id="systems-pillar" style="margin-bottom: 3rem;">
-                    <div class="pillar-header">
-                        <span class="pillar-badge">Category 03</span>
-                        <h2 style="font-size: 1.8rem; color: white; font-weight: 700;">Plumbing Systems &amp; Blueprints (DWV, Water, Gas)</h2>
-                        <p class="pillar-desc">
-                            Translating engineer drawings to actual pipe runs. You must confidently read structural layouts, sketch isometrics, and size distribution networks.
-                        </p>
-                    </div>
-
-                    <!-- Sub-category 1: Plan Reading -->
-                    <div class="sub-category-block">
-                        <h3>Plan Reading &amp; Isometric Drawing Basics</h3>
-                        <div class="article-card-grid">
-                            <article class="article-card">
-                                <div class="article-meta">
-                                    <span class="difficulty-badge beginner">Beginner</span>
-                                    <span class="read-time">7 Min Read</span>
-                                </div>
-                                <h4>Reading Symbols, Floor Plans, and Architectural Layouts</h4>
-                                <p>
-                                    Learn to decrypt complex legends, architectural notations, line weights, and system abbreviations for DWV, hot water distribution, and natural gas systems on schematic layouts.
-                                </p>
-                                <a href="plumbing/reading-plumbing-blueprints-for-beginners/index.html" class="article-link">
-                                    Read Article <span>&rarr;</span>
-                                </a>
-                            </article>
+                <div id="systems-pillar" class="directory-container">
+                    <h2 class="directory-category-title">
+                        Plumbing Systems &amp; Blueprints (DWV, Water, Gas) <span class="count-badge">3 Articles</span>
+                    </h2>
+                    <div class="directory-grid">
+                        <div class="directory-item">
+                            <span class="directory-icon">&#9656;</span>
+                            <a href="plumbing/reading-plumbing-blueprints-for-beginners/index.html" class="directory-link">Symbols, Floor Plans &amp; Layouts</a>
+                        </div>
+                        <div class="directory-item">
+                            <span class="directory-icon">&#9656;</span>
+                            <a href="plumbing/designing-dwv-isometric-drawings/index.html" class="directory-link">Designing DWV Isometric Drawings</a>
+                        </div>
+                        <div class="directory-item">
+                            <span class="directory-icon">&#9656;</span>
+                            <a href="plumbing/sizing-water-distribution-pipe-systems/index.html" class="directory-link">Sizing Water Distribution Piping</a>
                         </div>
                     </div>
-
-                    <!-- Sub-category 2: DWV Isometrics -->
-                    <div class="sub-category-block">
-                        <h3>DWV Isometric Drafting</h3>
-                        <div class="article-card-grid">
-                            <article class="article-card">
-                                <div class="article-meta">
-                                    <span class="difficulty-badge intermediate">Intermediate</span>
-                                    <span class="read-time">10 Min Read</span>
-                                </div>
-                                <h4>Designing Drain, Waste, and Vent (DWV) Isometric Views</h4>
-                                <p>
-                                    Step-by-step drafting principles. Learn how to convert 2D plan views into code-compliant, 3D isometric piping sketches, keeping angular ratios consistent for state examiners.
-                                </p>
-                                <a href="plumbing/designing-dwv-isometric-drawings/index.html" class="article-link">
-                                    Read Article <span>&rarr;</span>
-                                </a>
-                            </article>
-                        </div>
-                    </div>
-
-                    <!-- Sub-category 3: Water Distribution Sizing -->
-                    <div class="sub-category-block">
-                        <h3>Commercial Water Supply Sizing</h3>
-                        <div class="article-card-grid">
-                            <article class="article-card">
-                                <div class="article-meta">
-                                    <span class="difficulty-badge advanced">Advanced</span>
-                                    <span class="read-time">14 Min Read</span>
-                                </div>
-                                <h4>Sizing Water Distribution Piping Systems</h4>
-                                <p>
-                                    Review calculations based on Hunter's Curve. Convert fixture counts to Water Supply Fixture Units (WSFUs), account for friction loss, static pressure limits, and sizing pipe trunks accurately.
-                                </p>
-                                <a href="plumbing/sizing-water-distribution-pipe-systems/index.html" class="article-link">
-                                    Read Article <span>&rarr;</span>
-                                </a>
-                            </article>
-                        </div>
-                    </div>
-                </section>
+                </div>
 
                 <!-- ================= CATEGORY 4: EXAM PREP ================= -->
-                <section id="prep-pillar" style="margin-bottom: 3rem;">
-                    <div class="pillar-header">
-                        <span class="pillar-badge">Category 04</span>
-                        <h2 style="font-size: 1.8rem; color: white; font-weight: 700;">Journeyman Exam Prep &amp; Testing Strategies</h2>
-                        <p class="pillar-desc">
-                            Passing is about strategy as much as trade skill. Discover how candidates streamline codebook lookup speed, dissect scenario questions, and handle exam-day stress.
-                        </p>
-                    </div>
-
-                    <!-- Sub-category 1: Registration & Format -->
-                    <div class="sub-category-block">
-                        <h3>License Requirements &amp; Registration</h3>
-                        <div class="article-card-grid">
-                            <article class="article-card">
-                                <div class="article-meta">
-                                    <span class="difficulty-badge beginner">Beginner</span>
-                                    <span class="read-time">6 Min Read</span>
-                                </div>
-                                <h4>Journeyman Exam Format, Requirements, and Application Paths</h4>
-                                <p>
-                                    Demystify the registration process. Review documentation needs, required field-apprentice hours, exam time limits, pass percentages, and candidate information bulletins.
-                                </p>
-                                <a href="plumbing/journeyman-exam-requirements-and-format/index.html" class="article-link">
-                                    Read Article <span>&rarr;</span>
-                                </a>
-                            </article>
+                <div id="prep-pillar" class="directory-container">
+                    <h2 class="directory-category-title">
+                        Journeyman Exam Prep &amp; Testing Strategies <span class="count-badge">3 Articles</span>
+                    </h2>
+                    <div class="directory-grid">
+                        <div class="directory-item">
+                            <span class="directory-icon">&#9656;</span>
+                            <a href="plumbing/journeyman-exam-requirements-and-format/index.html" class="directory-link">Exam Formats, Hours &amp; Registration</a>
+                        </div>
+                        <div class="directory-item">
+                            <span class="directory-icon">&#9656;</span>
+                            <a href="plumbing/how-to-tabs-highlight-codebooks-for-exam-speed/index.html" class="directory-link">Codebook Highlighting &amp; Tabbing</a>
+                        </div>
+                        <div class="directory-item">
+                            <span class="directory-icon">&#9656;</span>
+                            <a href="plumbing/deconstructing-journeyman-scenario-based-exam-questions/index.html" class="directory-link">Analyzing Scenario Questions</a>
                         </div>
                     </div>
-
-                    <!-- Sub-category 2: Codebook Tabbing -->
-                    <div class="sub-category-block">
-                        <h3>Codebook Navigating &amp; Tabbing Hacks</h3>
-                        <div class="article-card-grid">
-                            <article class="article-card">
-                                <div class="article-meta">
-                                    <span class="difficulty-badge intermediate">Intermediate</span>
-                                    <span class="read-time">7 Min Read</span>
-                                </div>
-                                <h4>Navigating the Codebook Quickly: Highlighting and Tabbing Hacks</h4>
-                                <p>
-                                    Your codebook is your primary weapon. Learn high-efficiency color coding systems (Yellow for sizing tables, Green for definitions, Red for exceptions) to find references in seconds.
-                                </p>
-                                <a href="plumbing/how-to-tabs-highlight-codebooks-for-exam-speed/index.html" class="article-link">
-                                    Read Article <span>&rarr;</span>
-                                </a>
-                            </article>
-                        </div>
-                    </div>
-
-                    <!-- Sub-category 3: Scenario Analysis -->
-                    <div class="sub-category-block">
-                        <h3>Exam Day Scenarios &amp; Deconstruction</h3>
-                        <div class="article-card-grid">
-                            <article class="article-card">
-                                <div class="article-meta">
-                                    <span class="difficulty-badge advanced">Advanced</span>
-                                    <span class="read-time">13 Min Read</span>
-                                </div>
-                                <h4>Analyzing Complex Scenario Questions and Math Deconstruction</h4>
-                                <p>
-                                    Dissect multi-step questions. Master parsing complex scenario descriptions, isolating the target query, and avoiding common distractor options planted by licensing providers.
-                                </p>
-                                <a href="plumbing/deconstructing-journeyman-scenario-based-exam-questions/index.html" class="article-link">
-                                    Read Article <span>&rarr;</span>
-                                </a>
-                            </article>
-                        </div>
-                    </div>
-                </section>
+                </div>
 
                 <!-- CITATIONS SECTION -->
                 <section id="citations" class="citations-section">
