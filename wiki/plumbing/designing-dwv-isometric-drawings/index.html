@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn the fundamentals of drafting isometric piping diagrams and how to layout DWV drawings for exam prep.">
+    <title>Designing Drain, Waste, and Vent (DWV) Isometric Views | ExamPrep Portal</title>
+    <link rel="stylesheet" href="../../../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- E-E-A-T Author Schema -->
+    <script type="application/ld-json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Designing Drain, Waste, and Vent (DWV) Isometric Views",
+      "author": {
+        "@type": "Person",
+        "name": "John Masterson"
+      },
+      "datePublished": "2026-08-13"
+    }
+    </script>
+
+    <link rel="canonical" href="https://eduprosuite-org.github.io/study/wiki/plumbing/designing-dwv-isometric-drawings/index.html">
+
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eduprosuite-org.github.io/study/wiki/plumbing/designing-dwv-isometric-drawings/index.html">
+    <meta property="og:title" content="Designing Drain, Waste, and Vent (DWV) Isometric Views">
+    <meta property="og:description" content="Learn the fundamentals of drafting isometric piping diagrams and how to layout DWV drawings for exam prep.">
+    <meta property="og:image" content="https://eduprosuite-org.github.io/study/og-banner.jpg">
+    <meta property="og:site_name" content="ExamPrep Portal">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Designing Drain, Waste, and Vent (DWV) Isometric Views">
+    <meta name="twitter:description" content="Learn the fundamentals of drafting isometric piping diagrams and how to layout DWV drawings for exam prep.">
+    <meta name="twitter:image" content="https://eduprosuite-org.github.io/study/og-banner.jpg">
+
+    <style>
+        .article-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: var(--text-primary);
+        }
+        .article-meta-badge {
+            background: rgba(16, 185, 129, 0.1); 
+            color: #34d399; 
+            padding: 0.5rem 1rem; 
+            border-radius: 50px; 
+            font-size: 0.85rem; 
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+        .promo-widget {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+            border: 1px solid rgba(168, 85, 247, 0.15);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .promo-badge {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: #ffffff;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 10px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.8rem;
+        }
+        .promo-image-container {
+            width: 100%;
+            height: 120px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            border: 1px solid var(--bg-card-border);
+            background: rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .promo-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .promo-widget:hover .promo-image {
+            transform: scale(1.05);
+        }
+        .promo-widget h4 {
+            font-size: 1.15rem;
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .promo-widget p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+        .btn-cta-secondary {
+            display: block;
+            width: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 9px 15px;
+            border-radius: 8px;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 10px rgba(99, 102, 241, 0.2);
+        }
+        .btn-cta-secondary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 14px rgba(99, 102, 241, 0.4);
+            color: #ffffff;
+        }
+        .btn-cta {
+            display: block;
+            width: 100%;
+            background: #ffffff;
+            color: #080c14;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 9px 15px;
+            border-radius: 8px;
+            transition: all 0.25s ease;
+            border: 1px solid #ffffff;
+        }
+        .btn-cta:hover {
+            background: transparent;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="../../../index.html" style="text-decoration:none;color:inherit;">ExamPrep<span>Portal</span></a>
+            </div>
+            <nav aria-label="Main Navigation" class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li class="has-dropdown">
+                        <a href="../../../exams/plumbing-license-prep/index.html">Plumbing Exams &#9660;</a>
+                        <ul class="dropdown">
+                            <li><a href="../../../exams/plumbing-license-prep/journeyman/index.html">Journeyman Exams</a></li>
+                            <li><a href="../../../exams/plumbing-license-prep/master-contractor/index.html">Master Contractor</a></li>
+                            <li><a href="../../../exams/plumbing-license-prep/tradesman-other/index.html">Tradesman &amp; Inspector</a></li>
+                            <li><a href="../../../exams/plumbing-license-prep/general/index.html">General &amp; Free Prep</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="../../../exams/plumbing-license-prep/journeyman/index.html">By State &#9660;</a>
+                        <ul class="dropdown">
+                            <li><a href="../../../exams/plumbing-license-prep/journeyman/texas-prep/index.html">Texas</a></li>
+                            <li><a href="../../../exams/plumbing-license-prep/journeyman/va-prep/index.html">Virginia</a></li>
+                            <li><a href="../../../exams/plumbing-license-prep/journeyman/kansas-prep/index.html">Kansas</a></li>
+                            <li><a href="../../../exams/plumbing-license-prep/journeyman/ma-prep/index.html">Massachusetts</a></li>
+                            <li><a href="../../../exams/plumbing-license-prep/journeyman/wssc-prep/index.html">WSSC (Maryland/DC)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../wiki/index.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 2rem;">
+        
+        <!-- Breadcrumbs -->
+        <nav aria-label="Breadcrumb" class="breadcrumbs" style="margin-bottom: 2rem; font-size: 0.9rem; color: var(--text-secondary);">
+            <a href="../../../index.html" style="color: var(--primary); text-decoration: none;">Home</a> &gt; 
+            <a href="../../index.html" style="color: var(--primary); text-decoration: none;">Wiki</a> &gt; 
+            <span style="text-transform: capitalize; color: var(--primary); font-weight: 500;">Plumbing Systems</span> &gt; 
+            <span style="color: var(--text-primary);">Designing DWV Isometric Drawings</span>
+        </nav>
+
+        <div class="page-layout">
+            
+            <!-- LEFT COLUMN: SIDEBAR SITE NAVIGATION -->
+            <aside class="sidebar-left glass-card">
+                <h3>Exam Categories</h3>
+                <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.5rem;">
+                    <li><a href="../../../exams/plumbing-license-prep/journeyman/index.html" style="color:var(--text-secondary); font-size:0.9rem;">Journeyman Exams</a></li>
+                    <li><a href="../../../exams/plumbing-license-prep/master-contractor/index.html" style="color:var(--text-secondary); font-size:0.9rem;">Master Exams</a></li>
+                    <li><a href="../../../exams/plumbing-license-prep/tradesman-other/index.html" style="color:var(--text-secondary); font-size:0.9rem;">Tradesman Exams</a></li>
+                    <li><a href="../../../exams/plumbing-aptitude-test/index.html" style="color:var(--text-secondary); font-size:0.9rem;">Plumbing Aptitude</a></li>
+                </ul>
+                <h3 style="margin-top: 2rem;">Popular Products</h3>
+                <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.5rem;">
+                    <li><a href="../../../exams/plumbing-license-prep/journeyman/texas-prep/index.html" style="color:var(--text-secondary); font-size:0.9rem;">Texas Journeyman</a></li>
+                    <li><a href="../../../exams/plumbing-license-prep/journeyman/va-prep/index.html" style="color:var(--text-secondary); font-size:0.9rem;">Virginia Journeyman</a></li>
+                    <li><a href="../../../exams/plumbing-license-prep/master-contractor/master-prep/index.html" style="color:var(--text-secondary); font-size:0.9rem;">Master Plumber</a></li>
+                    <li><a href="../../../exams/plumbing-license-prep/general/code-cert-prep/index.html" style="color:var(--text-secondary); font-size:0.9rem;">Code Certification</a></li>
+                </ul>
+            </aside>
+
+            <!-- MIDDLE COLUMN: ARTICLE CONTENT -->
+            <div class="main-content">
+                <article class="glass-card article-content" style="padding: 2.5rem;">
+                    <h1 style="font-size: 2.5rem; font-weight: 800; color: white; margin-bottom: 0.5rem;">Designing DWV Isometric Drawings</h1>
+                    
+                    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 2rem; border-bottom: 1px solid var(--bg-card-border); padding-bottom: 1.5rem; flex-wrap: wrap;">
+                        <div style="background: rgba(255,255,255,0.03); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem; color: var(--text-secondary);">
+                             Written by <strong style="color: white;">John Masterson</strong>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.03); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem; color: var(--text-secondary);">
+                             Published: 2026-08-13
+                        </div>
+                        <span class="article-meta-badge">Fact Checked</span>
+                    </div>
+
+                    <p class="lead" style="font-size: 1.15rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+    Isometric drawings represent three-dimensional piping runs on a two-dimensional surface. Most master and journeyman exams require you to interpret or draw an isometric routing map to prove you can layout venting configurations.
+</p>
+
+<h2 style="color: white; margin: 1.5rem 0 1rem; font-size: 1.5rem;">1. Isometric Drawing Rules</h2>
+<p style="margin-bottom: 1rem;">
+    Isometric drawing uses specific angles to represent depth and elevation:
+</p>
+<ul style="margin: 0 0 1.5rem 1.5rem; color: var(--text-secondary); line-height: 1.8;">
+    <li><strong>Vertical Lines:</strong> Run straight up and down, representing vertical stack piping.</li>
+    <li><strong>30-Degree Lines:</strong> Run at a 30-degree angle from the horizontal to represent horizontal runs going north/south or east/west.</li>
+    <li><strong>No Horizontal Lines:</strong> True isometrics contain absolutely no flat horizontal lines.</li>
+</ul>
+
+<h2 style="color: white; margin: 1.5rem 0 1rem; font-size: 1.5rem;">2. Labeling Fixtures and Vents</h2>
+<p style="margin-bottom: 1rem;">
+    When drafting isometrics for exam grading, you must explicitly mark:
+</p>
+<ol style="margin: 0 0 1.5rem 1.5rem; color: var(--text-secondary); line-height: 1.8;">
+    <li>The location of fixture traps and trap arms.</li>
+    <li>Where vents tie into the drainage system (vent connections).</li>
+    <li>Directions of flow (indicated by arrows).</li>
+    <li>Pipe sizes and pipe sizing transitions.</li>
+</ol>
+
+<h2 style="color: white; margin: 1.5rem 0 1rem; font-size: 1.5rem;">3. Sizing Vents on Isometrics</h2>
+<p style="margin-bottom: 1rem;">
+    You must size each section of waste and vent lines on the isometric drawing using the DFU tables. Make sure that your vent stack terminals extend through the roof by at least **6 inches** (or more depending on frost closure rules, which require 10-inch extensions in cold regions).
+</p>
+                </article>
+            </div>
+
+            <!-- RIGHT COLUMN: SIDEBAR PREMIUM PRODUCTS -->
+            <aside class="sidebar-right glass-card">
+                <div class="promo-widget">
+                    <span class="promo-badge">Best Seller</span>
+                    <div class="promo-image-container">
+                        <img class="promo-image" src="https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=300&q=80" alt="Journeyman Plumber Exam Prep Course Bundle - Practice Tests and Math Workbooks">
+                    </div>
+                    <h4>Journeyman Plumber Prep Bundle</h4>
+                    <p>Get lifetime access to interactive simulators, study templates, and verified mock examinations.</p>
+                    <a href="../../../courses/journeyman-plumber-prep-bundle" class="btn-cta-secondary">Get Prep Bundle Now</a>
+                </div>
+
+                <div class="promo-widget" style="border-color: rgba(6, 182, 212, 0.25);">
+                    <span class="promo-badge" style="background: linear-gradient(90deg, var(--accent), var(--primary));">Specialized Course</span>
+                    <div class="promo-image-container">
+                        <img class="promo-image" src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=300&q=80" alt="Plumbing Math Calculations Online Course Module Banner">
+                    </div>
+                    <h4>Plumbing Math Masterclass</h4>
+                    <p>Struggling with rolling offsets, slope gradients, and pipe sizing equations? Master calculations here.</p>
+                    <a href="../../../courses/plumbing-math-masterclass" class="btn-cta">Access Math Syllabus</a>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- COMPULSORY EXPLORE LICENSING TAG SECTION -->
+    <section class="niche-tags-container" style="max-width: 1200px; margin: 2rem auto; padding: 0 1.5rem;">
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 2rem;">
+            <h3 style="font-size: 1.15rem; color: white; font-weight: 700; margin: 0 0 1.2rem 0;">Explore Licensing &amp; Compliance Resources</h3>
+            <div class="niche-tags-list">
+                <a href="../../../exams/ca-real-estate-math/index.html" class="niche-tag-link">CA Real Estate Math Prep</a>
+                <a href="../../../exams/ca-real-estate-math/practice-test/index.html" class="niche-tag-link">Real Estate Practice Simulator</a>
+                <a href="../../../exams/ca-real-estate-math/study-guide/index.html" class="niche-tag-link">Real Estate Formulas Study Guide</a>
+                <a href="../../../exams/vic-lea-electrician-prep/index.html" class="niche-tag-link">Victoria LEA Electrician Prep</a>
+                <a href="../../../exams/vic-lea-electrician-prep/practice-test/index.html" class="niche-tag-link">LEA Practice Quiz LET/LEP</a>
+                <a href="../../../exams/vic-lea-electrician-prep/study-guide/index.html" class="niche-tag-link">AS NZS 3000 Study Guide</a>
+                <a href="../../../exams/sarasota-adu-permit-checklist/index.html" class="niche-tag-link">Sarasota ADU Permit Guide</a>
+                <a href="../../../exams/sarasota-adu-permit-checklist/zoning-guide/index.html" class="niche-tag-link">Sarasota Zoning Requirements</a>
+                <a href="../../../exams/gwinnett-home-occupation-checklist/index.html" class="niche-tag-link">Gwinnett Home Occupation</a>
+                <a href="../../../exams/gwinnett-home-occupation-checklist/zoning-requirements/index.html" class="niche-tag-link">Gwinnett UDO Zoning Rules</a>
+                <a href="../../../exams/douglas-co-residential-building-checklist/index.html" class="niche-tag-link">Douglas County Building Checklist</a>
+                <a href="../../../exams/douglas-co-residential-building-checklist/building-codes/index.html" class="niche-tag-link">Douglas County Building Codes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Semantic Footer -->
+    <footer>
+        <div class="footer-content" style="flex-direction: column; gap: 1.5rem; text-align: center; padding: 3rem 0; background: rgba(8, 12, 20, 0.85); border-top: 1px solid var(--bg-card-border); margin-top: 4rem;">
+            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem;">
+                <a href="../../../index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
+                <a href="../../../exams/plumbing-license-prep/journeyman/index.html" style="color: var(--text-secondary); text-decoration: none;">Journeyman Exams</a>
+                <a href="../../../exams/plumbing-license-prep/master-contractor/index.html" style="color: var(--text-secondary); text-decoration: none;">Master Exams</a>
+                <a href="../../../exams/plumbing-license-prep/tradesman-other/index.html" style="color: var(--text-secondary); text-decoration: none;">Tradesman Exams</a>
+                <a href="../../../wiki/index.html" style="color: var(--text-secondary); text-decoration: none;">Blog</a>
+            </div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">&copy; 2026 ExamPrep Portal. All rights reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

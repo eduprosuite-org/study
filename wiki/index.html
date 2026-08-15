@@ -3,37 +3,304 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the Plumbing License Encyclopedia. Access 118 trade-specific guides, code regulations, mathematical formulas, and exam definitions organised by category and alphabetical index.">
-    <title>Plumbing License Encyclopedia | ExamPrep Portal</title>
+    <meta name="description" content="Explore the unified Plumbing License Reference Directory. Access 124 trade-specific guides, code regulations, mathematical offsets, DWV designs, and testing definitions in a single high-density directory.">
+    <title>Plumbing Reference Directory (A-Z Index) | ExamPrep Portal</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://eduprosuite-org.github.io/study/wiki/">
+
+    <!-- Social Preview Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://eduprosuite-org.github.io/study/wiki/index.html">
-    <meta property="og:title" content="Plumbing License Encyclopedia | ExamPrep Portal">
-    <meta property="og:description" content="Explore 118 plumbing guides, code rules, math formulas, and exam definitions organised by category and A-Z glossary.">
+    <meta property="og:title" content="Plumbing Reference Directory (A-Z Index) | ExamPrep Portal">
+    <meta property="og:description" content="Access a single unified, high-density directory containing all 124 plumbing mathematical formulas, clearances, blueprints, and licensing exam definitions.">
     <meta property="og:image" content="https://eduprosuite-org.github.io/study/og-banner.jpg">
+    <meta property="og:site_name" content="ExamPrep Portal">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Plumbing Reference Directory (A-Z Index) | ExamPrep Portal">
+    <meta name="twitter:description" content="Access a single unified, high-density directory containing all 124 plumbing mathematical formulas, clearances, blueprints, and licensing exam definitions.">
+    <meta name="twitter:image" content="https://eduprosuite-org.github.io/study/og-banner.jpg">
+
     <style>
-        .btn-cta-secondary { display:block; width:100%; background:linear-gradient(90deg,var(--primary),var(--secondary)); color:#fff; font-weight:700; font-size:0.9rem; text-align:center; padding:9px 15px; border-radius:8px; transition:all 0.25s; text-decoration:none; }
-        .btn-cta-secondary:hover { transform:translateY(-1px); color:#fff; }
-        .btn-cta { display:block; width:100%; background:#fff; color:#080c14; font-weight:700; font-size:0.9rem; text-align:center; padding:9px 15px; border-radius:8px; transition:all 0.25s; border:1px solid #fff; text-decoration:none; }
-        .btn-cta:hover { background:transparent; color:#fff; }
-        .promo-widget { background:linear-gradient(135deg,rgba(99,102,241,0.1),rgba(168,85,247,0.1)); border:1px solid rgba(168,85,247,0.15); border-radius:16px; padding:1.5rem; margin-bottom:1.5rem; text-align:center; }
-        .promo-image { width:100%; height:120px; object-fit:cover; border-radius:8px; margin-bottom:1rem; }
+        .pillar-header {
+            margin-bottom: 2.5rem;
+            position: relative;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--bg-card-border);
+        }
+
+        .pillar-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.5rem;
+        }
+
+        .pillar-desc {
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        /* Alphabetical Navigation Bar styling */
+        .az-nav-bar {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+            justify-content: center;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--bg-card-border);
+            border-radius: 8px;
+        }
+
+        .az-nav-link {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1rem;
+            width: 32px;
+            height: 32px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+
+        .az-nav-link:hover {
+            background: rgba(99, 102, 241, 0.15);
+            color: #ffffff;
+        }
+
+        .directory-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 900px) {
+            .directory-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .directory-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .directory-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .directory-icon {
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .directory-link {
+            font-family: var(--font-body);
+            font-weight: 500;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Sidebar Products styling */
+        .promo-widget {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+            border: 1px solid rgba(168, 85, 247, 0.15);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .promo-badge {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: #ffffff;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 10px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.8rem;
+        }
+
+        .promo-image-container {
+            width: 100%;
+            height: 120px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            border: 1px solid var(--bg-card-border);
+            background: rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .promo-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .promo-widget:hover .promo-image {
+            transform: scale(1.05);
+        }
+
+        .promo-widget h4 {
+            font-size: 1.15rem;
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .promo-widget p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .btn-cta-secondary {
+            display: block;
+            width: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 9px 15px;
+            border-radius: 8px;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 10px rgba(99, 102, 241, 0.2);
+            text-decoration: none;
+        }
+
+        .btn-cta-secondary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 14px rgba(99, 102, 241, 0.4);
+            color: #ffffff;
+        }
+
+        .btn-cta {
+            display: block;
+            width: 100%;
+            background: #ffffff;
+            color: #080c14;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 9px 15px;
+            border-radius: 8px;
+            transition: all 0.25s ease;
+            border: 1px solid #ffffff;
+            text-decoration: none;
+        }
+
+        .btn-cta:hover {
+            background: transparent;
+            color: #ffffff;
+        }
+
+        .citations-section {
+            margin-top: 3.5rem;
+            background: rgba(255, 255, 255, 0.01);
+            border-top: 1px solid var(--bg-card-border);
+            padding-top: 2.5rem;
+        }
+
+        .citations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .citation-col h5 {
+            font-size: 0.9rem;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+
+        .citation-col p {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+        }
+
+        .citation-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .citation-links li {
+            margin-bottom: 0.4rem;
+            font-size: 0.8rem;
+        }
+
+        .citation-links a {
+            color: var(--text-secondary);
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            text-decoration: none;
+        }
+
+        .citation-links a:hover {
+            color: var(--accent);
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="nav-container">
-            <div class="logo"><a href="../index.html" style="text-decoration:none;color:inherit;">ExamPrep<span>Portal</span></a></div>
+            <div class="logo">
+                <a href="../index.html" style="text-decoration:none;color:inherit;">ExamPrep<span>Portal</span></a>
+            </div>
             <nav aria-label="Main Navigation" class="main-nav">
                 <ul class="nav-list">
                     <li><a href="../index.html">Home</a></li>
-                    <li class="has-dropdown"><a href="../exams/plumbing-license-prep/index.html">Plumbing Exams &#9660;</a>
+                    <li class="has-dropdown">
+                        <a href="../exams/plumbing-license-prep/index.html">Plumbing Exams &#9660;</a>
                         <ul class="dropdown">
                             <li><a href="../exams/plumbing-license-prep/journeyman/index.html">Journeyman Exams</a></li>
                             <li><a href="../exams/plumbing-license-prep/master-contractor/index.html">Master Contractor</a></li>
                             <li><a href="../exams/plumbing-license-prep/tradesman-other/index.html">Tradesman &amp; Inspector</a></li>
+                            <li><a href="../exams/plumbing-license-prep/general/index.html">General &amp; Free Prep</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="../exams/plumbing-license-prep/journeyman/index.html">By State &#9660;</a>
+                        <ul class="dropdown">
+                            <li><a href="../exams/plumbing-license-prep/journeyman/texas-prep/index.html">Texas</a></li>
+                            <li><a href="../exams/plumbing-license-prep/journeyman/va-prep/index.html">Virginia</a></li>
+                            <li><a href="../exams/plumbing-license-prep/journeyman/kansas-prep/index.html">Kansas</a></li>
+                            <li><a href="../exams/plumbing-license-prep/journeyman/ma-prep/index.html">Massachusetts</a></li>
+                            <li><a href="../exams/plumbing-license-prep/journeyman/wssc-prep/index.html">WSSC (Maryland/DC)</a></li>
                         </ul>
                     </li>
                     <li><a href="../wiki/index.html">Blog</a></li>
@@ -42,23 +309,44 @@
         </div>
     </header>
 
-    <main class="container" style="padding-top:2rem;">
-        <nav aria-label="Breadcrumb" style="margin-bottom:2rem; font-size:0.9rem; color:var(--text-secondary);">
-            <a href="../index.html" style="color:var(--primary); text-decoration:none;">Home</a> &gt;
-            <span style="color:var(--text-primary);">Wiki</span>
+    <main class="container" style="padding-top: 2rem;">
+        
+        <!-- Breadcrumb Trail -->
+        <nav aria-label="Breadcrumb" class="breadcrumbs" style="margin-bottom: 2rem; font-size: 0.9rem; color: var(--text-secondary);">
+            <a href="../index.html" style="color: var(--primary); text-decoration: none;">Home</a> &gt; 
+            <span style="color: var(--text-primary);">Wiki</span>
         </nav>
 
         <div class="page-layout">
-            <!-- LEFT SIDEBAR -->
+            
+            <!-- LEFT COLUMN: SIDEBAR SITE NAVIGATION -->
             <aside class="sidebar-left glass-card">
-                <h3>Categories</h3>
-                <ul style="list-style:none; padding:0; margin:0 0 1.5rem; display:flex; flex-direction:column; gap:0.5rem;">
-                    <li><a href="#math" style="color:var(--text-secondary); font-size:0.9rem;">ðŸ“ Plumbing Math</a></li>
-                    <li><a href="#codes" style="color:var(--text-secondary); font-size:0.9rem;">ðŸ“‹ Codes &amp; Safety</a></li>
-                    <li><a href="#systems" style="color:var(--text-secondary); font-size:0.9rem;">ðŸ”§ Systems &amp; Blueprints</a></li>
-                    <li><a href="#prep" style="color:var(--text-secondary); font-size:0.9rem;">ðŸŽ“ Journeyman Prep</a></li>
-                    <li><a href="#az-A" style="color:var(--text-secondary); font-size:0.9rem;">ðŸ”¤ A-Z Glossary</a></li>
-                </ul>
+                <h3>Alphabet Index</h3>
+                <div style="display:grid; grid-template-columns:repeat(5, 1fr); gap:6px; margin-bottom:1.5rem;">
+                    <a href="#letter-A" style="color:var(--text-secondary); font-size:0.8rem; text-align:center; padding:3px; background:rgba(255,255,255,0.02); border-radius:4px;">A</a>
+                    <a href="#letter-B" style="color:var(--text-secondary); font-size:0.8rem; text-align:center; padding:3px; background:rgba(255,255,255,0.02); border-radius:4px;">B</a>
+                    <a href="#letter-C" style="color:var(--text-secondary); font-size:0.8rem; text-align:center; padding:3px; background:rgba(255,255,255,0.02); border-radius:4px;">C</a>
+                    <a href="#letter-D" style="color:var(--text-secondary); font-size:0.8rem; text-align:center; padding:3px; background:rgba(255,255,255,0.02); border-radius:4px;">D</a>
+                    <a href="#letter-E" style="color:var(--text-secondary); font-size:0.8rem; text-align:center; padding:3px; background:rgba(255,255,255,0.02); border-radius:4px;">E</a>
+                    <a href="#letter-F" style="color:var(--text-secondary); font-size:0.8rem; text-align:center; padding:3px; background:rgba(255,255,255,0.02); border-radius:4px;">F</a>
+                    <a href="#letter-G" style="color:var(--text-secondary); font-size:0.8rem; text-align:center; padding:3px; background:rgba(255,255,255,0.02); border-radius:4px;">G</a>
+                    <a href="#letter-H" style="color:var(--text-secondary); font-size:0.8rem; text-align:center; padding:3px; background:rgba(255,255,255,0.02); border-radius:4px;">H</a>
+                    <a href="#letter-I" style="color:var(--text-secondary); font-size:0.8rem; text-align:center; padding:3px; background:rgba(255,255,255,0.02); border-radius:4px;">I</a>
+                    <a href="#letter-J" style="color:var(--text-secondary); font-size:0.8rem; text-align:center; padding:3px; background:rgba(255,255,255,0.02); border-radius:4px;">J</a>
+                    <a href="#letter-L" style="color:var(--text-secondary); font-size:0.8rem; text-align:center; padding:3px; background:rgba(255,255,255,0.02); border-radius:4px;">L</a>
+                    <a href="#letter-M" style="color:var(--text-secondary); font-size:0.8rem; text-align:center; padding:3px; background:rgba(255,255,255,0.02); border-radius:4px;">M</a>
+                    <a href="#letter-N" style="color:var(--text-secondary); font-size:0.8rem; text-align:center; padding:3px; background:rgba(255,255,255,0.02); border-radius:4px;">N</a>
+                    <a href="#letter-O" style="color:var(--text-secondary); font-size:0.8rem; text-align:center; padding:3px; background:rgba(255,255,255,0.02); border-radius:4px;">O</a>
+                    <a href="#letter-P" style="color:var(--text-secondary); font-size:0.8rem; text-align:center; padding:3px; background:rgba(255,255,255,0.02); border-radius:4px;">P</a>
+                    <a href="#letter-R" style="color:var(--text-secondary); font-size:0.8rem; text-align:center; padding:3px; background:rgba(255,255,255,0.02); border-radius:4px;">R</a>
+                    <a href="#letter-S" style="color:var(--text-secondary); font-size:0.8rem; text-align:center; padding:3px; background:rgba(255,255,255,0.02); border-radius:4px;">S</a>
+                    <a href="#letter-T" style="color:var(--text-secondary); font-size:0.8rem; text-align:center; padding:3px; background:rgba(255,255,255,0.02); border-radius:4px;">T</a>
+                    <a href="#letter-U" style="color:var(--text-secondary); font-size:0.8rem; text-align:center; padding:3px; background:rgba(255,255,255,0.02); border-radius:4px;">U</a>
+                    <a href="#letter-V" style="color:var(--text-secondary); font-size:0.8rem; text-align:center; padding:3px; background:rgba(255,255,255,0.02); border-radius:4px;">V</a>
+                    <a href="#letter-W" style="color:var(--text-secondary); font-size:0.8rem; text-align:center; padding:3px; background:rgba(255,255,255,0.02); border-radius:4px;">W</a>
+                    <a href="#letter-Y" style="color:var(--text-secondary); font-size:0.8rem; text-align:center; padding:3px; background:rgba(255,255,255,0.02); border-radius:4px;">Y</a>
+                </div>
+                
                 <h3>Exam Silos</h3>
                 <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.5rem;">
                     <li><a href="../exams/plumbing-license-prep/journeyman/index.html" style="color:var(--text-secondary); font-size:0.9rem;">Journeyman Exams</a></li>
@@ -68,137 +356,732 @@
                 </ul>
             </aside>
 
-            <!-- MAIN CONTENT -->
+            <!-- MIDDLE COLUMN: DIRECTORY OF 124 ITEMS -->
             <div class="main-content">
-                <!-- HEADER -->
-                <div style="margin-bottom:2.5rem; padding-bottom:1.5rem; border-bottom:1px solid var(--bg-card-border);">
-                    <span style="font-size:0.75rem; font-weight:700; color:var(--accent); text-transform:uppercase; letter-spacing:0.08em;">3-Tier Reference Directory</span>
-                    <h1 style="font-size:2.6rem; font-weight:800; color:white; margin:0.5rem 0;">Plumbing License Encyclopedia</h1>
-                    <p style="color:var(--text-secondary); font-size:1.05rem; line-height:1.6;">118 trade-specific guides and definitions organized by category. Long-form guides are marked with â˜…. Click any category to view its full directory.</p>
-                    <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.75rem;">Curated by John Masterson, Principal Trade Compliance Advisor &bull; GSC Verified</p>
+                
+                <!-- PILLAR INTRODUCTION -->
+                <div class="pillar-header">
+                    <span class="pillar-badge">Unified Directory Index</span>
+                    <h1 style="font-size: 2.5rem; font-weight: 800; color: white; margin-bottom: 0.5rem;">Plumbing Reference Directory</h1>
+                    <p class="pillar-desc">
+                        A single unified plumbing encyclopedia featuring 124 entries. Select from long-form guides (marked with â˜…) or alphabetical trade term definitions to support your exam preparation.
+                    </p>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.75rem;">
+                        Curated by John Masterson, Principal Trade Compliance Advisor. Fact Checked and GSC verified.
+                    </p>
                 </div>
 
-                <!-- 4 CATEGORY BLOCKS -->
-                <div id="math" style="margin-bottom:3rem;">
-                    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.25rem; padding-bottom:0.75rem; border-bottom:1px solid rgba(255,255,255,0.05);">
-                        <h2 style="font-size:1.5rem; color:white; font-weight:700; margin:0;">Plumbing Math and Trade Calculations</h2>
-                        <span style="font-size:0.8rem; font-weight:600; background:rgba(99,102,241,0.15); color:var(--primary); padding:2px 10px; border-radius:50px; border:1px solid rgba(99,102,241,0.2);">9 articles</span>
-                    </div>
-                    <ul style="list-style:none; padding:0; margin:0 0 1rem;">
-                    <li style="margin-bottom:0.5rem;"><a href="plumbing-math/fractions-decimals-basics/index.html" style="color:var(--text-secondary); font-size:0.9rem; text-decoration:none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'">&#9656;  $args[0].Value.ToUpper() ractions  $args[0].Value.ToUpper() ecimals  $args[0].Value.ToUpper() asics</a></li>
-                    <li style="margin-bottom:0.5rem;"><a href="plumbing-math/pipe-grade-slope-fall/index.html" style="color:var(--text-secondary); font-size:0.9rem; text-decoration:none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'">&#9656;  $args[0].Value.ToUpper() ipe  $args[0].Value.ToUpper() rade  $args[0].Value.ToUpper() lope  $args[0].Value.ToUpper() all</a></li>
-                    <li style="margin-bottom:0.5rem;"><a href="plumbing-math/45-degree-rolling-offsets/index.html" style="color:var(--text-secondary); font-size:0.9rem; text-decoration:none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'">&#9656;  $args[0].Value.ToUpper() 5  $args[0].Value.ToUpper() egree  $args[0].Value.ToUpper() olling  $args[0].Value.ToUpper() ffsets</a></li>
-                    </ul>
-                    <a href="plumbing-math/index.html" style="display:inline-flex; align-items:center; gap:6px; color:var(--primary); font-size:0.9rem; font-weight:700; text-decoration:none;">View all 9 Plumbing Math and Trade Calculations articles &rarr;</a>
-                </div>                <div id="codes" style="margin-bottom:3rem;">
-                    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.25rem; padding-bottom:0.75rem; border-bottom:1px solid rgba(255,255,255,0.05);">
-                        <h2 style="font-size:1.5rem; color:white; font-weight:700; margin:0;">Plumbing Codes and Safety Standards</h2>
-                        <span style="font-size:0.8rem; font-weight:600; background:rgba(99,102,241,0.15); color:var(--primary); padding:2px 10px; border-radius:50px; border:1px solid rgba(99,102,241,0.2);">48 articles</span>
-                    </div>
-                    <ul style="list-style:none; padding:0; margin:0 0 1rem;">
-                    <li style="margin-bottom:0.5rem;"><a href="plumbing-codes/fixture-clearances-accessibility-rules/index.html" style="color:var(--text-secondary); font-size:0.9rem; text-decoration:none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'">&#9656;  $args[0].Value.ToUpper() ixture  $args[0].Value.ToUpper() learances  $args[0].Value.ToUpper() ccessibility  $args[0].Value.ToUpper() ules</a></li>
-                    <li style="margin-bottom:0.5rem;"><a href="plumbing-codes/sizing-vent-systems-ipc-upc/index.html" style="color:var(--text-secondary); font-size:0.9rem; text-decoration:none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'">&#9656;  $args[0].Value.ToUpper() izing  $args[0].Value.ToUpper() ent  $args[0].Value.ToUpper() ystems  $args[0].Value.ToUpper() pc  $args[0].Value.ToUpper() pc</a></li>
-                    <li style="margin-bottom:0.5rem;"><a href="plumbing-codes/gas-piping-venting-safety-standards/index.html" style="color:var(--text-secondary); font-size:0.9rem; text-decoration:none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'">&#9656;  $args[0].Value.ToUpper() as  $args[0].Value.ToUpper() iping  $args[0].Value.ToUpper() enting  $args[0].Value.ToUpper() afety  $args[0].Value.ToUpper() tandards</a></li>
-                    </ul>
-                    <a href="plumbing-codes/index.html" style="display:inline-flex; align-items:center; gap:6px; color:var(--primary); font-size:0.9rem; font-weight:700; text-decoration:none;">View all 48 Plumbing Codes and Safety Standards articles &rarr;</a>
-                </div>                <div id="systems" style="margin-bottom:3rem;">
-                    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.25rem; padding-bottom:0.75rem; border-bottom:1px solid rgba(255,255,255,0.05);">
-                        <h2 style="font-size:1.5rem; color:white; font-weight:700; margin:0;">Plumbing Systems and Blueprints</h2>
-                        <span style="font-size:0.8rem; font-weight:600; background:rgba(99,102,241,0.15); color:var(--primary); padding:2px 10px; border-radius:50px; border:1px solid rgba(99,102,241,0.2);">57 articles</span>
-                    </div>
-                    <ul style="list-style:none; padding:0; margin:0 0 1rem;">
-                    <li style="margin-bottom:0.5rem;"><a href="plumbing-systems/reading-plumbing-blueprints-for-beginners/index.html" style="color:var(--text-secondary); font-size:0.9rem; text-decoration:none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'">&#9656;  $args[0].Value.ToUpper() eading  $args[0].Value.ToUpper() lumbing  $args[0].Value.ToUpper() lueprints  $args[0].Value.ToUpper() or  $args[0].Value.ToUpper() eginners</a></li>
-                    <li style="margin-bottom:0.5rem;"><a href="plumbing-systems/designing-dwv-isometric-drawings/index.html" style="color:var(--text-secondary); font-size:0.9rem; text-decoration:none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'">&#9656;  $args[0].Value.ToUpper() esigning  $args[0].Value.ToUpper() wv  $args[0].Value.ToUpper() sometric  $args[0].Value.ToUpper() rawings</a></li>
-                    <li style="margin-bottom:0.5rem;"><a href="plumbing-systems/sizing-water-distribution-pipe-systems/index.html" style="color:var(--text-secondary); font-size:0.9rem; text-decoration:none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'">&#9656;  $args[0].Value.ToUpper() izing  $args[0].Value.ToUpper() ater  $args[0].Value.ToUpper() istribution  $args[0].Value.ToUpper() ipe  $args[0].Value.ToUpper() ystems</a></li>
-                    </ul>
-                    <a href="plumbing-systems/index.html" style="display:inline-flex; align-items:center; gap:6px; color:var(--primary); font-size:0.9rem; font-weight:700; text-decoration:none;">View all 57 Plumbing Systems and Blueprints articles &rarr;</a>
-                </div>                <div id="prep" style="margin-bottom:3rem;">
-                    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.25rem; padding-bottom:0.75rem; border-bottom:1px solid rgba(255,255,255,0.05);">
-                        <h2 style="font-size:1.5rem; color:white; font-weight:700; margin:0;">Journeyman Exam Prep and Testing Strategy</h2>
-                        <span style="font-size:0.8rem; font-weight:600; background:rgba(99,102,241,0.15); color:var(--primary); padding:2px 10px; border-radius:50px; border:1px solid rgba(99,102,241,0.2);">4 articles</span>
-                    </div>
-                    <ul style="list-style:none; padding:0; margin:0 0 1rem;">
-                    <li style="margin-bottom:0.5rem;"><a href="journeyman-prep/journeyman-exam-requirements-and-format/index.html" style="color:var(--text-secondary); font-size:0.9rem; text-decoration:none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'">&#9656;  $args[0].Value.ToUpper() ourneyman  $args[0].Value.ToUpper() xam  $args[0].Value.ToUpper() equirements  $args[0].Value.ToUpper() nd  $args[0].Value.ToUpper() ormat</a></li>
-                    <li style="margin-bottom:0.5rem;"><a href="journeyman-prep/how-to-tabs-highlight-codebooks-for-exam-speed/index.html" style="color:var(--text-secondary); font-size:0.9rem; text-decoration:none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'">&#9656;  $args[0].Value.ToUpper() ow  $args[0].Value.ToUpper() o  $args[0].Value.ToUpper() abs  $args[0].Value.ToUpper() ighlight  $args[0].Value.ToUpper() odebooks  $args[0].Value.ToUpper() or  $args[0].Value.ToUpper() xam  $args[0].Value.ToUpper() peed</a></li>
-                    <li style="margin-bottom:0.5rem;"><a href="journeyman-prep/deconstructing-journeyman-scenario-based-exam-questions/index.html" style="color:var(--text-secondary); font-size:0.9rem; text-decoration:none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'">&#9656;  $args[0].Value.ToUpper() econstructing  $args[0].Value.ToUpper() ourneyman  $args[0].Value.ToUpper() cenario  $args[0].Value.ToUpper() ased  $args[0].Value.ToUpper() xam  $args[0].Value.ToUpper() uestions</a></li>
-                    </ul>
-                    <a href="journeyman-prep/index.html" style="display:inline-flex; align-items:center; gap:6px; color:var(--primary); font-size:0.9rem; font-weight:700; text-decoration:none;">View all 4 Journeyman Exam Prep and Testing Strategy articles &rarr;</a>
+                <!-- ALPHABETICAL NAV BAR -->
+                <div class="az-nav-bar">
+                    <a href="#letter-A" class="az-nav-link">A</a>
+                    <a href="#letter-B" class="az-nav-link">B</a>
+                    <a href="#letter-C" class="az-nav-link">C</a>
+                    <a href="#letter-D" class="az-nav-link">D</a>
+                    <a href="#letter-E" class="az-nav-link">E</a>
+                    <a href="#letter-F" class="az-nav-link">F</a>
+                    <a href="#letter-G" class="az-nav-link">G</a>
+                    <a href="#letter-H" class="az-nav-link">H</a>
+                    <a href="#letter-I" class="az-nav-link">I</a>
+                    <a href="#letter-J" class="az-nav-link">J</a>
+                    <a href="#letter-L" class="az-nav-link">L</a>
+                    <a href="#letter-M" class="az-nav-link">M</a>
+                    <a href="#letter-N" class="az-nav-link">N</a>
+                    <a href="#letter-O" class="az-nav-link">O</a>
+                    <a href="#letter-P" class="az-nav-link">P</a>
+                    <a href="#letter-R" class="az-nav-link">R</a>
+                    <a href="#letter-S" class="az-nav-link">S</a>
+                    <a href="#letter-T" class="az-nav-link">T</a>
+                    <a href="#letter-U" class="az-nav-link">U</a>
+                    <a href="#letter-V" class="az-nav-link">V</a>
+                    <a href="#letter-W" class="az-nav-link">W</a>
+                    <a href="#letter-Y" class="az-nav-link">Y</a>
                 </div>
 
-                <!-- DIVIDER -->
-                <div style="margin:3.5rem 0 2.5rem; padding-top:2.5rem; border-top:2px solid rgba(255,255,255,0.06);">
-                    <span style="font-size:0.75rem; font-weight:700; color:var(--accent); text-transform:uppercase; letter-spacing:0.08em;">Complete Index</span>
-                    <h2 style="font-size:2rem; font-weight:800; color:white; margin:0.5rem 0;">Plumbing Dictionary (A-Z)</h2>
-                    <p style="color:var(--text-secondary); font-size:0.95rem;">All 118 articles alphabetically. â˜… indicates a long-form guide.</p>
-                </div>
+                <!-- DYNAMIC DIRECTORY LIST -->
+                <div style="display: flex; flex-direction: column; gap: 2.5rem;">
+    <div id="letter-A" style="padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05);>
+        <h3 style="font-size: 2rem; color: var(--accent); margin-bottom: 1.25rem; font-weight: 800; display:flex; align-items:center; gap:10px;>A <span style="font-size:0.9rem; font-weight:600; color:var(--text-secondary); background:rgba(255,255,255,0.02); padding: 2px 8px; border-radius:4px;>7 entries</span></h3>
+        <div class="directory-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1rem 2rem;>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/aerator/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Aerator</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/area-drain/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Area Drain</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/accumulator/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Accumulator</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/air-gap/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Air Gap</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/air-chamber/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Air Chamber</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/angle-valve/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Angle Valve</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 8px;>
+                <span class="directory-icon" style="color: var(--accent); font-weight: bold;>&#9733;</span>
+                <a href="plumbing/deconstructing-journeyman-scenario-based-exam-questions/index.html" class="directory-link" style="color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 700; onmouseover="this.style.textDecoration='underline'` onmouseout="this.style.textDecoration='none'`>Analyzing Scenario Questions (Exam Guide)</a>
+            </div>
+        </div>
+    </div>
+    <div id="letter-B" style="padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05);>
+        <h3 style="font-size: 2rem; color: var(--accent); margin-bottom: 1.25rem; font-weight: 800; display:flex; align-items:center; gap:10px;>B <span style="font-size:0.9rem; font-weight:600; color:var(--text-secondary); background:rgba(255,255,255,0.02); padding: 2px 8px; border-radius:4px;>10 entries</span></h3>
+        <div class="directory-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1rem 2rem;>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/backflow/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Backflow</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/blackwater/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Blackwater</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/branch/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Branch</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/branch-interval/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Branch Interval</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/bidet/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Bidet</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/backflow-preventer/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Backflow Preventer</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/backwater-valve/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Backwater Valve</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/ball-valve/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Ball Valve</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/building-drain/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Building Drain</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/building-sewer/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Building Sewer</a>
+            </div>
+        </div>
+    </div>
+    <div id="letter-C" style="padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05);>
+        <h3 style="font-size: 2rem; color: var(--accent); margin-bottom: 1.25rem; font-weight: 800; display:flex; align-items:center; gap:10px;>C <span style="font-size:0.9rem; font-weight:600; color:var(--text-secondary); background:rgba(255,255,255,0.02); padding: 2px 8px; border-radius:4px;>8 entries</span></h3>
+        <div class="directory-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1rem 2rem;>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 8px;>
+                <span class="directory-icon" style="color: var(--accent); font-weight: bold;>&#9733;</span>
+                <a href="plumbing/how-to-tabs-highlight-codebooks-for-exam-speed/index.html" class="directory-link" style="color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 700; onmouseover="this.style.textDecoration='underline'` onmouseout="this.style.textDecoration='none'`>Codebook Highlighting & Tabbing (Exam Guide)</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/cesspool/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Cesspool</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/coupling/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Coupling</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/cross-connection/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Cross-Connection</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/cistern/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Cistern</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/cleanout-access-points/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Cleanout</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/common-venting-rules/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Common Vent</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/crown-venting/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Crown Vent</a>
+            </div>
+        </div>
+    </div>
+    <div id="letter-D" style="padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05);>
+        <h3 style="font-size: 2rem; color: var(--accent); margin-bottom: 1.25rem; font-weight: 800; display:flex; align-items:center; gap:10px;>D <span style="font-size:0.9rem; font-weight:600; color:var(--text-secondary); background:rgba(255,255,255,0.02); padding: 2px 8px; border-radius:4px;>9 entries</span></h3>
+        <div class="directory-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1rem 2rem;>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 8px;>
+                <span class="directory-icon" style="color: var(--accent); font-weight: bold;>&#9733;</span>
+                <a href="plumbing/designing-dwv-isometric-drawings/index.html" class="directory-link" style="color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 700; onmouseover="this.style.textDecoration='underline'` onmouseout="this.style.textDecoration='none'`>Designing DWV Isometric Drawings (Blueprint Guide)</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/dry-vent/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Dry Vent</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/drainage-fixture-unit/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Drainage Fixture Unit</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/double-check-valve/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Double Check Valve</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/downspout/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Downspout</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/drain/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Drain</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/digestion/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Digestion</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/dead-end/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Dead End</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/developed-length/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Developed Length</a>
+            </div>
+        </div>
+    </div>
+    <div id="letter-E" style="padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05);>
+        <h3 style="font-size: 2rem; color: var(--accent); margin-bottom: 1.25rem; font-weight: 800; display:flex; align-items:center; gap:10px;>E <span style="font-size:0.9rem; font-weight:600; color:var(--text-secondary); background:rgba(255,255,255,0.02); padding: 2px 8px; border-radius:4px;>6 entries</span></h3>
+        <div class="directory-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1rem 2rem;>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 8px;>
+                <span class="directory-icon" style="color: var(--accent); font-weight: bold;>&#9733;</span>
+                <a href="plumbing/journeyman-exam-requirements-and-format/index.html" class="directory-link" style="color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 700; onmouseover="this.style.textDecoration='underline'` onmouseout="this.style.textDecoration='none'`>Exam Formats, Hours & Registration (Exam Guide)</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/escutcheon/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Escutcheon</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/expansion-joint/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Expansion Joint</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/ejector-pump/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Ejector Pump</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/elbow/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Elbow</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/effluent/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Effluent</a>
+            </div>
+        </div>
+    </div>
+    <div id="letter-F" style="padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05);>
+        <h3 style="font-size: 2rem; color: var(--accent); margin-bottom: 1.25rem; font-weight: 800; display:flex; align-items:center; gap:10px;>F <span style="font-size:0.9rem; font-weight:600; color:var(--text-secondary); background:rgba(255,255,255,0.02); padding: 2px 8px; border-radius:4px;>11 entries</span></h3>
+        <div class="directory-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1rem 2rem;>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/flushometer/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Flushometer</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 8px;>
+                <span class="directory-icon" style="color: var(--accent); font-weight: bold;>&#9733;</span>
+                <a href="plumbing/fixture-clearances-accessibility-rules/index.html" class="directory-link" style="color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 700; onmouseover="this.style.textDecoration='underline'` onmouseout="this.style.textDecoration='none'`>Fixture Clearance & Space Rules (Code Guide)</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 8px;>
+                <span class="directory-icon" style="color: var(--accent); font-weight: bold;>&#9733;</span>
+                <a href="plumbing/fractions-decimals-basics/index.html" class="directory-link" style="color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 700; onmouseover="this.style.textDecoration='underline'` onmouseout="this.style.textDecoration='none'`>Fractions & Decimals (Math Guide)</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/faucet/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Faucet</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/flood-level-rim/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Flood Level Rim</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/flow-rate/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Flow Rate</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/flush-valve/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Flush Valve</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/fixture-supply/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Fixture Supply</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/fixture/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Fixture</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/fixture-branch/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Fixture Branch</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/fixture-drain/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Fixture Drain</a>
+            </div>
+        </div>
+    </div>
+    <div id="letter-G" style="padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05);>
+        <h3 style="font-size: 2rem; color: var(--accent); margin-bottom: 1.25rem; font-weight: 800; display:flex; align-items:center; gap:10px;>G <span style="font-size:0.9rem; font-weight:600; color:var(--text-secondary); background:rgba(255,255,255,0.02); padding: 2px 8px; border-radius:4px;>4 entries</span></h3>
+        <div class="directory-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1rem 2rem;>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/grease-interceptor/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Grease Interceptor</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/gate-valve/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Gate Valve</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/graywater/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Graywater</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 8px;>
+                <span class="directory-icon" style="color: var(--accent); font-weight: bold;>&#9733;</span>
+                <a href="plumbing/gas-piping-venting-safety-standards/index.html" class="directory-link" style="color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 700; onmouseover="this.style.textDecoration='underline'` onmouseout="this.style.textDecoration='none'`>Gas Piping & Safety Compliance (Code Guide)</a>
+            </div>
+        </div>
+    </div>
+    <div id="letter-H" style="padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05);>
+        <h3 style="font-size: 2rem; color: var(--accent); margin-bottom: 1.25rem; font-weight: 800; display:flex; align-items:center; gap:10px;>H <span style="font-size:0.9rem; font-weight:600; color:var(--text-secondary); background:rgba(255,255,255,0.02); padding: 2px 8px; border-radius:4px;>6 entries</span></h3>
+        <div class="directory-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1rem 2rem;>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/hanger/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Hanger</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/horizontal-branch/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Horizontal Branch</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/horizontal-pipe/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Horizontal Pipe</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/hot-water/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Hot Water</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/house-sewer/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>House Sewer</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 8px;>
+                <span class="directory-icon" style="color: var(--accent); font-weight: bold;>&#9733;</span>
+                <a href="plumbing/history-of-plumbing-codes/index.html" class="directory-link" style="color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 700; onmouseover="this.style.textDecoration='underline'` onmouseout="this.style.textDecoration='none'`>History of Plumbing Codes (Code Guide)</a>
+            </div>
+        </div>
+    </div>
+    <div id="letter-I" style="padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05);>
+        <h3 style="font-size: 2rem; color: var(--accent); margin-bottom: 1.25rem; font-weight: 800; display:flex; align-items:center; gap:10px;>I <span style="font-size:0.9rem; font-weight:600; color:var(--text-secondary); background:rgba(255,255,255,0.02); padding: 2px 8px; border-radius:4px;>5 entries</span></h3>
+        <div class="directory-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1rem 2rem;>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/invert/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Invert</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/ipc/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>IPC</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/ips/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>IPS</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/individual-vent/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Individual Vent</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/indirect-waste/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Indirect Waste</a>
+            </div>
+        </div>
+    </div>
+    <div id="letter-L" style="padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05);>
+        <h3 style="font-size: 2rem; color: var(--accent); margin-bottom: 1.25rem; font-weight: 800; display:flex; align-items:center; gap:10px;>L <span style="font-size:0.9rem; font-weight:600; color:var(--text-secondary); background:rgba(255,255,255,0.02); padding: 2px 8px; border-radius:4px;>3 entries</span></h3>
+        <div class="directory-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1rem 2rem;>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/loop-vent/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Loop Vent</a>
+            </div>
+        </div>
+    </div>
+    <div id="letter-M" style="padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05);>
+        <h3 style="font-size: 2rem; color: var(--accent); margin-bottom: 1.25rem; font-weight: 800; display:flex; align-items:center; gap:10px;>M <span style="font-size:0.9rem; font-weight:600; color:var(--text-secondary); background:rgba(255,255,255,0.02); padding: 2px 8px; border-radius:4px;>4 entries</span></h3>
+        <div class="directory-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1rem 2rem;>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/main/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Main</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/manifold/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Manifold</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/mechanical-joint/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Mechanical Joint</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 8px;>
+                <span class="directory-icon" style="color: var(--accent); font-weight: bold;>&#9733;</span>
+                <a href="plumbing/master-vs-journeyman/index.html" class="directory-link" style="color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 700; onmouseover="this.style.textDecoration='underline'` onmouseout="this.style.textDecoration='none'`>Master vs Journeyman Plumber (Exam Guide)</a>
+            </div>
+        </div>
+    </div>
+    <div id="letter-N" style="padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05);>
+        <h3 style="font-size: 2rem; color: var(--accent); margin-bottom: 1.25rem; font-weight: 800; display:flex; align-items:center; gap:10px;>N <span style="font-size:0.9rem; font-weight:600; color:var(--text-secondary); background:rgba(255,255,255,0.02); padding: 2px 8px; border-radius:4px;>3 entries</span></h3>
+        <div class="directory-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1rem 2rem;>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/nonpotable-water/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Nonpotable Water</a>
+            </div>
+        </div>
+    </div>
+    <div id="letter-O" style="padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05);>
+        <h3 style="font-size: 2rem; color: var(--accent); margin-bottom: 1.25rem; font-weight: 800; display:flex; align-items:center; gap:10px;>O <span style="font-size:0.9rem; font-weight:600; color:var(--text-secondary); background:rgba(255,255,255,0.02); padding: 2px 8px; border-radius:4px;>2 entries</span></h3>
+        <div class="directory-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1rem 2rem;>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/o-ring/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>O-Ring</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/outfall/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Outfall</a>
+            </div>
+        </div>
+    </div>
+    <div id="letter-P" style="padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05);>
+        <h3 style="font-size: 2rem; color: var(--accent); margin-bottom: 1.25rem; font-weight: 800; display:flex; align-items:center; gap:10px;>P <span style="font-size:0.9rem; font-weight:600; color:var(--text-secondary); background:rgba(255,255,255,0.02); padding: 2px 8px; border-radius:4px;>8 entries</span></h3>
+        <div class="directory-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1rem 2rem;>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/p-trap/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>P-Trap</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/plumbing-appurtenance/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Plumbing Appurtenance</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/plumbing-appliance/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Plumbing Appliance</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/pe-pipe/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>PE Pipe</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/pex-tubing/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>PEX Tubing</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/plumb/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Plumb</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 8px;>
+                <span class="directory-icon" style="color: var(--accent); font-weight: bold;>&#9733;</span>
+                <a href="plumbing-aptitude/how-to-pass-plumbing-aptitude-test/index.html" class="directory-link" style="color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 700; onmouseover="this.style.textDecoration='underline'` onmouseout="this.style.textDecoration='none'`>Plumbing Apprentice Aptitude Math (Aptitude Guide)</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 8px;>
+                <span class="directory-icon" style="color: var(--accent); font-weight: bold;>&#9733;</span>
+                <a href="plumbing/pipe-grade-slope-fall/index.html" class="directory-link" style="color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 700; onmouseover="this.style.textDecoration='underline'` onmouseout="this.style.textDecoration='none'`>Pipe Grade, Slope & Fall (Math Guide)</a>
+            </div>
+        </div>
+    </div>
+    <div id="letter-R" style="padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05);>
+        <h3 style="font-size: 2rem; color: var(--accent); margin-bottom: 1.25rem; font-weight: 800; display:flex; align-items:center; gap:10px;>R <span style="font-size:0.9rem; font-weight:600; color:var(--text-secondary); background:rgba(255,255,255,0.02); padding: 2px 8px; border-radius:4px;>4 entries</span></h3>
+        <div class="directory-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1rem 2rem;>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/relief-valve/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Relief Valve</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/rim/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Rim</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/riser/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Riser</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/rough-in/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Rough-In</a>
+            </div>
+        </div>
+    </div>
+    <div id="letter-S" style="padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05);>
+        <h3 style="font-size: 2rem; color: var(--accent); margin-bottom: 1.25rem; font-weight: 800; display:flex; align-items:center; gap:10px;>S <span style="font-size:0.9rem; font-weight:600; color:var(--text-secondary); background:rgba(255,255,255,0.02); padding: 2px 8px; border-radius:4px;>12 entries</span></h3>
+        <div class="directory-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1rem 2rem;>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/soil-pipe/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Soil Pipe</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/soil-stack/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Soil Stack</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/stack-vent/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Stack Vent</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/siphonage/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Siphonage</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/saddle-valve/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Saddle Valve</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/sanitary-sewer/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Sanitary Sewer</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/stack/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Stack</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/storm-sewer/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Storm Sewer</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/sump/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Sump</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 8px;>
+                <span class="directory-icon" style="color: var(--accent); font-weight: bold;>&#9733;</span>
+                <a href="plumbing/sizing-vent-systems-ipc-upc/index.html" class="directory-link" style="color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 700; onmouseover="this.style.textDecoration='underline'` onmouseout="this.style.textDecoration='none'`>Sizing Vent Systems (Code Guide)</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 8px;>
+                <span class="directory-icon" style="color: var(--accent); font-weight: bold;>&#9733;</span>
+                <a href="plumbing/sizing-water-distribution-pipe-systems/index.html" class="directory-link" style="color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 700; onmouseover="this.style.textDecoration='underline'` onmouseout="this.style.textDecoration='none'`>Sizing Water Distribution Piping (Water Guide)</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 12px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 8px;>
+                <span class="directory-icon" style="color: var(--accent); font-weight: bold;>&#9733;</span>
+                <a href="plumbing/reading-plumbing-blueprints-for-beginners/index.html" class="directory-link" style="color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 700; onmouseover="this.style.textDecoration='underline'` onmouseout="this.style.textDecoration='none'`>Symbols, Floor Plans & Layouts (Blueprint Guide)</a>
+            </div>
+        </div>
+    </div>
+    <div id="letter-T" style="padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05);>
+        <h3 style="font-size: 2rem; color: var(--accent); margin-bottom: 1.25rem; font-weight: 800; display:flex; align-items:center; gap:10px;>T <span style="font-size:0.9rem; font-weight:600; color:var(--text-secondary); background:rgba(255,255,255,0.02); padding: 2px 8px; border-radius:4px;>5 entries</span></h3>
+        <div class="directory-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1rem 2rem;>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/trap-seal/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Trap Seal</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/tailpiece/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Tailpiece</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/trap-arm/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Trap Arm</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/trap-primer/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Trap Primer</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/tee-fitting/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Tee</a>
+            </div>
+        </div>
+    </div>
+    <div id="letter-U" style="padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05);>
+        <h3 style="font-size: 2rem; color: var(--accent); margin-bottom: 1.25rem; font-weight: 800; display:flex; align-items:center; gap:10px;>U <span style="font-size:0.9rem; font-weight:600; color:var(--text-secondary); background:rgba(255,255,255,0.02); padding: 2px 8px; border-radius:4px;>3 entries</span></h3>
+        <div class="directory-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1rem 2rem;>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/upc/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>UPC</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/union/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Union</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/urinal/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Urinal</a>
+            </div>
+        </div>
+    </div>
+    <div id="letter-V" style="padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05);>
+        <h3 style="font-size: 2rem; color: var(--accent); margin-bottom: 1.25rem; font-weight: 800; display:flex; align-items:center; gap:10px;>V <span style="font-size:0.9rem; font-weight:600; color:var(--text-secondary); background:rgba(255,255,255,0.02); padding: 2px 8px; border-radius:4px;>4 entries</span></h3>
+        <div class="directory-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1rem 2rem;>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/valve/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Valve</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/vent-stack/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Vent Stack</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/vertical-pipe/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Vertical Pipe</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/vacuum-breaker/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Vacuum Breaker</a>
+            </div>
+        </div>
+    </div>
+    <div id="letter-W" style="padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05);>
+        <h3 style="font-size: 2rem; color: var(--accent); margin-bottom: 1.25rem; font-weight: 800; display:flex; align-items:center; gap:10px;>W <span style="font-size:0.9rem; font-weight:600; color:var(--text-secondary); background:rgba(255,255,255,0.02); padding: 2px 8px; border-radius:4px;>6 entries</span></h3>
+        <div class="directory-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1rem 2rem;>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/water-service-pipe/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Water Service Pipe</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/wye-fitting/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Wye Fitting</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/water-meter/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Water Meter</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/waste-pipe/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Waste Pipe</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/water-closet/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Water Closet</a>
+            </div>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/water-main/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Water Main</a>
+            </div>
+        </div>
+    </div>
+    <div id="letter-Y" style="padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05);>
+        <h3 style="font-size: 2rem; color: var(--accent); margin-bottom: 1.25rem; font-weight: 800; display:flex; align-items:center; gap:10px;>Y <span style="font-size:0.9rem; font-weight:600; color:var(--text-secondary); background:rgba(255,255,255,0.02); padding: 2px 8px; border-radius:4px;>3 entries</span></h3>
+        <div class="directory-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1rem 2rem;>
+            <div class="directory-item" style="display: flex; align-items: center; gap: 8px; padding: 6px 0;>
+                <span class="directory-icon" style="color: var(--primary); opacity: 0.75;>&#9656;</span>
+                <a href="plumbing/yoke-vent/index.html" class="directory-link" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'` onmouseout="this.style.color='var(--text-secondary)'; this.style.textDecoration='none'`>Yoke Vent</a>
+            </div>
+        </div>
+    </div>
+</div>
 
-                <!-- LETTER NAVIGATION -->
-                <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:2.5rem; justify-content:center; padding:10px; background:rgba(255,255,255,0.02); border:1px solid var(--bg-card-border); border-radius:8px;">
-<a href="#az-H" style="color:var(--primary); font-weight:700; font-size:1rem; width:32px; height:32px; display:inline-flex; align-items:center; justify-content:center; border-radius:4px; text-decoration:none; transition:all 0.2s;" onmouseover="this.style.background='rgba(99,102,241,0.15)'" onmouseout="this.style.background='none'">H</a>
-                </div>
-
-                <!-- A-Z DIRECTORY -->
-                <div id="az-H" style="padding-bottom:2rem; border-bottom:1px solid rgba(255,255,255,0.05); margin-bottom:1.5rem;">
-                    <h3 style="font-size:1.8rem; color:var(--accent); margin-bottom:1rem; font-weight:800;">H <span style="font-size:0.85rem; color:var(--text-secondary); font-weight:500;">(4)</span></h3>
-                    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:0.75rem 2rem;">
-                        <div style="display:flex; align-items:center; gap:8px; padding:5px 8px; background:rgba(99,102,241,0.05); border:1px solid rgba(99,102,241,0.2); border-radius:6px;"><span style="color:var(--accent);">&#9733;</span><a href="plumbing-math/how-to-pass-plumbing-aptitude-test/index.html" style="color:#fff; text-decoration:none; font-size:0.9rem; font-weight:700;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">How to Pass Plumbing Aptitude Test</a></div>
+                <!-- CITATIONS SECTION -->
+                <section id="citations" class="citations-section">
+                    <h4 style="font-family: var(--font-display); font-size: 1.4rem; color: #ffffff; margin-bottom: 0.5rem; font-weight:700;">
+                        Official Standards &amp; Reference Citations
+                    </h4>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">
+                        Our study resources compile rulings directly from the governing bodies that write, administer, and enforce safety and construction standards.
+                    </p>
+                    <div class="citations-grid">
+                        <div class="citation-col">
+                            <h5>Code Foundations</h5>
+                            <ul class="citation-links">
+                                <li><a href="https://www.iccsafe.org" target="_blank" rel="noopener">International Code Council (ICC) &rarr;</a></li>
+                                <li><a href="https://www.iapmo.org" target="_blank" rel="noopener">Uniform Plumbing Code (IAPMO) &rarr;</a></li>
+                            </ul>
+                        </div>
+                        <div class="citation-col">
+                            <h5>Testing Partners</h5>
+                            <ul class="citation-links">
+                                <li><a href="https://candidate.psiexams.com" target="_blank" rel="noopener">PSI Exams Candidate Services &rarr;</a></li>
+                                <li><a href="https://home.pearsonvue.com" target="_blank" rel="noopener">Pearson VUE Trades Licensing &rarr;</a></li>
+                            </ul>
+                        </div>
+                        <div class="citation-col">
+                            <h5>Safety Compliance</h5>
+                            <ul class="citation-links">
+                                <li><a href="https://www.osha.gov" target="_blank" rel="noopener">OSHA Safety Regulations &rarr;</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
+                </section>
 
             </div>
 
-            <!-- RIGHT SIDEBAR -->
+            <!-- RIGHT COLUMN: SIDEBAR PREMIUM PRODUCTS & CALL-TO-ACTIONS -->
             <aside class="sidebar-right glass-card">
+                
+                <!-- CTA 1: Journeyman Prep Bundle -->
                 <div class="promo-widget">
-                    <span style="display:inline-block; background:linear-gradient(90deg,var(--primary),var(--secondary)); color:#fff; font-size:0.7rem; font-weight:800; padding:3px 10px; border-radius:50px; text-transform:uppercase; margin-bottom:0.8rem;">Best Seller</span>
-                    <img class="promo-image" src="https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=300&q=80" alt="Journeyman Plumber Exam Prep Course Bundle">
-                    <h4 style="color:#fff; font-weight:700; margin-bottom:0.5rem;">Journeyman Prep Bundle</h4>
-                    <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1rem;">Interactive simulators and verified mock exams modelled after PSI and Pearson VUE.</p>
-                    <a href="../courses/journeyman-plumber-prep-bundle" class="btn-cta-secondary">Get Prep Bundle Now</a>
+                    <span class="promo-badge">Best Seller</span>
+                    <div class="promo-image-container">
+                        <img class="promo-image" 
+                             src="https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=300&q=80" 
+                             alt="Journeyman Plumber Exam Prep Course Bundle - Practice Tests and Math Workbooks">
+                    </div>
+                    <h4>Journeyman Plumber Prep Bundle</h4>
+                    <p>
+                        Get access to interactive simulators, study templates, and verified mock examinations modeled after PSI and Pearson VUE criteria.
+                    </p>
+                    <a href="../courses/journeyman-plumber-prep-bundle" class="btn-cta-secondary">
+                        Get Prep Bundle Now
+                    </a>
                 </div>
-                <div class="promo-widget" style="border-color:rgba(6,182,212,0.25);">
-                    <span style="display:inline-block; background:linear-gradient(90deg,var(--accent),var(--primary)); color:#fff; font-size:0.7rem; font-weight:800; padding:3px 10px; border-radius:50px; text-transform:uppercase; margin-bottom:0.8rem;">Specialized Course</span>
-                    <img class="promo-image" src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=300&q=80" alt="Plumbing Math Calculations Course">
-                    <h4 style="color:#fff; font-weight:700; margin-bottom:0.5rem;">Plumbing Math Masterclass</h4>
-                    <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1rem;">Master rolling offsets, slope, and pipe sizing in a self-paced course.</p>
-                    <a href="../courses/plumbing-math-masterclass" class="btn-cta">Access Math Syllabus</a>
+
+                <!-- CTA 2: Plumbing Math Masterclass -->
+                <div class="promo-widget" style="border-color: rgba(6, 182, 212, 0.25);">
+                    <span class="promo-badge" style="background: linear-gradient(90deg, var(--accent), var(--primary));">Specialized Course</span>
+                    <div class="promo-image-container">
+                        <img class="promo-image" 
+                             src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=300&q=80" 
+                             alt="Plumbing Math Calculations Online Course Module Banner">
+                    </div>
+                    <h4>Plumbing Math Masterclass</h4>
+                    <p>
+                        Struggling with rolling offsets, slope gradients, and pipe sizing equations? Master calculations in this self-paced course.
+                    </p>
+                    <a href="../courses/plumbing-math-masterclass" class="btn-cta">
+                        Access Math Syllabus
+                    </a>
                 </div>
-                <div style="background:rgba(17,24,39,0.5); border-radius:16px; padding:1.25rem;">
-                    <h5 style="font-size:0.95rem; color:#fff; margin-bottom:0.5rem; text-transform:uppercase;">Why Students Pass</h5>
-                    <ul style="list-style:none; text-align:left; font-size:0.8rem; color:var(--text-secondary); display:flex; flex-direction:column; gap:0.5rem; padding:0; margin:0;">
-                        <li>&bull; <strong>98.7%</strong> Pass Rate on First Attempt</li>
-                        <li>&bull; Rated #1 in State Exam Alignment</li>
-                        <li>&bull; 3,500+ Active Apprentices Enrolled</li>
-                    </ul>
-                </div>
+
             </aside>
+
         </div>
     </main>
 
-    <section style="max-width:1200px; margin:2rem auto; padding:0 1.5rem;">
-        <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:16px; padding:2rem;">
-            <h3 style="font-size:1.15rem; color:white; font-weight:700; margin:0 0 1.2rem;">Explore Licensing &amp; Compliance Resources</h3>
+    <!-- COMPULSORY EXPLORE LICENSING TAG SECTION (RULE-COMPLIANT) -->
+    <section class="niche-tags-container" style="max-width: 1200px; margin: 2rem auto; padding: 0 1.5rem;">
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 2rem;">
+            <h3 style="font-size: 1.15rem; color: white; font-weight: 700; margin: 0 0 1.2rem 0;">Explore Licensing &amp; Compliance Resources</h3>
             <div class="niche-tags-list">
                 <a href="../exams/ca-real-estate-math/index.html" class="niche-tag-link">CA Real Estate Math Prep</a>
                 <a href="../exams/ca-real-estate-math/practice-test/index.html" class="niche-tag-link">Real Estate Practice Simulator</a>
                 <a href="../exams/ca-real-estate-math/study-guide/index.html" class="niche-tag-link">Real Estate Formulas Study Guide</a>
                 <a href="../exams/vic-lea-electrician-prep/index.html" class="niche-tag-link">Victoria LEA Electrician Prep</a>
-                <a href="../exams/vic-lea-electrician-prep/practice-test/index.html" class="niche-tag-link">LEA Practice Quiz</a>
+                <a href="../exams/vic-lea-electrician-prep/practice-test/index.html" class="niche-tag-link">LEA Practice Quiz LET/LEP</a>
+                <a href="../exams/vic-lea-electrician-prep/study-guide/index.html" class="niche-tag-link">AS NZS 3000 Study Guide</a>
                 <a href="../exams/sarasota-adu-permit-checklist/index.html" class="niche-tag-link">Sarasota ADU Permit Guide</a>
+                <a href="../exams/sarasota-adu-permit-checklist/zoning-guide/index.html" class="niche-tag-link">Sarasota Zoning Requirements</a>
                 <a href="../exams/gwinnett-home-occupation-checklist/index.html" class="niche-tag-link">Gwinnett Home Occupation</a>
+                <a href="../exams/gwinnett-home-occupation-checklist/zoning-requirements/index.html" class="niche-tag-link">Gwinnett UDO Zoning Rules</a>
                 <a href="../exams/douglas-co-residential-building-checklist/index.html" class="niche-tag-link">Douglas County Building Checklist</a>
+                <a href="../exams/douglas-co-residential-building-checklist/building-codes/index.html" class="niche-tag-link">Douglas County Building Codes</a>
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
     <footer>
-        <div style="text-align:center; padding:3rem 0; background:rgba(8,12,20,0.85); border-top:1px solid var(--bg-card-border); margin-top:4rem;">
-            <div style="display:flex; gap:2rem; justify-content:center; flex-wrap:wrap; margin-bottom:1rem; font-size:0.9rem;">
-                <a href="../index.html" style="color:var(--text-secondary); text-decoration:none;">Home</a>
-                <a href="../exams/plumbing-license-prep/journeyman/index.html" style="color:var(--text-secondary); text-decoration:none;">Journeyman Exams</a>
-                <a href="../exams/plumbing-license-prep/master-contractor/index.html" style="color:var(--text-secondary); text-decoration:none;">Master Exams</a>
-                <a href="../wiki/index.html" style="color:var(--text-secondary); text-decoration:none;">Blog</a>
+        <div class="footer-content" style="flex-direction: column; gap: 1.5rem; text-align: center; padding: 3rem 0; background: rgba(8, 12, 20, 0.85); border-top: 1px solid var(--bg-card-border); margin-top: 4rem;">
+            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem;">
+                <a href="../index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
+                <a href="../exams/plumbing-license-prep/journeyman/index.html" style="color: var(--text-secondary); text-decoration: none;">Journeyman Exams</a>
+                <a href="../exams/plumbing-license-prep/master-contractor/index.html" style="color: var(--text-secondary); text-decoration: none;">Master Exams</a>
+                <a href="../exams/plumbing-license-prep/tradesman-other/index.html" style="color: var(--text-secondary); text-decoration: none;">Tradesman Exams</a>
+                <a href="../wiki/index.html" style="color: var(--text-secondary); text-decoration: none;">Blog</a>
             </div>
-            <div style="font-size:0.85rem; color:var(--text-muted);">&copy; 2026 ExamPrep Portal. All rights reserved.</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">&copy; 2026 ExamPrep Portal. All rights reserved.</div>
         </div>
     </footer>
 </body>

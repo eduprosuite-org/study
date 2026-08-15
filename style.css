@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
-
 /* CSS Variables for Premium Dark Theme */
 :root {
     --bg-dark: #080c14;
@@ -26,6 +24,15 @@
     box-sizing: border-box;
     font-family: 'Outfit', sans-serif;
     -webkit-tap-highlight-color: transparent;
+}
+
+/* Accessibility: Keyboard focus outlines */
+a:focus-visible,
+button:focus-visible,
+.btn-primary:focus-visible,
+[role="button"]:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
 }
 
 body {
@@ -132,7 +139,8 @@ header {
     list-style: none;
 }
 
-.has-dropdown:hover .dropdown {
+.has-dropdown:hover .dropdown,
+.has-dropdown:focus-within .dropdown {
     display: block;
 }
 
@@ -499,6 +507,11 @@ p {
     border-radius: 3px;
     background: rgba(255, 255, 255, 0.1);
     outline: none;
+}
+
+.range-input:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
 }
 
 .range-input::-webkit-slider-thumb {

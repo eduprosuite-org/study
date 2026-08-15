@@ -1,3 +1,8 @@
 .github_token
 scratch/
 deploy.ps1
+exams/
+wiki/
+sitemap-exams.xml
+sitemap-wiki.xml
+wiki_articles.csv
