@@ -46,6 +46,7 @@ User-agent: cohere-ai
 Allow: /
 # ────────────────────────────────────────────────────────────────
 
+Sitemap: https://eduprosuite-org.github.io/study/sitemap_index.xml
 Sitemap: https://eduprosuite-org.github.io/study/sitemap.xml
 Sitemap: https://eduprosuite-org.github.io/study/feed.xml
 Sitemap: https://eduprosuite-org.github.io/study/llms.txt
