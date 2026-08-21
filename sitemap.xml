@@ -1,19 +1,55 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://eduprosuite-org.github.io/study/sitemap-pages.xml</loc>
+    <loc>https://eduprosuite-org.github.io/qrcode/sitemap-pages.xml</loc>
     <lastmod>2026-08-21</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://eduprosuite-org.github.io/study/sitemap-exams.xml</loc>
+    <loc>https://eduprosuite-org.github.io/qrcode/sitemap-wifi.xml</loc>
     <lastmod>2026-08-21</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://eduprosuite-org.github.io/study/sitemap-wiki.xml</loc>
+    <loc>https://eduprosuite-org.github.io/qrcode/sitemap-link.xml</loc>
     <lastmod>2026-08-21</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://eduprosuite-org.github.io/study/sitemap-legal.xml</loc>
+    <loc>https://eduprosuite-org.github.io/qrcode/sitemap-vcard.xml</loc>
+    <lastmod>2026-08-21</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://eduprosuite-org.github.io/qrcode/sitemap-pdf.xml</loc>
+    <lastmod>2026-08-21</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://eduprosuite-org.github.io/qrcode/sitemap-social.xml</loc>
+    <lastmod>2026-08-21</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://eduprosuite-org.github.io/qrcode/sitemap-text.xml</loc>
+    <lastmod>2026-08-21</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://eduprosuite-org.github.io/qrcode/sitemap-email.xml</loc>
+    <lastmod>2026-08-21</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://eduprosuite-org.github.io/qrcode/sitemap-typing.xml</loc>
+    <lastmod>2026-08-21</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://eduprosuite-org.github.io/qrcode/sitemap-exams.xml</loc>
+    <lastmod>2026-08-21</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://eduprosuite-org.github.io/qrcode/sitemap-wiki.xml</loc>
+    <lastmod>2026-08-21</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://eduprosuite-org.github.io/qrcode/sitemap-learn.xml</loc>
+    <lastmod>2026-08-21</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://eduprosuite-org.github.io/qrcode/sitemap-legal.xml</loc>
     <lastmod>2026-08-21</lastmod>
   </sitemap>
 </sitemapindex>

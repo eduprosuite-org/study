@@ -46,7 +46,7 @@ User-agent: cohere-ai
 Allow: /
 # ────────────────────────────────────────────────────────────────
 
-Sitemap: https://eduprosuite-org.github.io/study/sitemap_index.xml
-Sitemap: https://eduprosuite-org.github.io/study/sitemap.xml
-Sitemap: https://eduprosuite-org.github.io/study/feed.xml
-Sitemap: https://eduprosuite-org.github.io/study/llms.txt
+Sitemap: https://eduprosuite-org.github.io/qrcode/sitemap_index.xml
+Sitemap: https://eduprosuite-org.github.io/qrcode/sitemap.xml
+Sitemap: https://eduprosuite-org.github.io/qrcode/feed.xml
+Sitemap: https://eduprosuite-org.github.io/qrcode/llms.txt
