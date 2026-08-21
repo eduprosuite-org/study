@@ -179,7 +179,55 @@
                 </div>
             </div>
                         <!-- Primary Official Sources Section -->
-                <div class="primary-sources-card">
+                <div class="glass-card" style="margin: 2.5rem 0; padding: 2rem; border: 1px solid rgba(168, 85, 247, 0.3); background: rgba(168, 85, 247, 0.04); border-radius: 12px;">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:1rem;">
+        <span style="font-size:1.5rem;">&#128178;</span>
+        <h3 style="margin:0; font-size:1.35rem; color:#ffffff; font-weight:700;">California Real Estate Cap Rate &amp; NOI Calculator</h3>
+    </div>
+    <p style="color:var(--text-secondary); font-size:0.92rem; margin-bottom:1.5rem;">
+        Calculate Net Operating Income (NOI), Capitalization Rate, and Property Valuation without falling for the DRE debt service trap.
+    </p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:1.25rem; margin-bottom:1.5rem;">
+        <div>
+            <label style="display:block; font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.4rem; font-weight:600;">Effective Gross Income ($):</label>
+            <input type="number" id="calc_re_egi" value="120000" min="0" step="1000" style="width:100%; padding:0.6rem 0.8rem; background:rgba(0,0,0,0.3); border:1px solid var(--bg-card-border); border-radius:6px; color:#fff; font-size:1rem;">
+        </div>
+        <div>
+            <label style="display:block; font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.4rem; font-weight:600;">Operating Expenses ($):</label>
+            <input type="number" id="calc_re_opex" value="45000" min="0" step="500" style="width:100%; padding:0.6rem 0.8rem; background:rgba(0,0,0,0.3); border:1px solid var(--bg-card-border); border-radius:6px; color:#fff; font-size:1rem;">
+        </div>
+        <div>
+            <label style="display:block; font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.4rem; font-weight:600;">Target Cap Rate (%):</label>
+            <input type="number" id="calc_re_cap" value="6.5" min="1" max="25" step="0.1" style="width:100%; padding:0.6rem 0.8rem; background:rgba(0,0,0,0.3); border:1px solid var(--bg-card-border); border-radius:6px; color:#fff; font-size:1rem;">
+        </div>
+    </div>
+    <button type="button" onclick="runCalcRE()" style="background:linear-gradient(90deg, var(--primary), var(--secondary)); border:none; color:#fff; font-weight:700; padding:0.65rem 1.5rem; border-radius:6px; cursor:pointer; font-size:0.95rem;">
+        Compute Property Valuation &rarr;
+    </button>
+    <div id="calc_re_result" style="margin-top:1.5rem; padding:1.25rem; background:rgba(0,0,0,0.4); border-radius:8px; border:1px solid rgba(255,255,255,0.08); display:flex; flex-wrap:wrap; gap:2rem;">
+        <div>
+            <div style="font-size:0.8rem; color:var(--text-muted); text-transform:uppercase; font-weight:700;">Net Operating Income (NOI)</div>
+            <div id="calc_re_noi" style="font-size:1.4rem; color:#34d399; font-weight:800; margin-top:0.2rem;">,000</div>
+        </div>
+        <div>
+            <div style="font-size:0.8rem; color:var(--text-muted); text-transform:uppercase; font-weight:700;">Estimated Property Value</div>
+            <div id="calc_re_val" style="font-size:1.4rem; color:var(--accent); font-weight:800; margin-top:0.2rem;">,153,846</div>
+        </div>
+    </div>
+    <script>
+    function runCalcRE() {
+        var egi = parseFloat(document.getElementById('calc_re_egi').value) || 0;
+        var opex = parseFloat(document.getElementById('calc_re_opex').value) || 0;
+        var cap = (parseFloat(document.getElementById('calc_re_cap').value) || 6.5) / 100;
+        var noi = Math.max(0, egi - opex);
+        var val = cap > 0 ? (noi / cap) : 0;
+        document.getElementById('calc_re_noi').innerText = '$' + noi.toLocaleString('en-US', {maximumFractionDigits: 0});
+        document.getElementById('calc_re_val').innerText = '$' + val.toLocaleString('en-US', {maximumFractionDigits: 0});
+    }
+    </script>
+</div>
+
+<div class="primary-sources-card">
                     <h3>&#127963;&#65039; Primary Official Regulatory Sources &amp; Citations</h3>
                     <p>All formulas, legal definitions, and question specifications on this page have been compiled and verified against official California statutory publications:</p>
                     <ul class="primary-sources-list">

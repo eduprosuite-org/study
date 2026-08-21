@@ -157,7 +157,62 @@
                 </article>
 
                 <!-- Primary Official Sources Section -->
-                <div class="primary-sources-card">
+                <div class="glass-card" style="margin: 2.5rem 0; padding: 2rem; border: 1px solid rgba(99, 102, 241, 0.3); background: rgba(99, 102, 241, 0.04); border-radius: 12px;">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:1rem;">
+        <span style="font-size:1.5rem;">&#128208;</span>
+        <h3 style="margin:0; font-size:1.35rem; color:#ffffff; font-weight:700;">Interactive Pipe Slope &amp; Total Fall Calculator</h3>
+    </div>
+    <p style="color:var(--text-secondary); font-size:0.92rem; margin-bottom:1.5rem;">
+        Calculate required elevation drop ( Fall = Pipe Run \times Slope$) for gravity sanitary drains according to IPC Chapter 7 tables.
+    </p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:1.25rem; margin-bottom:1.5rem;">
+        <div>
+            <label style="display:block; font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.4rem; font-weight:600;">Horizontal Pipe Run (feet):</label>
+            <input type="number" id="calc_slope_run" value="40" min="1" step="1" style="width:100%; padding:0.6rem 0.8rem; background:rgba(0,0,0,0.3); border:1px solid var(--bg-card-border); border-radius:6px; color:#fff; font-size:1rem;">
+        </div>
+        <div>
+            <label style="display:block; font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.4rem; font-weight:600;">Standard Slope Grade:</label>
+            <select id="calc_slope_grade" style="width:100%; padding:0.6rem 0.8rem; background:rgba(0,0,0,0.3); border:1px solid var(--bg-card-border); border-radius:6px; color:#fff; font-size:1rem;">
+                <option value="0.25">1/4" per foot (0.25 in/ft) - 2" &amp; smaller</option>
+                <option value="0.125">1/8" per foot (0.125 in/ft) - 3" to 6"</option>
+                <option value="0.0625">1/16" per foot (0.0625 in/ft) - 8" &amp; larger</option>
+                <option value="0.5">1/2" per foot (0.50 in/ft) - High pitch</option>
+            </select>
+        </div>
+    </div>
+    <button type="button" onclick="runCalcSlope()" style="background:linear-gradient(90deg, var(--primary), var(--secondary)); border:none; color:#fff; font-weight:700; padding:0.65rem 1.5rem; border-radius:6px; cursor:pointer; font-size:0.95rem;">
+        Calculate Elevation Fall &rarr;
+    </button>
+    <div id="calc_slope_result" style="margin-top:1.5rem; padding:1.25rem; background:rgba(0,0,0,0.4); border-radius:8px; border:1px solid rgba(255,255,255,0.08); display:flex; flex-wrap:wrap; gap:2rem;">
+        <div>
+            <div style="font-size:0.8rem; color:var(--text-muted); text-transform:uppercase; font-weight:700;">Total Fall (Inches)</div>
+            <div id="calc_slope_inches" style="font-size:1.4rem; color:var(--accent); font-weight:800; margin-top:0.2rem;">10.00 inches</div>
+        </div>
+        <div>
+            <div style="font-size:0.8rem; color:var(--text-muted); text-transform:uppercase; font-weight:700;">Total Fall (Feet &amp; Inches)</div>
+            <div id="calc_slope_ftin" style="font-size:1.4rem; color:#34d399; font-weight:800; margin-top:0.2rem;">0 ft 10 in</div>
+        </div>
+        <div>
+            <div style="font-size:0.8rem; color:var(--text-muted); text-transform:uppercase; font-weight:700;">Grade Percentage</div>
+            <div id="calc_slope_pct" style="font-size:1.4rem; color:#f59e0b; font-weight:800; margin-top:0.2rem;">2.08% Grade</div>
+        </div>
+    </div>
+    <script>
+    function runCalcSlope() {
+        var run = parseFloat(document.getElementById('calc_slope_run').value) || 0;
+        var grade = parseFloat(document.getElementById('calc_slope_grade').value) || 0.25;
+        var totalInches = run * grade;
+        var feet = Math.floor(totalInches / 12);
+        var remInches = (totalInches % 12).toFixed(2);
+        var pct = ((grade / 12) * 100).toFixed(2);
+        document.getElementById('calc_slope_inches').innerText = totalInches.toFixed(2) + ' inches';
+        document.getElementById('calc_slope_ftin').innerText = feet + ' ft ' + remInches + ' in';
+        document.getElementById('calc_slope_pct').innerText = pct + '% Grade';
+    }
+    </script>
+</div>
+
+<div class="primary-sources-card">
                     <h3>&#127963;&#65039; Primary Official Regulatory &amp; Technical Standards</h3>
                     <p>All technical reference definitions, safety guidelines, and trade standards are verified against primary regulatory bodies:</p>
                     <ul class="primary-sources-list">

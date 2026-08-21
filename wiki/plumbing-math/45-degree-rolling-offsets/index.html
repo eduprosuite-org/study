@@ -157,7 +157,54 @@
                 </article>
 
                 <!-- Primary Official Sources Section -->
-                <div class="primary-sources-card">
+                <div class="glass-card" style="margin: 2.5rem 0; padding: 2rem; border: 1px solid rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.04); border-radius: 12px;">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:1rem;">
+        <span style="font-size:1.5rem;">&#128295;</span>
+        <h3 style="margin:0; font-size:1.35rem; color:#ffffff; font-weight:700;">Interactive 45&deg; Rolling Offset &amp; Travel Calculator</h3>
+    </div>
+    <p style="color:var(--text-secondary); font-size:0.92rem; margin-bottom:1.5rem;">
+        Input your vertical Set and horizontal Roll to calculate the <strong>True Offset</strong> and 45&deg; <strong>Center-to-Center Travel</strong> ( = True Offset \times 1.414$).
+    </p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:1.25rem; margin-bottom:1.5rem;">
+        <div>
+            <label style="display:block; font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.4rem; font-weight:600;">Vertical Set (inches):</label>
+            <input type="number" id="calc45_set" value="12" min="0" step="0.125" style="width:100%; padding:0.6rem 0.8rem; background:rgba(0,0,0,0.3); border:1px solid var(--bg-card-border); border-radius:6px; color:#fff; font-size:1rem;">
+        </div>
+        <div>
+            <label style="display:block; font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.4rem; font-weight:600;">Horizontal Roll (inches):</label>
+            <input type="number" id="calc45_roll" value="16" min="0" step="0.125" style="width:100%; padding:0.6rem 0.8rem; background:rgba(0,0,0,0.3); border:1px solid var(--bg-card-border); border-radius:6px; color:#fff; font-size:1rem;">
+        </div>
+    </div>
+    <button type="button" onclick="runCalc45()" style="background:linear-gradient(90deg, var(--primary), var(--secondary)); border:none; color:#fff; font-weight:700; padding:0.65rem 1.5rem; border-radius:6px; cursor:pointer; font-size:0.95rem; transition:transform 0.2s;">
+        Calculate Travel &amp; Offset &rarr;
+    </button>
+    <div id="calc45_result" style="margin-top:1.5rem; padding:1.25rem; background:rgba(0,0,0,0.4); border-radius:8px; border:1px solid rgba(255,255,255,0.08); display:flex; flex-wrap:wrap; gap:2rem;">
+        <div>
+            <div style="font-size:0.8rem; color:var(--text-muted); text-transform:uppercase; font-weight:700;">True Offset</div>
+            <div id="calc45_true" style="font-size:1.4rem; color:var(--accent); font-weight:800; margin-top:0.2rem;">20.00 in</div>
+        </div>
+        <div>
+            <div style="font-size:0.8rem; color:var(--text-muted); text-transform:uppercase; font-weight:700;">45&deg; Travel Length</div>
+            <div id="calc45_travel" style="font-size:1.4rem; color:#34d399; font-weight:800; margin-top:0.2rem;">28.28 in</div>
+        </div>
+        <div>
+            <div style="font-size:0.8rem; color:var(--text-muted); text-transform:uppercase; font-weight:700;">Formula Used</div>
+            <div style="font-size:0.9rem; color:var(--text-secondary); margin-top:0.2rem;">\text{Travel} = \sqrt{\text{Set}^2 + \text{Roll}^2} \times 1.414</div>
+        </div>
+    </div>
+    <script>
+    function runCalc45() {
+        var s = parseFloat(document.getElementById('calc45_set').value) || 0;
+        var r = parseFloat(document.getElementById('calc45_roll').value) || 0;
+        var trueOffset = Math.sqrt(s*s + r*r);
+        var travel = trueOffset * 1.41421356;
+        document.getElementById('calc45_true').innerText = trueOffset.toFixed(2) + ' in';
+        document.getElementById('calc45_travel').innerText = travel.toFixed(2) + ' in';
+    }
+    </script>
+</div>
+
+<div class="primary-sources-card">
                     <h3>&#127963;&#65039; Primary Official Regulatory &amp; Technical Standards</h3>
                     <p>All technical reference definitions, safety guidelines, and trade standards are verified against primary regulatory bodies:</p>
                     <ul class="primary-sources-list">
