@@ -1,43 +1,51 @@
-﻿﻿User-agent: *
+User-agent: *
 Allow: /
-Disallow: /app.js
-Disallow: /style.css
 Disallow: /backups-study/
 Disallow: /scratch/
 Disallow: /Google Dev Search Central Official SEO MD files/
+Disallow: /Google%20Dev%20Search%20Central%20Official%20SEO%20MD%20files/
 
-Sitemap: https://eduprosuite-org.github.io/qrcode/sitemap_index.xml
-
-# GEO / AIO: AI Crawler Explicit Permissions
+# ── GEO / AIO: AI Crawler Explicit Permissions ──────────────────
+# Google AI Overviews + Gemini (SGE)
 User-agent: Google-Extended
 Allow: /
 
+# OpenAI ChatGPT
 User-agent: GPTBot
 Allow: /
 
+# Perplexity AI
 User-agent: PerplexityBot
 Allow: /
 
+# Anthropic Claude
 User-agent: ClaudeBot
 Allow: /
 
 User-agent: anthropic-ai
 Allow: /
 
+# Apple Intelligence / Siri
 User-agent: Applebot-Extended
 Allow: /
 
+# You.com AI Search
 User-agent: YouBot
 Allow: /
 
+# Common Crawl (used by AI training)
 User-agent: CCBot
 Allow: /
 
+# Meta AI
 User-agent: FacebookBot
 Allow: /
 
+# Cohere AI
 User-agent: cohere-ai
 Allow: /
+# ────────────────────────────────────────────────────────────────
 
-Sitemap: https://eduprosuite-org.github.io/study/sitemap_index.xml
+Sitemap: https://eduprosuite-org.github.io/study/sitemap.xml
+Sitemap: https://eduprosuite-org.github.io/study/feed.xml
 Sitemap: https://eduprosuite-org.github.io/study/llms.txt
