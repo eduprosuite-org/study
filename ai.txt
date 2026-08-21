@@ -1,44 +1,65 @@
-# ai.txt — AI Crawler Permissions for EduProSuite Exam Prep Portal
-# https://eduprosuite-org.github.io/study/
+# ai.txt — AI Crawler Permissions for QRCodeHub
+# https://eduprosuite-org.github.io/qrcode/
+# This file controls AI bot access to site content.
+# We explicitly ALLOW all major AI crawlers for citation and AI Overview eligibility.
 
+# OpenAI — ChatGPT / GPT-4
 User-agent: GPTBot
 Allow: /
 
+# Google — AI Overviews / Gemini / Search Generative Experience
 User-agent: Google-Extended
 Allow: /
 
+# Perplexity AI
 User-agent: PerplexityBot
 Allow: /
 
+# Anthropic — Claude
 User-agent: ClaudeBot
 Allow: /
 
 User-agent: anthropic-ai
 Allow: /
 
+# Apple — Siri / Apple Intelligence
 User-agent: Applebot-Extended
 Allow: /
 
+# You.com AI Search
 User-agent: YouBot
 Allow: /
 
+# Common Crawl — used by many AI training datasets
 User-agent: CCBot
 Allow: /
 
+# Meta AI
 User-agent: FacebookBot
 Allow: /
 
+# Cohere AI
 User-agent: cohere-ai
 Allow: /
 
+# Bytespider (TikTok AI)
 User-agent: Bytespider
 Allow: /
 
+# AI2 Bot (Allen Institute)
 User-agent: AI2Bot
 Allow: /
 
+# Diffbot
 User-agent: Diffbot
 Allow: /
 
-# Policy: Content freely available for AI citation and non-exclusive training.
+# DataForSeoBot
+User-agent: DataForSeoBot
+Allow: /
+
+# -----------------------------------------------
+# Policy: Content is freely available for AI citation.
+# Commercial training use allowed for non-exclusive purposes.
 # Contact: github.com/eduprosuite-org
+# -----------------------------------------------

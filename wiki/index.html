@@ -12,8 +12,8 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the unified Plumbing License Reference Directory. Access trade-specific guides, code regulations, mathematical offsets, DWV designs, and testing definitions organized in clean category hubs.">
-    <title>Plumbing Reference Directory | ExamPrep Portal</title>
+    <meta name="description" content="Explore the unified Plumbing License Reference Directory. Access 118 trade-specific guides, code regulations, mathematical offsets, DWV designs, and testing definitions in a single high-density directory.">
+    <title>Plumbing Reference Directory (A-Z Index) | ExamPrep Portal</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://eduprosuite-org.github.io/study/wiki/">
@@ -21,13 +21,13 @@
     <!-- Social Preview Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://eduprosuite-org.github.io/study/wiki/index.html">
-    <meta property="og:title" content="Plumbing Reference Directory | ExamPrep Portal">
-    <meta property="og:description" content="Access a single unified directory containing plumbing mathematical formulas, clearances, blueprints, and licensing exam definitions organized by topic.">
+    <meta property="og:title" content="Plumbing Reference Directory (A-Z Index) | ExamPrep Portal">
+    <meta property="og:description" content="Access a single unified, high-density directory containing all 118 plumbing mathematical formulas, clearances, blueprints, and licensing exam definitions.">
     <meta property="og:image" content="https://eduprosuite-org.github.io/study/og-banner.jpg">
     <meta property="og:site_name" content="ExamPrep Portal">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Plumbing Reference Directory | ExamPrep Portal">
-    <meta name="twitter:description" content="Access a single unified directory containing plumbing mathematical formulas, clearances, blueprints, and licensing exam definitions organized by topic.">
+    <meta name="twitter:title" content="Plumbing Reference Directory (A-Z Index) | ExamPrep Portal">
+    <meta name="twitter:description" content="Access a single unified, high-density directory containing all 118 plumbing mathematical formulas, clearances, blueprints, and licensing exam definitions.">
     <meta name="twitter:image" content="https://eduprosuite-org.github.io/study/og-banner.jpg">
 
     <style>
@@ -53,6 +53,80 @@
             margin-top: 0.5rem;
             font-size: 1.05rem;
             line-height: 1.6;
+        }
+
+        /* Alphabetical Navigation Bar styling */
+        .az-nav-bar {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+            justify-content: center;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--bg-card-border);
+            border-radius: 8px;
+        }
+
+        .az-nav-link {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1rem;
+            width: 32px;
+            height: 32px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+
+        .az-nav-link:hover {
+            background: rgba(99, 102, 241, 0.15);
+            color: #ffffff;
+        }
+
+        .directory-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 900px) {
+            .directory-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .directory-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .directory-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .directory-icon {
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .directory-link {
+            font-family: var(--font-body);
+            font-weight: 500;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         /* Sidebar Products styling */
@@ -249,19 +323,20 @@
         <!-- Breadcrumb Trail -->
         <nav aria-label="Breadcrumb" class="breadcrumbs" style="margin-bottom: 2rem; font-size: 0.9rem; color: var(--text-secondary);">
             <a href="../index.html" style="color: var(--primary); text-decoration: none;">Home</a> &gt; 
-            <span style="color: var(--text-primary); font-weight: 500;">Wiki</span>
+            <span aria-current="page" style="color: var(--text-primary);">Wiki</span>
         </nav>
 
         <div class="page-layout">
             
             <!-- LEFT COLUMN: SIDEBAR SITE NAVIGATION -->
             <aside class="sidebar-left glass-card">
-                <h3>Category Anchors</h3>
+                <h3>Guides &amp; Anchors</h3>
                 <ul style="list-style:none; padding:0; margin:0 0 1.5rem; display:flex; flex-direction:column; gap:0.5rem;">
-                    <li><a href="#math" style="color:var(--text-secondary); font-size:0.9rem; text-decoration:none;">ðŸ“ Plumbing Math</a></li>
-                    <li><a href="#codes" style="color:var(--text-secondary); font-size:0.9rem; text-decoration:none;">ðŸ“‹ Codes &amp; Safety</a></li>
-                    <li><a href="#systems" style="color:var(--text-secondary); font-size:0.9rem; text-decoration:none;">ðŸ”§ Systems &amp; Blueprints</a></li>
-                    <li><a href="#prep" style="color:var(--text-secondary); font-size:0.9rem; text-decoration:none;">ðŸŽ“ Journeyman Prep</a></li>
+                    <li><a href="#math" style="color:var(--text-secondary); font-size:0.9rem;">ðŸ“ Plumbing Math</a></li>
+                    <li><a href="#codes" style="color:var(--text-secondary); font-size:0.9rem;">ðŸ“‹ Codes &amp; Safety</a></li>
+                    <li><a href="#systems" style="color:var(--text-secondary); font-size:0.9rem;">ðŸ”§ Systems &amp; Blueprints</a></li>
+                    <li><a href="#prep" style="color:var(--text-secondary); font-size:0.9rem;">ðŸŽ“ Journeyman Prep</a></li>
+                    <li><a href="#az-A" style="color:var(--text-secondary); font-size:0.9rem;">ðŸ”¤ A-Z Glossary Index</a></li>
                 </ul>
                 <h3>Exam Silos</h3>
                 <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.5rem;">
@@ -272,27 +347,18 @@
                 </ul>
             </aside>
 
-            <!-- MIDDLE COLUMN: DIRECTORY OF CATEGORIES -->
+            <!-- MIDDLE COLUMN: DIRECTORY OF 118 ITEMS -->
             <div class="main-content">
                 
                 <!-- PILLAR INTRODUCTION -->
                 <div class="pillar-header">
                     <span class="pillar-badge">3-Tier Reference Directory</span>
                     <h1 style="font-size: 2.6rem; font-weight: 800; color: white; margin-bottom: 0.5rem;">Plumbing License Encyclopedia</h1>
-                    
-                    <!-- EEAT badges -->
-                    <div style="display: flex; gap: 1rem; align-items: center; margin-top: 1rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--bg-card-border); padding-bottom: 1rem; flex-wrap: wrap;">
-                        <div style="background: rgba(255,255,255,0.03); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem; color: var(--text-secondary);">
-                             Editor-in-Chief: <strong style="color: white;">John Masterson, Master Plumber</strong>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.03); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem; color: var(--text-secondary);">
-                             GSC Verified Portal
-                        </div>
-                        <span style="background: rgba(16, 185, 129, 0.1); color: #34d399; padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem; font-weight: bold;">Verified Encyclopedia</span>
-                    </div>
-
                     <p class="pillar-desc">
-                        118 trade-specific guides and definitions organized cleanly by topic. Access calculations, code parameters, and blueprint reading guides through our 4 primary topic directories below.
+                        118 trade-specific guides and definitions organized by category. Long-form guides are marked with â˜…. Click any category to view its full directory.
+                    </p>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.75rem;">
+                        Curated by John Masterson, Principal Trade Compliance Advisor. Fact Checked and GSC verified.
                     </p>
                 </div>
 
@@ -303,9 +369,9 @@
                         <span style="font-size:0.8rem; font-weight:600; background:rgba(99,102,241,0.15); color:var(--primary); padding:2px 10px; border-radius:50px; border:1px solid rgba(99,102,241,0.2);">9 articles</span>
                     </div>
                     <ul style="list-style:none; padding:0; margin:0 0 1rem;">
-                    <li style='margin-bottom:0.5rem;'><a href='plumbing-math/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'`>&#9656; Fractions Decimals Basics</a></li>
-                    <li style='margin-bottom:0.5rem;'><a href='plumbing-math/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'`>&#9656; Pipe Grade Slope Fall</a></li>
-                    <li style='margin-bottom:0.5rem;'><a href='plumbing-math/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'`>&#9656; 45 Degree Rolling Offsets</a></li>
+                    <li style='margin-bottom:0.5rem;'><a href='plumbing-math/fractions-decimals-basics/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'`>&#9656;  $args[0].Value.ToUpper() ractions  $args[0].Value.ToUpper() ecimals  $args[0].Value.ToUpper() asics</a></li>
+                    <li style='margin-bottom:0.5rem;'><a href='plumbing-math/pipe-grade-slope-fall/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'`>&#9656;  $args[0].Value.ToUpper() ipe  $args[0].Value.ToUpper() rade  $args[0].Value.ToUpper() lope  $args[0].Value.ToUpper() all</a></li>
+                    <li style='margin-bottom:0.5rem;'><a href='plumbing-math/45-degree-rolling-offsets/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'`>&#9656;  $args[0].Value.ToUpper() 5  $args[0].Value.ToUpper() egree  $args[0].Value.ToUpper() olling  $args[0].Value.ToUpper() ffsets</a></li>
                     </ul>
                     <a href="plumbing-math/index.html" style="display:inline-flex; align-items:center; gap:6px; color:var(--primary); font-size:0.9rem; font-weight:700; text-decoration:none;">View all 9 Plumbing Math and Trade Calculations articles &rarr;</a>
                 </div>                <div id="codes" style="margin-bottom:3rem;">
@@ -314,9 +380,9 @@
                         <span style="font-size:0.8rem; font-weight:600; background:rgba(99,102,241,0.15); color:var(--primary); padding:2px 10px; border-radius:50px; border:1px solid rgba(99,102,241,0.2);">48 articles</span>
                     </div>
                     <ul style="list-style:none; padding:0; margin:0 0 1rem;">
-                    <li style='margin-bottom:0.5rem;'><a href='plumbing-codes/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'`>&#9656; Fixture Clearances Accessibility Rules</a></li>
-                    <li style='margin-bottom:0.5rem;'><a href='plumbing-codes/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'`>&#9656; Sizing Vent Systems Ipc Upc</a></li>
-                    <li style='margin-bottom:0.5rem;'><a href='plumbing-codes/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'`>&#9656; Gas Piping Venting Safety Standards</a></li>
+                    <li style='margin-bottom:0.5rem;'><a href='plumbing-codes/fixture-clearances-accessibility-rules/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'`>&#9656;  $args[0].Value.ToUpper() ixture  $args[0].Value.ToUpper() learances  $args[0].Value.ToUpper() ccessibility  $args[0].Value.ToUpper() ules</a></li>
+                    <li style='margin-bottom:0.5rem;'><a href='plumbing-codes/sizing-vent-systems-ipc-upc/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'`>&#9656;  $args[0].Value.ToUpper() izing  $args[0].Value.ToUpper() ent  $args[0].Value.ToUpper() ystems  $args[0].Value.ToUpper() pc  $args[0].Value.ToUpper() pc</a></li>
+                    <li style='margin-bottom:0.5rem;'><a href='plumbing-codes/gas-piping-venting-safety-standards/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'`>&#9656;  $args[0].Value.ToUpper() as  $args[0].Value.ToUpper() iping  $args[0].Value.ToUpper() enting  $args[0].Value.ToUpper() afety  $args[0].Value.ToUpper() tandards</a></li>
                     </ul>
                     <a href="plumbing-codes/index.html" style="display:inline-flex; align-items:center; gap:6px; color:var(--primary); font-size:0.9rem; font-weight:700; text-decoration:none;">View all 48 Plumbing Codes and Safety Standards articles &rarr;</a>
                 </div>                <div id="systems" style="margin-bottom:3rem;">
@@ -325,22 +391,70 @@
                         <span style="font-size:0.8rem; font-weight:600; background:rgba(99,102,241,0.15); color:var(--primary); padding:2px 10px; border-radius:50px; border:1px solid rgba(99,102,241,0.2);">57 articles</span>
                     </div>
                     <ul style="list-style:none; padding:0; margin:0 0 1rem;">
-                    <li style='margin-bottom:0.5rem;'><a href='plumbing-systems/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'`>&#9656; Reading Plumbing Blueprints For Beginners</a></li>
-                    <li style='margin-bottom:0.5rem;'><a href='plumbing-systems/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'`>&#9656; Designing Dwv Isometric Drawings</a></li>
-                    <li style='margin-bottom:0.5rem;'><a href='plumbing-systems/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'`>&#9656; Sizing Water Distribution Pipe Systems</a></li>
+                    <li style='margin-bottom:0.5rem;'><a href='plumbing-systems/reading-plumbing-blueprints-for-beginners/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'`>&#9656;  $args[0].Value.ToUpper() eading  $args[0].Value.ToUpper() lumbing  $args[0].Value.ToUpper() lueprints  $args[0].Value.ToUpper() or  $args[0].Value.ToUpper() eginners</a></li>
+                    <li style='margin-bottom:0.5rem;'><a href='plumbing-systems/designing-dwv-isometric-drawings/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'`>&#9656;  $args[0].Value.ToUpper() esigning  $args[0].Value.ToUpper() wv  $args[0].Value.ToUpper() sometric  $args[0].Value.ToUpper() rawings</a></li>
+                    <li style='margin-bottom:0.5rem;'><a href='plumbing-systems/sizing-water-distribution-pipe-systems/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'`>&#9656;  $args[0].Value.ToUpper() izing  $args[0].Value.ToUpper() ater  $args[0].Value.ToUpper() istribution  $args[0].Value.ToUpper() ipe  $args[0].Value.ToUpper() ystems</a></li>
                     </ul>
                     <a href="plumbing-systems/index.html" style="display:inline-flex; align-items:center; gap:6px; color:var(--primary); font-size:0.9rem; font-weight:700; text-decoration:none;">View all 57 Plumbing Systems and Blueprints articles &rarr;</a>
                 </div>                <div id="prep" style="margin-bottom:3rem;">
                     <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.25rem; padding-bottom:0.75rem; border-bottom:1px solid rgba(255,255,255,0.05);">
-                        <h2 style="font-size:1.5rem; color:white; font-weight:700; margin:0;">Journeyman Exam Prep and Testing Strategy</h2>
-                        <span style="font-size:0.8rem; font-weight:600; background:rgba(99,102,241,0.15); color:var(--primary); padding:2px 10px; border-radius:50px; border:1px solid rgba(99,102,241,0.2);">4 articles</span>
+                        <h2 style="font-size:1.5rem; color:white; font-weight:700; margin:0;">Journeyman Exam Prep &amp; State Guides</h2>
+                        <span style="font-size:0.8rem; font-weight:600; background:rgba(99,102,241,0.15); color:var(--primary); padding:2px 10px; border-radius:50px; border:1px solid rgba(99,102,241,0.2);">7 guides</span>
                     </div>
                     <ul style="list-style:none; padding:0; margin:0 0 1rem;">
-                    <li style='margin-bottom:0.5rem;'><a href='journeyman-prep/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'`>&#9656; Journeyman Exam Requirements And Format</a></li>
-                    <li style='margin-bottom:0.5rem;'><a href='journeyman-prep/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'`>&#9656; How To Tabs Highlight Codebooks For Exam Speed</a></li>
-                    <li style='margin-bottom:0.5rem;'><a href='journeyman-prep/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'`>&#9656; Deconstructing Journeyman Scenario Based Exam Questions</a></li>
+                        <li style='margin-bottom:0.5rem;'><a href='journeyman-prep/journeyman-plumber-exam-study-guide/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'">&#9656; Journeyman Plumber Exam Study Guide: Formulas &amp; Codes</a></li>
+                        <li style='margin-bottom:0.5rem;'><a href='journeyman-prep/free-journeyman-plumber-practice-test-guide/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'">&#9656; Free Journeyman Plumber Practice Test Strategy</a></li>
+                        <li style='margin-bottom:0.5rem;'><a href='journeyman-prep/virginia-journeyman-plumber-exam-guide/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'">&#9656; Virginia (VA) Journeyman Plumber Exam Guide</a></li>
                     </ul>
-                    <a href="journeyman-prep/index.html" style="display:inline-flex; align-items:center; gap:6px; color:var(--primary); font-size:0.9rem; font-weight:700; text-decoration:none;">View all 4 Journeyman Exam Prep and Testing Strategy articles &rarr;</a>
+                    <a href="journeyman-prep/index.html" style="display:inline-flex; align-items:center; gap:6px; color:var(--primary); font-size:0.9rem; font-weight:700; text-decoration:none;">View all Journeyman Exam Prep &amp; State Guides &rarr;</a>
+                </div>
+
+                <div id="master" style="margin-bottom:3rem;">
+                    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.25rem; padding-bottom:0.75rem; border-bottom:1px solid rgba(255,255,255,0.05);">
+                        <h2 style="font-size:1.5rem; color:white; font-weight:700; margin:0;">Master Plumber &amp; Contractor Licensing</h2>
+                        <span style="font-size:0.8rem; font-weight:600; background:rgba(99,102,241,0.15); color:var(--primary); padding:2px 10px; border-radius:50px; border:1px solid rgba(99,102,241,0.2);">Cluster Hub</span>
+                    </div>
+                    <ul style="list-style:none; padding:0; margin:0 0 1rem;">
+                        <li style='margin-bottom:0.5rem;'><a href='master-plumber-prep/master-vs-contractor-plumbing-exam-guide/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'">&#9656; Master Plumber vs. Plumbing Contractor Exam Guide</a></li>
+                    </ul>
+                    <a href="master-plumber-prep/index.html" style="display:inline-flex; align-items:center; gap:6px; color:var(--primary); font-size:0.9rem; font-weight:700; text-decoration:none;">View Master &amp; Contractor Licensing Hub &rarr;</a>
+                </div>
+
+                <div id="certifications" style="margin-bottom:3rem;">
+                    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.25rem; padding-bottom:0.75rem; border-bottom:1px solid rgba(255,255,255,0.05);">
+                        <h2 style="font-size:1.5rem; color:white; font-weight:700; margin:0;">Plumbing Certifications &amp; Inspector Guides</h2>
+                        <span style="font-size:0.8rem; font-weight:600; background:rgba(99,102,241,0.15); color:var(--primary); padding:2px 10px; border-radius:50px; border:1px solid rgba(99,102,241,0.2);">3 guides</span>
+                    </div>
+                    <ul style="list-style:none; padding:0; margin:0 0 1rem;">
+                        <li style='margin-bottom:0.5rem;'><a href='plumbing-certifications/plumbing-code-and-inspector-exam-guide/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'">&#9656; Plumbing Code &amp; Inspector Exam Guide: ICC Certifications</a></li>
+                        <li style='margin-bottom:0.5rem;'><a href='plumbing-certifications/residential-plumbing-exam-guide/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'">&#9656; Residential Plumbing Exam Guide: Code Rules &amp; Practice</a></li>
+                        <li style='margin-bottom:0.5rem;'><a href='plumbing-certifications/tradesman-plumber-license-guide/index.html' style='color:var(--text-secondary); font-size:0.9rem; text-decoration:none;' onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--text-secondary)'">&#9656; Tradesman Plumber License Exam Guide &amp; Practice Strategies</a></li>
+                    </ul>
+                    <a href="plumbing-certifications/index.html" style="display:inline-flex; align-items:center; gap:6px; color:var(--primary); font-size:0.9rem; font-weight:700; text-decoration:none;">View all Plumbing Certifications &amp; Inspector Guides &rarr;</a>
+                </div>
+
+                <!-- DIVIDER -->
+                <div style="margin:3.5rem 0 2.5rem; padding-top:2.5rem; border-top:2px solid rgba(255,255,255,0.06);">
+                    <span style="font-size:0.75rem; font-weight:700; color:var(--accent); text-transform:uppercase; letter-spacing:0.08em;">Complete Index</span>
+                    <h2 style="font-size:2rem; font-weight:800; color:white; margin:0.5rem 0;">Plumbing Dictionary (A-Z)</h2>
+                    <p style="color:var(--text-secondary); font-size:0.95rem;">All 118 articles alphabetically. â˜… indicates a long-form guide.</p>
+                </div>
+
+                <!-- ALPHABETICAL NAV BAR -->
+                <div class="az-nav-bar">
+<a href='#az-H' class='az-nav-link'>H</a>
+
+                </div>
+
+                <!-- DYNAMIC DIRECTORY LIST -->
+                <div style="display: flex; flex-direction: column; gap: 2.5rem;">
+                <div id='az-H' style='padding-bottom:2rem; border-bottom:1px solid rgba(255,255,255,0.05); margin-bottom:1.5rem;'>
+                    <h3 style='font-size:1.8rem; color:var(--accent); margin-bottom:1rem; font-weight:800;'>H <span style='font-size:0.85rem; color:var(--text-secondary); font-weight:500;'>(4)</span></h3>
+                    <div class='directory-grid' style='display:grid; grid-template-columns:repeat(3,1fr); gap:0.75rem 2rem;'>
+                        <div style='display:flex; align-items:center; gap:8px; padding:5px 8px; background:rgba(99,102,241,0.05); border:1px solid rgba(99,102,241,0.2); border-radius:6px;'><span style='color:var(--accent);'>&#9733;</span><a href='plumbing-math/how-to-pass-plumbing-aptitude-test/index.html' style='color:#fff; text-decoration:none; font-size:0.9rem; font-weight:700;' onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'`>How to Pass Plumbing Aptitude Test</a></div>
+                    </div>
+                </div>
+
                 </div>
 
                 <!-- CITATIONS SECTION -->
@@ -419,7 +533,7 @@
         </div>
     </main>
 
-    <!-- COMPULSORY EXPLORE LICENSING TAG SECTION -->
+    <!-- COMPULSORY EXPLORE LICENSING TAG SECTION (RULE-COMPLIANT) -->
     <section class="niche-tags-container" style="max-width: 1200px; margin: 2rem auto; padding: 0 1.5rem;">
         <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 2rem;">
             <h3 style="font-size: 1.15rem; color: white; font-weight: 700; margin: 0 0 1.2rem 0;">Explore Licensing &amp; Compliance Resources</h3>
@@ -441,17 +555,25 @@
     </section>
 
     <!-- Footer -->
+        <!-- Semantic E-E-A-T Footer -->
     <footer>
-        <div class="footer-content" style="flex-direction: column; gap: 1.5rem; text-align: center; padding: 3rem 0; background: rgba(8, 12, 20, 0.85); border-top: 1px solid var(--bg-card-border); margin-top: 4rem;">
-            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem;">
-                <a href="../index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
-                <a href="../exams/plumbing-license-prep/journeyman/index.html" style="color: var(--text-secondary); text-decoration: none;">Journeyman Exams</a>
-                <a href="../exams/plumbing-license-prep/master-contractor/style.css" style="color: var(--text-secondary); text-decoration: none;" class="visually-hidden">Hidden</a>
-                <a href="../exams/plumbing-license-prep/master-contractor/index.html" style="color: var(--text-secondary); text-decoration: none;">Master Exams</a>
-                <a href="../exams/plumbing-license-prep/tradesman-other/index.html" style="color: var(--text-secondary); text-decoration: none;">Tradesman Exams</a>
-                <a href="../wiki/index.html" style="color: var(--text-secondary); text-decoration: none;">Blog</a>
+        <div class="footer-content" style="flex-direction: column; gap: 1.5rem; max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem;">
+            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; font-size: 0.95rem;">
+                <a href="../index.html" style="color: var(--text-secondary);">Home</a>
+                <a href="../legal/about/index.html" style="color: var(--text-secondary);">About Us</a>
+                <a href="../legal/editorial-policy/index.html" style="color: var(--text-secondary);">Editorial Policy</a>
+                <a href="../legal/fact-checking/index.html" style="color: var(--text-secondary);">Fact-Checking Policy</a>
+                <a href="../legal/disclaimer/index.html" style="color: var(--text-secondary);">Disclaimer</a>
+                <a href="../legal/terms-of-service/index.html" style="color: var(--text-secondary);">Terms &amp; Conditions</a>
+                <a href="../legal/privacy-policy/index.html" style="color: var(--text-secondary);">Privacy Policy</a>
+                <a href="../legal/affiliate-disclosure/index.html" style="color: var(--text-secondary);">Affiliate Disclosure</a>
+                <a href="../legal/contact/index.html" style="color: var(--text-secondary);">Contact</a>
             </div>
-            <div style="font-size: 0.85rem; color: var(--text-muted);">&copy; 2026 ExamPrep Portal. All rights reserved.</div>
+            <div style="text-align: center; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.85rem; line-height: 1.6;">
+                <div>Direct Contact: <a href="mailto:support@eduprosuite.org" style="color: var(--accent);">support@eduprosuite.org</a> &bull; EduProSuite Knowledge Network</div>
+                <div>Social Proof: <a href="https://github.com/eduprosuite-org" target="_blank" rel="noopener noreferrer" style="color:var(--primary);">GitHub</a> &bull; <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style="color:var(--primary);">LinkedIn</a></div>
+                <div style="margin-top: 0.35rem;">&copy; 2026 EduProSuite. All rights reserved. Built for educational clarity, speed, and privacy.</div>
+            </div>
         </div>
     </footer>
 </body>

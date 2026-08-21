@@ -40,7 +40,9 @@ const sitePages = [
     { title: "WhatsApp Chat Link QR Code Generator with Custom Logo", path: "social/messaging/whatsapp/chat-link/" },
     { title: "Create Free WhatsApp QR Codes Online", path: "social/messaging/whatsapp/qr-generator/" },
     { title: "WhatsApp Phone Number QR Code Generator", path: "social/messaging/whatsapp/contact-number/" },
-    { title: "WhatsApp Business API QR Code Generator Tool", path: "social/messaging/whatsapp/business-api/" }
+    { title: "WhatsApp Business API QR Code Generator Tool", path: "social/messaging/whatsapp/business-api/" },
+    { title: "Plain Text & SMS QR Code Generator", path: "text/" },
+    { title: "Email Mailto QR Code Generator with Subject & Body", path: "email/" }
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -254,6 +256,15 @@ function getQRValue() {
             const phoneNum = document.getElementById('wa-phone').value.replace(/[^0-9]/g, '') || "1234567890";
             const message = document.getElementById('wa-message').value || "";
             return `https://wa.me/${phoneNum}?text=${encodeURIComponent(message)}`;
+        case 'email':
+            const emailTo = document.getElementById('email-to') ? document.getElementById('email-to').value : "";
+            const emailSub = document.getElementById('email-sub') ? document.getElementById('email-sub').value : "";
+            const emailBody = document.getElementById('email-body') ? document.getElementById('email-body').value : "";
+            return `mailto:${emailTo}?subject=${encodeURIComponent(emailSub)}&body=${encodeURIComponent(emailBody)}`;
+        case 'sms':
+            const smsPhone = document.getElementById('sms-phone') ? document.getElementById('sms-phone').value.replace(/[^0-9+]/g, '') : "";
+            const smsMsg = document.getElementById('sms-msg') ? document.getElementById('sms-msg').value : "";
+            return `SMSTO:${smsPhone}:${smsMsg}`;
         default:
             return "https://eduprosuite-org.github.io/qrcode/";
     }

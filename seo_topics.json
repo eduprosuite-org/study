@@ -1,0 +1,19 @@
+[
+  {
+    "topic": "Electrical Licensing Basics",
+    "category": "electrical-licensing",
+    "page_type": "wiki"
+  },
+  {
+    "topic": "HVAC Certification Prep",
+    "category": "hvac-licensing",
+    "page_type": "wiki"
+  },
+  {
+    "topic": "General Contractor Exam Study Guide",
+    "category": "general-contractor",
+    "niche_folder": "general-contractor",
+    "page_type": "exams",
+    "subpage": "study-guide"
+  }
+]

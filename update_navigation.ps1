@@ -37,7 +37,8 @@ foreach ($file in $allFiles) {
         "plumbing-aptitude-test",
         "sarasota-adu-permit-checklist",
         "gwinnett-home-occupation-checklist",
-        "douglas-co-residential-building-checklist"
+        "douglas-co-residential-building-checklist",
+        "electrical-licensing"
     )
     foreach ($folder in $nicheFolders) {
         if ($file.FullName -match [regex]::Escape($folder)) {

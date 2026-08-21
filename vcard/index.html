@@ -1,98 +1,181 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CJDNH392VX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-CJDNH392VX');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Create an interactive vCard QR code containing your name, phone number, email, and website. Scan to save contacts instantly to phone address books.">
-    <title>vCard QR Code Generator - Share Contact Details</title>
+    <meta name="description" content="Create an interactive vCard QR code containing your full name, phone number, email, company, and website. Scan to save digital contact cards to smartphones instantly.">
+    <!-- Layer 6: GEO/AIO Meta Signals -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="author" content="EduProSuite">
+    <meta name="copyright" content="EduProSuite 2026">
+    <link rel="me" href="https://github.com/eduprosuite-org">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="vCard QR Code Generator - Digital Business Card Maker">
+    <meta property="og:description" content="Generate free vCard 3.0 digital business cards with custom colors and logos. Direct one-tap contact saving for iPhone and Android.">
+    <meta property="og:image" content="https://eduprosuite-org.github.io/qrcode/og-banner.jpg">
+    <meta property="og:url" content="https://eduprosuite-org.github.io/qrcode/vcard/">
+    <meta property="og:site_name" content="QRCodeHub">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="vCard QR Code Generator - Free Digital Contact Creator">
+    <meta name="twitter:description" content="Create vector SVG & high-res PNG digital business cards. 100% free, client-side, unlimited scans.">
+    <meta name="twitter:image" content="https://eduprosuite-org.github.io/qrcode/og-banner.jpg">
+    <title>vCard QR Code Generator - Digital Business Card Maker</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="canonical" href="https://eduprosuite-org.github.io/qrcode/vcard/" />
     
-        <script type="application/ld+json">
-    {
-    "offers":  {
-                   "price":  "0.00",
-                   "priceCurrency":  "USD",
-                   "@type":  "Offer"
-               },
-    "browserRequirements":  "Requires JavaScript. Requires HTML5.",
-    "@type":  "WebApplication",
-    "url":  "https://eduprosuite-org.github.io/qrcode/vcard/",
-    "operatingSystem":  "All",
-    "name":  "vCard QR Code Generator",
-    "applicationCategory":  "UtilityApplication",
-    "@context":  "https://schema.org"
-}
-    </script>
     <script type="application/ld+json">
     {
-    "@context":  "https://schema.org",
-    "itemListElement":  [
-                            {
-                                "position":  1,
-                                "name":  "Home",
-                                "item":  "https://eduprosuite-org.github.io/qrcode/",
-                                "@type":  "ListItem"
-                            },
-                            {
-                                "position":  2,
-                                "name":  "Vcard",
-                                "item":  "https://eduprosuite-org.github.io/qrcode/vcard/",
-                                "@type":  "ListItem"
-                            }
-                        ],
-    "@type":  "BreadcrumbList"
-}
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "vCard QR Code Generator",
+        "url": "https://eduprosuite-org.github.io/qrcode/vcard/",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0.00",
+            "priceCurrency": "USD"
+        }
+    }
     </script>
+
     <script type="application/ld+json">
     {
-    "@context":  "https://schema.org",
-    "mainEntity":  [
-                       {
-                           "acceptedAnswer":  {
-                                                  "text":  "A vCard QR code stores contact data in a standardized VCF format. When scanned, modern smartphones recognize it as a contact card and offer a one-click save.",
-                                                  "@type":  "Answer"
-                                              },
-                           "name":  "What is a vCard QR code?",
-                           "@type":  "Question"
-                       },
-                       {
-                           "acceptedAnswer":  {
-                                                  "text":  "You can include fields like name, phone, email, company, title, and address. Avoid too much text to keep the QR code easy to scan.",
-                                                  "@type":  "Answer"
-                                              },
-                           "name":  "How much contact details can I include?",
-                           "@type":  "Question"
-                       }
-                   ],
-    "@type":  "FAQPage"
-}
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://eduprosuite-org.github.io/qrcode/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "vCard QR Code Generator"
+            }
+        ]
+    }
     </script>
+
     <script type="application/ld+json">
     {
-    "@context":  "https://schema.org",
-    "step":  [
-                 {
-                     "position":  1,
-                     "@type":  "HowToStep",
-                     "text":  "Fill out your contact fields (first name, last name, phone, email)."
-                 },
-                 {
-                     "position":  2,
-                     "@type":  "HowToStep",
-                     "text":  "Add your business URL and company name if applicable."
-                 },
-                 {
-                     "position":  3,
-                     "@type":  "HowToStep",
-                     "text":  "Generate the high-correction code and save to your mobile device."
-                 }
-             ],
-    "name":  "How to generate a vCard QR Code Generator",
-    "@type":  "HowTo"
-}
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is a vCard QR code?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A vCard QR code encodes virtual contact file data (RFC 2426 vCard 3.0 standard). When scanned by a smartphone camera, the operating system parses the fields and prompts the user to add the contact directly into their phone address book with a single tap."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Which fields can I include in a vCard QR code?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You can encode First Name, Last Name, Mobile Phone, Work Email, Company Organization, Job Title, Website URL, and Physical Street Address."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why is my vCard QR code more dense than a simple URL QR code?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Because a vCard contains structured multi-line contact text (150 to 350 characters), the QR generator automatically scales to a higher QR Version matrix (e.g. Version 6 or 7) to store all byte characters."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the recommended print size for business card QR codes?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For standard 3.5 x 2 inch business cards scanned at 15 to 25 cm, print the QR code at a minimum size of 2.2 x 2.2 cm (0.87 x 0.87 inches) in 300+ DPI vector SVG format."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Create a vCard Digital Business Card QR Code",
+        "step": [
+            {
+                "@type": "HowToStep",
+                "position": 1,
+                "text": "Fill in your professional contact details: First Name, Last Name, Phone Number, and Email Address."
+            },
+            {
+                "@type": "HowToStep",
+                "position": 2,
+                "text": "Optionally enter Company Name, Job Title, Website, and Office Street Address."
+            },
+            {
+                "@type": "HowToStep",
+                "position": 3,
+                "text": "Customize color themes to align with your corporate branding and optionally upload your company badge logo."
+            },
+            {
+                "@type": "HowToStep",
+                "position": 4,
+                "text": "Download the vector SVG file for professional business card offset printing or high-res PNG for digital email signatures."
+            }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [".hero p", ".takeaway-box ul", "h1"]
+        },
+        "url": "https://eduprosuite-org.github.io/qrcode/vcard/",
+        "name": "vCard QR Code Generator - Digital Business Card Maker",
+        "description": "Create an interactive vCard QR code containing your full name, phone number, email, company, and website. Scan to save digital contact cards."
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "url": "https://eduprosuite-org.github.io/qrcode/vcard/",
+        "about": {
+            "@type": "DefinedTerm",
+            "name": "vCard 3.0 Specification",
+            "description": "The IETF RFC 2426 electronic business card data exchange format widely adopted for mobile address book integration.",
+            "inDefinedTermSet": "https://en.wikipedia.org/wiki/VCard"
+        },
+        "mentions": [
+            {"@type": "Thing", "name": "RFC 2426 MIME Directory Profile"},
+            {"@type": "Thing", "name": "Contact Card Parsing on iOS and Android"},
+            {"@type": "Thing", "name": "Vector SVG Print DPI Standards"},
+            {"@type": "Thing", "name": "Client-Side Zero Data Collection"}
+        ]
+    }
     </script>
     
     <script>var relPrefix = "../";</script>
@@ -153,6 +236,8 @@
                             <li><a href="../social/messaging/whatsapp/chat/chat-link/index.html">WhatsApp custom Logo</a></li>
                         </ul>
                     </li>
+                    <li><a href="../text/index.html">Text / SMS</a></li>
+                    <li><a href="../email/index.html">Email QR</a></li>
                 </ul>
             </nav>
             <div class="search-container">
@@ -167,82 +252,60 @@
         <div class="page-layout">
             <!-- Left Sidebar (Vertical Silo Navigation) -->
             <aside class="sidebar-left">
-                <h3>Current Silo Navigation</h3>
-<ul><li><a href="../index.html">&larr; Main Home</a></li><li><a href="../vcard/business-card/free/contacts/contact-qr/index.html">&nbsp;&nbsp;â–ª Create Free Contact Info QR Code</a></li><li><a href="../vcard/business-card/free/contacts/digital-profile/index.html">&nbsp;&nbsp;â–ª Digital Business Card QR Code with Logo</a></li><li><a href="../vcard/business-card/free/contacts/mobile-vcard/index.html">&nbsp;&nbsp;â–ª Mobile vCard QR Code Generator</a></li><li><a href="../vcard/business-card/free/contacts/vcf-generator/index.html">&nbsp;&nbsp;â–ª Free VCF Link QR Code Generator</a></li><li><a href="../vcard/business-card/index.html">QR Code Business Card Guide</a></li><li><a href="../vcard/index.html" class="active">vCard QR Code Generator</a></li><li><a href="../vcard/business-card/free/contacts/index.html">Contact QR Code Hub</a></li><li><a href="../vcard/business-card/free/index.html">Free QR Code Business Card Tools</a></li></ul>
+                <h3>QR Code Creators</h3>
+                <ul>
+                    <li><a href="../vcard/index.html" class="active">vCard Business Cards</a></li>
+                    <li><a href="../link/index.html">Link to QR Code</a></li>
+                    <li><a href="../wifi/index.html">WiFi Network QR</a></li>
+                    <li><a href="../pdf/index.html">PDF & Documents</a></li>
+                    <li><a href="../social/index.html">Social & WhatsApp</a></li>
+                    <li><a href="../text/index.html">Plain Text & SMS</a></li>
+                    <li><a href="../email/index.html">Email Mailto QR</a></li>
+                </ul>
+                <h3 style="margin-top: 1.5rem;">vCard Sub-Topics</h3>
+                <ul>
+                    <li><a href="../vcard/business-card/index.html">Business Card Guide</a></li>
+                    <li><a href="../vcard/business-card/free/index.html">Free vCard Tools</a></li>
+                    <li><a href="../vcard/business-card/free/contacts/digital-profile/index.html">Digital Profile Cards</a></li>
+                    <li><a href="../vcard/business-card/free/contacts/contact-qr/index.html">Create Contact Info QR</a></li>
+                    <li><a href="../vcard/business-card/free/contacts/vcf-generator/index.html">VCF Generator Tool</a></li>
+                    <li><a href="../vcard/business-card/free/contacts/mobile-vcard/index.html">Mobile vCard Format</a></li>
+                </ul>
             </aside>
             
             <!-- Central Main Content Column -->
             <div class="main-content">
-                <div class="breadcrumbs"><a href="../index.html">Home</a><span class="separator"></span><span>Vcard</span></div>
+                <nav aria-label="Breadcrumb" class="breadcrumbs"><a href="../index.html">Home</a><span class="separator">/</span><span>vCard QR Code Generator</span></nav>
                 
                 <section class="hero">
                     <h1>vCard QR Code Generator</h1>
-                    <p>Create an interactive vCard QR code containing your name, phone number, email, and website. Scan to save contacts instantly to phone address books.</p>
+                    <p>Generate interactive digital business cards using the standardized vCard 3.0 format. Enable prospects and clients to scan your QR code with their mobile cameras and save your contact information into their address book with zero manual typing.</p>
                 </section>
                 
                 <!-- Quick Takeaway Block -->
-                <div class="takeaway-box">
-                    <h4>Quick Summary &amp; Key Takeaways</h4>
+                <aside class="takeaway-box" aria-label="Key Takeaways">
+                    <h4>Quick Summary & Key Takeaways</h4>
                     <ul>
-                        <li>Convert full contact cards (names, addresses, websites) into single scannable codes.</li><li>Native compatibility with Android Contacts and Apple Address Book apps.</li><li>Perfect for resume designs, portfolio pages, and event networking.</li>
+                        <li>Encodes contact information in RFC 2426 vCard 3.0 format recognized by iOS Contacts and Android Google Contacts.</li>
+                        <li>Stores Name, Phone, Email, Company, Title, Website, and Address offline inside the matrix without needing an internet connection.</li>
+                        <li>100% private: no contact database is stored on remote servers; all data remains in your client browser.</li>
+                        <li>Export in vector SVG for crisp 300+ DPI physical business card printing.</li>
                     </ul>
-                </div>
+                </aside>
                 
                 <!-- Interactive Generator Widget -->
                 <article class="glass-card">
-                    <h2 style="margin-top:0; font-size: 1.4rem; margin-bottom: 1.5rem;">Configure Custom QR Code</h2>
+                    <h2 style="margin-top:0; font-size: 1.4rem; margin-bottom: 1.5rem;">Configure vCard Contact Card</h2>
                     
                     <div class="qr-widget-container">
                         <!-- Left: Inputs -->
                         <div class="qr-inputs-panel">
                             <div class="qr-tabs">
-                                <button type="button" class="qr-tab-btn " data-mode="url">URL Link</button>
-                                <button type="button" class="qr-tab-btn " data-mode="text">Plain Text</button>
-                                <button type="button" class="qr-tab-btn " data-mode="wifi">WiFi Network</button>
                                 <button type="button" class="qr-tab-btn active" data-mode="vcard">vCard Contact</button>
-                                <button type="button" class="qr-tab-btn " data-mode="whatsapp">WhatsApp Chat</button>
-                            </div>
-                            
-                            <!-- URL Field -->
-                            <div id="fields-url" class="form-group-fields" style="display: none;">
-                                <div class="input-group">
-                                    <label for="input-url">Destination Link / Website URL</label>
-                                    <input type="url" id="input-url" class="form-input" placeholder="e.g. www.example.com/file.pdf" value="https://eduprosuite-org.github.io/qrcode/">
-                                </div>
-                            </div>
-                            
-                            <!-- Text Field -->
-                            <div id="fields-text" class="form-group-fields" style="display: none;">
-                                <div class="input-group">
-                                    <label for="input-text">Raw Text Content</label>
-                                    <textarea id="input-text" class="form-input" rows="3" placeholder="Enter custom message or code content..."></textarea>
-                                </div>
-                            </div>
-                            
-                            <!-- WiFi Fields -->
-                            <div id="fields-wifi" class="form-group-fields" style="display: none;">
-                                <div class="input-group" style="margin-bottom: 0.8rem;">
-                                    <label for="wifi-ssid">WiFi Network Name (SSID)</label>
-                                    <input type="text" id="wifi-ssid" class="form-input" placeholder="SSID Name" value="WiFi-Network">
-                                </div>
-                                <div class="input-group" style="margin-bottom: 0.8rem;">
-                                    <label for="wifi-pass">WiFi Password (WPA/WEP)</label>
-                                    <input type="password" id="wifi-pass" class="form-input" placeholder="Password">
-                                </div>
-                                <div class="control-row">
-                                    <div class="input-group">
-                                        <label for="wifi-enc">Security Protocol</label>
-                                        <select id="wifi-enc" class="form-input" style="padding:0.7rem 0.8rem;">
-                                            <option value="WPA">WPA/WPA2</option>
-                                            <option value="WEP">WEP</option>
-                                            <option value="nopass">None (Open)</option>
-                                        </select>
-                                    </div>
-                                    <div class="input-group" style="justify-content: center; flex-direction:row; align-items:center; gap: 0.5rem; margin-top:1.2rem;">
-                                        <input type="checkbox" id="wifi-hidden" style="width: 18px; height: 18px; cursor: pointer;">
-                                        <label for="wifi-hidden" style="cursor: pointer; margin:0; text-transform:none;">Hidden Network</label>
-                                    </div>
-                                </div>
+                                <button type="button" class="qr-tab-btn" data-mode="url">URL Link</button>
+                                <button type="button" class="qr-tab-btn" data-mode="wifi">WiFi Network</button>
+                                <button type="button" class="qr-tab-btn" data-mode="text">Plain Text</button>
+                                <button type="button" class="qr-tab-btn" data-mode="whatsapp">WhatsApp Chat</button>
                             </div>
                             
                             <!-- vCard Fields -->
@@ -250,54 +313,74 @@
                                 <div class="control-row" style="margin-bottom: 0.8rem;">
                                     <div class="input-group">
                                         <label for="vcard-first">First Name</label>
-                                        <input type="text" id="vcard-first" class="form-input" placeholder="First Name" value="John">
+                                        <input type="text" id="vcard-first" class="form-input" placeholder="First Name" value="Alex">
                                     </div>
                                     <div class="input-group">
                                         <label for="vcard-last">Last Name</label>
-                                        <input type="text" id="vcard-last" class="form-input" placeholder="Last Name" value="Doe">
+                                        <input type="text" id="vcard-last" class="form-input" placeholder="Last Name" value="Morgan">
                                     </div>
                                 </div>
                                 <div class="control-row" style="margin-bottom: 0.8rem;">
                                     <div class="input-group">
                                         <label for="vcard-phone">Mobile Phone</label>
-                                        <input type="tel" id="vcard-phone" class="form-input" placeholder="+1234567890">
+                                        <input type="tel" id="vcard-phone" class="form-input" placeholder="+1234567890" value="+1-555-0199">
                                     </div>
                                     <div class="input-group">
                                         <label for="vcard-email">Email Address</label>
-                                        <input type="email" id="vcard-email" class="form-input" placeholder="email@address.com">
+                                        <input type="email" id="vcard-email" class="form-input" placeholder="email@address.com" value="alex@example.com">
                                     </div>
                                 </div>
                                 <div class="control-row" style="margin-bottom: 0.8rem;">
                                     <div class="input-group">
-                                        <label for="vcard-org">Organization</label>
-                                        <input type="text" id="vcard-org" class="form-input" placeholder="Company Name">
+                                        <label for="vcard-org">Organization / Company</label>
+                                        <input type="text" id="vcard-org" class="form-input" placeholder="Company Name" value="EduProSuite Corp">
                                     </div>
                                     <div class="input-group">
                                         <label for="vcard-title">Job Title</label>
-                                        <input type="text" id="vcard-title" class="form-input" placeholder="e.g. Director">
+                                        <input type="text" id="vcard-title" class="form-input" placeholder="e.g. Senior Consultant" value="Technical Director">
                                     </div>
                                 </div>
                                 <div class="control-row" style="margin-bottom: 0.8rem;">
                                     <div class="input-group">
                                         <label for="vcard-web">Website Link</label>
-                                        <input type="url" id="vcard-web" class="form-input" placeholder="e.g. www.yoursite.com">
+                                        <input type="url" id="vcard-web" class="form-input" placeholder="https://www.yoursite.com" value="https://eduprosuite-org.github.io/qrcode/">
                                     </div>
                                     <div class="input-group">
                                         <label for="vcard-addr">Office Address</label>
-                                        <input type="text" id="vcard-addr" class="form-input" placeholder="e.g. 100 Main St, NY">
+                                        <input type="text" id="vcard-addr" class="form-input" placeholder="City, State" value="San Francisco, CA">
                                     </div>
                                 </div>
                             </div>
-                            
-                            <!-- WhatsApp Fields -->
-                            <div id="fields-whatsapp" class="form-group-fields" style="display: none;">
-                                <div class="input-group" style="margin-bottom: 0.8rem;">
-                                    <label for="wa-phone">WhatsApp Number (with country code)</label>
-                                    <input type="tel" id="wa-phone" class="form-input" placeholder="e.g. 15551234567" value="15551234567">
-                                </div>
+
+                            <!-- URL Field (fallback) -->
+                            <div id="fields-url" class="form-group-fields" style="display: none;">
                                 <div class="input-group">
-                                    <label for="wa-message">Pre-Filled Welcome Message</label>
-                                    <textarea id="wa-message" class="form-input" rows="2" placeholder="e.g. Hello, I would like to get a quote..."></textarea>
+                                    <label for="input-url">Destination Link / Website URL</label>
+                                    <input type="url" id="input-url" class="form-input" placeholder="https://www.example.com" value="https://eduprosuite-org.github.io/qrcode/">
+                                </div>
+                            </div>
+                            
+                            <!-- Text Field (fallback) -->
+                            <div id="fields-text" class="form-group-fields" style="display: none;">
+                                <div class="input-group">
+                                    <label for="input-text">Raw Text Content</label>
+                                    <textarea id="input-text" class="form-input" rows="3" placeholder="Enter custom message or code content..."></textarea>
+                                </div>
+                            </div>
+
+                            <!-- WiFi Fields (fallback) -->
+                            <div id="fields-wifi" class="form-group-fields" style="display: none;">
+                                <div class="input-group" style="margin-bottom: 0.8rem;">
+                                    <label for="wifi-ssid">WiFi Network Name (SSID)</label>
+                                    <input type="text" id="wifi-ssid" class="form-input" placeholder="SSID Name" value="WiFi-Network">
+                                </div>
+                            </div>
+                            
+                            <!-- WhatsApp Fields (fallback) -->
+                            <div id="fields-whatsapp" class="form-group-fields" style="display: none;">
+                                <div class="input-group">
+                                    <label for="wa-phone">WhatsApp Number</label>
+                                    <input type="tel" id="wa-phone" class="form-input" placeholder="15551234567" value="15551234567">
                                 </div>
                             </div>
                             
@@ -329,15 +412,15 @@
                                 </div>
                                 
                                 <div class="input-group">
-                                    <label>Add Branded Center Logo</label>
+                                    <label>Add Brand Avatar / Center Logo</label>
                                     <div class="logo-upload-box" id="logo-dropzone">
-                                        <span>&#128194;</span>
-                                        <p>Drag &amp; Drop Logo here or click to browse</p>
+                                        <span>👤</span>
+                                        <p>Drag & Drop Profile / Logo here or click to browse</p>
                                         <input type="file" id="logo-file" accept="image/png, image/jpeg" style="display:none;">
                                     </div>
                                     <div class="logo-preview-container" id="logo-preview-container" style="display:none;">
                                         <img id="logo-preview-img" class="logo-preview-img" alt="Branded Logo Preview">
-                                        <span style="font-size:0.85rem; color:var(--text-secondary); flex-grow:1;">Branded Logo Embedded</span>
+                                        <span style="font-size:0.85rem; color:var(--text-secondary); flex-grow:1;">Avatar Embedded</span>
                                         <button type="button" id="remove-logo-btn" class="remove-logo-btn">Remove Logo</button>
                                     </div>
                                 </div>
@@ -350,51 +433,161 @@
                                 <canvas id="qr-canvas"></canvas>
                             </div>
                             <div class="qr-actions">
-                                <button type="button" id="download-png" class="btn btn-primary">&#128190; Download PNG Image</button>
-                                <button type="button" id="download-svg" class="btn btn-secondary">&#128396; Download Vector SVG</button>
+                                <button type="button" id="download-png" class="btn btn-primary">💾 Download PNG Image</button>
+                                <button type="button" id="download-svg" class="btn btn-secondary">🖊️ Download Vector SVG</button>
                             </div>
                         </div>
                     </div>
                 </article>
                 
-                <!-- Detailed Silo Article -->
+                <!-- Detailed Silo Article with Comparison Tables -->
                 <section class="glass-card" style="margin-top:2rem;">
-                    <h2>Overview of vCard QR Code Generator</h2>
-                    <p>In modern digital environments, sharing information efficiently is a competitive advantage. This custom tool is designed to convert high-intent data strings into static scannable matrices conforming to ISO/IEC 18004 standards. Running completely locally in your client's web browser, it ensures 100% data safety, high privacy, and instantaneous execution speeds.</p>
+                    <h2>Digital Business Card Formats & Technical Architecture</h2>
+                    <p>A vCard QR code embeds an RFC 2426 electronic business card data stream directly into the QR code matrix. When scanned by Apple iOS Camera or Android Google Lens, the operating system synthesizes a native contact preview sheet allowing immediate address book integration.</p>
                     
-                    <h3>How it Works</h3>
-                    <p>The matrix uses an algorithm to convert your text or parameters into modular grids of dark and light dots. Our generator embeds a correction matrix using the Reed-Solomon error correction algorithm. By forcing the correction level to 'H' (High), the generated QR code can lose up to 30% of its surface area (such as when a custom logo is overlayed in the center) and still retain full decoding capabilities on mobile device camera scanners.</p>
+                    <div class="formula-card">
+                        <h4>📋 vCard 3.0 Data Structure</h4>
+                        <div class="formula-math">BEGIN:VCARD&#92;nVERSION:3.0&#92;nN:Last;First;;;&#92;nFN:First Last&#92;nORG:Company&#92;nTEL;TYPE=CELL:Phone&#92;nEMAIL:Email&#92;nURL:Web&#92;nEND:VCARD</div>
+                    </div>
+
+                    <h3>1. Contact Exchange Protocols Comparison</h3>
+                    <p>Different contact formats offer different balances of data richness versus scanning speed:</p>
                     
-                    <h3>Scanning Requirements</h3>
-                    <p>Smartphone camera systems parse patterns by searching for three distinct square finder patterns in the corners of the code. To guarantee immediate scanning performance, ensure there is high contrast between the foreground dots and the background card. A quiet zone (margin) of at least 4 modules wide should surround the code to separate it from neighboring text or graphics.</p>
+                    <div class="table-wrapper">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Standard Format</th>
+                                    <th>Data Richness</th>
+                                    <th>Offline Compatibility</th>
+                                    <th>Smartphone Native Support</th>
+                                    <th>Recommended Use Case</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="spec-badge success">vCard 3.0 (Static)</span></td>
+                                    <td>High (Name, Phone, Email, Org, Title, Web, Address)</td>
+                                    <td>100% Offline (No Server Needed)</td>
+                                    <td>Universal (iOS, Android, macOS, Windows)</td>
+                                    <td>Standard Printed Business Cards &amp; Badges</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="spec-badge accent">MeCard (NTT DoCoMo)</span></td>
+                                    <td>Basic (Name, Phone, Email only)</td>
+                                    <td>100% Offline</td>
+                                    <td>Partial (Older Asian mobile standards)</td>
+                                    <td>Ultra-compact low-density matrices</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="spec-badge primary">Dynamic Contact URL</span></td>
+                                    <td>Unlimited (Social links, bio, videos, PDF portfolio)</td>
+                                    <td>Requires Active Internet Connection</td>
+                                    <td>Opens web browser first, then downloads .vcf</td>
+                                    <td>Executive interactive digital profile hubs</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>2. Business Card Physical Dimensions & Print Guidelines</h3>
+                    <p>Printing high-density vCard QR codes on standard business card cardstocks requires precise sizing to prevent optical scanning failure:</p>
+                    
+                    <div class="table-wrapper">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Card Standard</th>
+                                    <th>Physical Card Size</th>
+                                    <th>Minimum QR Code Print Size</th>
+                                    <th>Required Quiet Zone (Margin)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Standard US Business Card</td>
+                                    <td>3.5&quot; &times; 2.0&quot; (88.9 &times; 50.8 mm)</td>
+                                    <td>2.2 cm &times; 2.2 cm (0.87&quot; &times; 0.87&quot;)</td>
+                                    <td>4 modules (~2 mm white border)</td>
+                                </tr>
+                                <tr>
+                                    <td>European Business Card</td>
+                                    <td>85 mm &times; 55 mm (3.34&quot; &times; 2.16&quot;)</td>
+                                    <td>2.2 cm &times; 2.2 cm (0.87&quot; &times; 0.87&quot;)</td>
+                                    <td>4 modules (~2 mm white border)</td>
+                                </tr>
+                                <tr>
+                                    <td>Conference Badge / Lanyard</td>
+                                    <td>4.0&quot; &times; 3.0&quot; (101.6 &times; 76.2 mm)</td>
+                                    <td>3.5 cm &times; 3.5 cm (1.38&quot; &times; 1.38&quot;)</td>
+                                    <td>4 modules (~3 mm white border)</td>
+                                </tr>
+                                <tr>
+                                    <td>Flyer / Corporate Brochure</td>
+                                    <td>8.5&quot; &times; 11.0&quot; (Letter / A4)</td>
+                                    <td>4.0 cm &times; 4.0 cm (1.57&quot; &times; 1.57&quot;)</td>
+                                    <td>4 modules (~4 mm white border)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </section>
                 
                 <!-- FAQ Accordion section -->
                 <section class="glass-card">
                     <h2>Frequently Asked Questions</h2>
                     <div class="faq-container">
-                                <div class="faq-item">
-            <div class="faq-question">What is a vCard QR code?</div>
-            <div class="faq-answer">A vCard QR code stores contact data in a standardized VCF format. When scanned, modern smartphones recognize it as a contact card and offer a one-click save.</div>
-        </div>        <div class="faq-item">
-            <div class="faq-question">How much contact details can I include?</div>
-            <div class="faq-answer">You can include fields like name, phone, email, company, title, and address. Avoid too much text to keep the QR code easy to scan.</div>
-        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">What is a vCard QR code?</div>
+                            <div class="faq-answer">A vCard QR code encodes virtual contact file data (RFC 2426 vCard 3.0 standard). When scanned by a smartphone camera, the operating system parses the fields and prompts the user to add the contact directly into their phone address book with a single tap.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">Which fields can I include in a vCard QR code?</div>
+                            <div class="faq-answer">You can encode First Name, Last Name, Mobile Phone, Work Email, Company Organization, Job Title, Website URL, and Physical Street Address.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">Why is my vCard QR code more dense than a simple URL QR code?</div>
+                            <div class="faq-answer">Because a vCard contains structured multi-line contact text (150 to 350 characters), the QR generator automatically scales to a higher QR Version matrix (e.g. Version 6 or 7) to store all byte characters.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">What is the recommended print size for business card QR codes?</div>
+                            <div class="faq-answer">For standard 3.5 x 2 inch business cards scanned at 15 to 25 cm, print the QR code at a minimum size of 2.2 x 2.2 cm (0.87 x 0.87 inches) in 300+ DPI vector SVG format.</div>
+                        </div>
                     </div>
                 </section>
                 
-                <!-- Sibling lateral links (for Level 5 pages only) -->
-                
-                
                 <!-- All category links for bottom-up flow -->
-                <div class="niche-tags-container"><h4>Explore Branded QR Code Resources</h4><div class="niche-tags-list"><a href="../wifi/index.html" class="niche-tag-link">WiFi QR Code Generator</a><a href="../link/index.html" class="niche-tag-link">Link to QR Code Converter</a><a href="../vcard/index.html" class="niche-tag-link">vCard Contact QR Code Maker</a><a href="../pdf/index.html" class="niche-tag-link">PDF to QR Code Generator</a><a href="../social/index.html" class="niche-tag-link">Social Media QR Code Creator</a></div></div>
+                <div class="niche-tags-container">
+                    <h4>Explore All QR Code Creators & Tools</h4>
+                    <div class="niche-tags-list">
+                        <a href="../vcard/index.html" class="niche-tag-link">vCard Contact QR Code Maker</a>
+                        <a href="../link/index.html" class="niche-tag-link">Link to QR Code Converter</a>
+                        <a href="../wifi/index.html" class="niche-tag-link">WiFi QR Code Generator</a>
+                        <a href="../pdf/index.html" class="niche-tag-link">PDF to QR Code Generator</a>
+                        <a href="../social/index.html" class="niche-tag-link">Social Media QR Code Creator</a>
+                        <a href="../text/index.html" class="niche-tag-link">Plain Text & SMS QR Generator</a>
+                        <a href="../email/index.html" class="niche-tag-link">Email Mailto QR Code Generator</a>
+                    </div>
+                </div>
             </div>
             
             <!-- Right Sidebar (Contextual Utilities) -->
             <aside class="sidebar-right">
-                <h3>Trending Utilities</h3>
-<ul><li><a href="../wifi/setup/android/home-network/free-tool/index.html">Free Android Home WiFi QR Code Generator Tool</a></li><li><a href="../wifi/setup/android/home-network/qr-generator/index.html">Create Android Home WiFi Network QR Codes</a></li><li><a href="../wifi/setup/android/home-network/share-scanner/index.html">Scan and Share Android WiFi QR Codes</a></li><li><a href="../wifi/setup/android/home-network/connect-guide/index.html">Connect to Android WiFi QR Codes Step-by-Step</a></li><li><a href="../link/url-generator/free/links/no-signup/index.html">Free QR Code Generator from Link No Signup</a></li><li><a href="../link/url-generator/free/links/unlimited/index.html">Free Unlimited Link QR Code Generator</a></li></ul><h3>Branded Tools</h3>
-<ul><li><a href="../wifi/index.html">WiFi QR Code Generator</a></li><li><a href="../wifi/setup/index.html">WiFi QR Code Connection Setup</a></li><li><a href="../wifi/setup/android/index.html">Android WiFi QR Code Setup</a></li><li><a href="../link/index.html">Link to QR Code Generator</a></li></ul>
+                <h3>vCard Utilities</h3>
+                <ul>
+                    <li><a href="../vcard/business-card/free/contacts/digital-profile/index.html">Digital Business Cards</a></li>
+                    <li><a href="../vcard/business-card/free/contacts/contact-qr/index.html">Contact QR Code Maker</a></li>
+                    <li><a href="../vcard/business-card/free/contacts/vcf-generator/index.html">Free VCF Link Generator</a></li>
+                    <li><a href="../vcard/business-card/free/contacts/mobile-vcard/index.html">Mobile Contact Cards</a></li>
+                </ul>
+                <h3 style="margin-top:1.5rem;">Other QR Hubs</h3>
+                <ul>
+                    <li><a href="../link/index.html">URL Link QR Generator</a></li>
+                    <li><a href="../wifi/index.html">WiFi Network QR Tool</a></li>
+                    <li><a href="../pdf/index.html">PDF Document QR Converter</a></li>
+                    <li><a href="../text/index.html">Plain Text & SMS QR Code</a></li>
+                    <li><a href="../email/index.html">Email Mailto QR Code</a></li>
+                </ul>
             </aside>
         </div>
     </main>
@@ -405,40 +598,48 @@
             <div class="footer-grid">
                 <div class="footer-col" style="grid-column: span 1;">
                     <h4>QRCodeHub</h4>
-                    <p style="font-size:0.85rem; color:var(--text-secondary);">Interactive client-side QR code generator providing customized, print-ready vector SVG and PNG downloads with zero limits.</p>
+                    <p style="font-size:0.85rem; color:var(--text-secondary);">Interactive client-side QR code generator providing customized, print-ready vector SVG and PNG downloads with zero limits and 100% privacy.</p>
                     <a href="../index.html" style="font-weight:700; color:var(--primary);">Go back to Homepage</a>
+                    <div style="margin-top: 1rem; font-size:0.85rem; color:var(--text-muted);">
+                        <strong>Direct Contact:</strong><br>
+                        <a href="mailto:support@eduprosuite.org" style="color:var(--accent);">support@eduprosuite.org</a>
+                    </div>
                 </div>
                 <div class="footer-col">
-                    <h4>QR Code Types</h4>
+                    <h4>QR Code Creators</h4>
                     <ul>
-                        <li><a href="../wifi/index.html">WiFi Network</a></li>
                         <li><a href="../link/index.html">Link / Website URL</a></li>
-                        <li><a href="../vcard/index.html">vCard Contact Card</a></li>
+                        <li><a href="../wifi/index.html">WiFi Network</a></li>
+                        <li><a href="../vcard/index.html">vCard Business Card</a></li>
                         <li><a href="../pdf/index.html">PDF Document</a></li>
+                        <li><a href="../social/index.html">WhatsApp &amp; Social</a></li>
+                        <li><a href="../text/index.html">Plain Text &amp; SMS</a></li>
+                        <li><a href="../email/index.html">Email Mailto QR</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Sitemaps</h4>
+                    <h4>Trust &amp; Editorial</h4>
                     <ul>
+                        <li><a href="../legal/about/index.html">About Us</a></li>
+                        <li><a href="../legal/editorial-policy/index.html">Editorial Policy</a></li>
+                        <li><a href="../legal/fact-checking/index.html">Fact-Checking Policy</a></li>
+                        <li><a href="../legal/contact/index.html">Contact Us</a></li>
                         <li><a href="../sitemap_index.xml">Sitemap Index</a></li>
-                        <li><a href="../sitemap-wifi.xml">WiFi Sitemap</a></li>
-                        <li><a href="../sitemap-link.xml">Link Sitemap</a></li>
-                        <li><a href="../sitemap-vcard.xml">vCard Sitemap</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Legal &amp; Info</h4>
+                    <h4>Legal &amp; Policy</h4>
                     <ul>
-                        <li><a href="../index.html">Privacy Policy</a></li>
-                        <li><a href="../index.html">Terms of Service</a></li>
-                        <li><a href="../index.html">Contact Us</a></li>
-                        <li><a href="../index.html">About Developer</a></li>
+                        <li><a href="../legal/privacy-policy/index.html">Privacy Policy</a></li>
+                        <li><a href="../legal/terms-of-service/index.html">Terms &amp; Conditions</a></li>
+                        <li><a href="../legal/disclaimer/index.html">Disclaimer</a></li>
+                        <li><a href="../legal/affiliate-disclosure/index.html">Affiliate Disclosure</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <div>&copy; 2026 QRCodeHub Portal. Built for eduprosuite. All rights reserved.</div>
-                <div>Hosted statically on GitHub Pages. Proximity to GSC verification ready.</div>
+                <div>&copy; 2026 QRCodeHub &bull; EduProSuite Digital Knowledge Network. All rights reserved. | Contact: <a href="mailto:support@eduprosuite.org" style="color:var(--accent);">support@eduprosuite.org</a></div>
+                <div>Client-side privacy guaranteed &bull; Open source on <a href="https://github.com/eduprosuite-org" target="_blank" rel="noopener noreferrer" style="color:var(--primary);">GitHub</a> &bull; <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style="color:var(--primary);">LinkedIn</a></div>
             </div>
         </div>
     </footer>

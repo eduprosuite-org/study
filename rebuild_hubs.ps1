@@ -1,7 +1,25 @@
 # PowerShell script to cleanly rebuild the Tier 1 and Tier 2 hub pages
 # in the study repository.
 
-$tempDir = "D:\study-rebuild-temp"
+$tempDir = "D:\study-inspect-hubs-clean"
+if (Test-Path $tempDir) {
+    Remove-Item -Path $tempDir -Recurse -Force | Out-Null
+}
+
+$tokenFile = Join-Path $PSScriptRoot ".github_token"
+$token = (Get-Content $tokenFile).Trim()
+$owner = "eduprosuite-org"
+$repo = "study"
+$branch = "main"
+
+Write-Host "Cloning repository..."
+$cloneUrl = "https://$($token)@github.com/$owner/$repo.git"
+git clone --depth 1 -b $branch $cloneUrl $tempDir
+if (-not (Test-Path $tempDir)) {
+    Write-Error "Failed to clone repository."
+    exit 1
+}
+
 $categories = @("plumbing-math", "plumbing-codes", "plumbing-systems", "journeyman-prep")
 $categoryDisplayNames = @{
     "plumbing-math"    = "Plumbing Math and Trade Calculations"
@@ -11,59 +29,6 @@ $categoryDisplayNames = @{
 }
 
 $baseDomain = "https://eduprosuite-org.github.io/study"
-
-# Explorer tags section (Silo-compliant, relative path depth 2 for category hub pages)
-$tagsSectionHub = @"
-    <!-- COMPULSORY EXPLORE LICENSING TAG SECTION -->
-    <section class="niche-tags-container" style="max-width: 1200px; margin: 2rem auto; padding: 0 1.5rem;">
-        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 2rem;">
-            <h3 style="font-size: 1.15rem; color: white; font-weight: 700; margin: 0 0 1.2rem 0;">Explore Licensing &amp; Compliance Resources</h3>
-            <div class="niche-tags-list">
-                <a href="../../exams/ca-real-estate-math/index.html" class="niche-tag-link">CA Real Estate Math Prep</a>
-                <a href="../../exams/ca-real-estate-math/practice-test/index.html" class="niche-tag-link">Real Estate Practice Simulator</a>
-                <a href="../../exams/ca-real-estate-math/study-guide/index.html" class="niche-tag-link">Real Estate Formulas Study Guide</a>
-                <a href="../../exams/vic-lea-electrician-prep/index.html" class="niche-tag-link">Victoria LEA Electrician Prep</a>
-                <a href="../../exams/vic-lea-electrician-prep/practice-test/index.html" class="niche-tag-link">LEA Practice Quiz LET/LEP</a>
-                <a href="../../exams/vic-lea-electrician-prep/study-guide/index.html" class="niche-tag-link">AS NZS 3000 Study Guide</a>
-                <a href="../../exams/sarasota-adu-permit-checklist/index.html" class="niche-tag-link">Sarasota ADU Permit Guide</a>
-                <a href="../../exams/sarasota-adu-permit-checklist/zoning-guide/index.html" class="niche-tag-link">Sarasota Zoning Requirements</a>
-                <a href="../../exams/gwinnett-home-occupation-checklist/index.html" class="niche-tag-link">Gwinnett Home Occupation</a>
-                <a href="../../exams/gwinnett-home-occupation-checklist/zoning-requirements/index.html" class="niche-tag-link">Gwinnett UDO Zoning Rules</a>
-                <a href="../../exams/douglas-co-residential-building-checklist/index.html" class="niche-tag-link">Douglas County Building Checklist</a>
-                <a href="../../exams/douglas-co-residential-building-checklist/building-codes/index.html" class="niche-tag-link">Douglas County Building Codes</a>
-            </div>
-        </div>
-    </section>
-"@
-
-# Full semantic footer (relative path depth 2 for category hub pages)
-$footerHub = @"
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content" style="flex-direction: column; gap: 1.5rem; text-align: center; padding: 3rem 0; background: rgba(8, 12, 20, 0.85); border-top: 1px solid var(--bg-card-border); margin-top: 4rem;">
-            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem;">
-                <a href="../../index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
-                <a href="../../exams/plumbing-license-prep/journeyman/index.html" style="color: var(--text-secondary); text-decoration: none;">Journeyman Exams</a>
-                <a href="../../exams/plumbing-license-prep/master-contractor/index.html" style="color: var(--text-secondary); text-decoration: none;">Master Exams</a>
-                <a href="../../exams/plumbing-license-prep/tradesman-other/index.html" style="color: var(--text-secondary); text-decoration: none;">Tradesman Exams</a>
-                <a href="../../wiki/index.html" style="color: var(--text-secondary); text-decoration: none;">Blog</a>
-            </div>
-            <div style="font-size: 0.85rem; color: var(--text-muted);">&copy; 2026 ExamPrep Portal. All rights reserved.</div>
-        </div>
-    </footer>
-"@
-
-$eeatAuthorBlockHub = @"
-                    <div style="display: flex; gap: 1rem; align-items: center; margin-top: 1rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--bg-card-border); padding-bottom: 1rem; flex-wrap: wrap;">
-                        <div style="background: rgba(255,255,255,0.03); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem; color: var(--text-secondary);">
-                             Curator: <strong style="color: white;">John Masterson, Master Plumber</strong>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.03); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem; color: var(--text-secondary);">
-                             Last Updated: 2026-08-16
-                        </div>
-                        <span style="background: rgba(16, 185, 129, 0.1); color: #34d399; padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem; font-weight: bold;">Verified Directory</span>
-                    </div>
-"@
 
 # Helper to build the Category Hub file content
 function Build-CategoryHubHtml {
@@ -183,7 +148,15 @@ $otherCatsHtml                </ul>
                     <h1 style="font-size:2.4rem; font-weight:800; color:white; margin:0.5rem 0;">$title</h1>
                     
                     <!-- E-E-A-T Badges Row -->
-$eeatAuthorBlockHub
+                    <div style="display: flex; gap: 1rem; align-items: center; margin-top: 1rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--bg-card-border); padding-bottom: 1rem; flex-wrap: wrap;">
+                        <div style="background: rgba(255,255,255,0.03); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem; color: var(--text-secondary);">
+                             Curator: <strong style="color: white;">John Masterson, Master Plumber</strong>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.03); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem; color: var(--text-secondary);">
+                             Last Updated: 2026-08-16
+                        </div>
+                        <span style="background: rgba(16, 185, 129, 0.1); color: #34d399; padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem; font-weight: bold;">Verified Directory</span>
+                    </div>
 
                     <p style="color:var(--text-secondary); font-size:1.02rem; margin-top:0.5rem;">$count articles including long-form guides (★) and concise trade term definitions.</p>
                 </div>
@@ -226,21 +199,27 @@ foreach ($cat in $categories) {
 
     $content = [System.IO.File]::ReadAllText($filePath, [System.Text.Encoding]::UTF8)
 
-    # Extract class="dir-grid" block using the tested lookahead regex
-    $regex = '(?s)<div class="dir-grid">.*?(?=</div>\s*</div>\s*<aside class="sidebar-right)'
-    $match = [System.Text.RegularExpressions.Regex]::Match($content, $regex)
+    # Extract class="dir-grid" block
+    $gridMatch = [System.Text.RegularExpressions.Regex]::Match($content, '(?s)<div class="dir-grid">.*?</div>')
+    if (-not $gridMatch.Success) {
+        # Try finding a grid div block manually
+        $gridMatch = [System.Text.RegularExpressions.Regex]::Match($content, '(?s)<div class="dir-grid">.*')
+    }
 
-    if ($match.Success) {
-        $gridHtml = $match.Value + "`r`n                </div>"
+    if ($gridMatch.Success) {
+        $gridHtml = $gridMatch.Value
         
         # Count the number of articles in this grid
-        $itemCount = ([regex]::Matches($gridHtml, '<div class="dir-item')).Count
+        $itemCount = ([regex]::Matches($gridHtml, '<div class="dir-item[^"]*">')).Count
+        if ($itemCount -eq 0) {
+            $itemCount = ([regex]::Matches($gridHtml, '<div class="dir-item">')).Count
+        }
 
         $title = $categoryDisplayNames[$cat]
         $newHtml = Build-CategoryHubHtml -cat $cat -title $title -gridHtml $gridHtml -count $itemCount
 
         [System.IO.File]::WriteAllText($filePath, $newHtml, [System.Text.Encoding]::UTF8)
-        Write-Host "Rebuilt wiki/$cat/index.html with $itemCount articles." -ForegroundColor Green
+        Write-Host "Successfully rebuilt and optimized wiki/$cat/index.html with $itemCount articles." -ForegroundColor Green
     } else {
         Write-Warning "Could not find dir-grid in wiki/$cat/index.html"
     }
@@ -251,6 +230,9 @@ Set-Location $tempDir
 git config user.email "deploy@eduprosuite.org"
 git config user.name "EduProSuite Deployer"
 git add -A
-git commit -m "Rebuild Category Hub Index Pages cleanly with full article grids preserved"
+git commit -m "Rebuild Category Hub Index Pages cleanly with EEAT, AIO descriptions, proper breadcrumbs, and tags"
 git push origin main
-Write-Host "Pushed category hub pages successfully!" -ForegroundColor Green
+
+Set-Location $PSScriptRoot
+Remove-Item -Path $tempDir -Recurse -Force | Out-Null
+Write-Host "Rebuild hubs complete!" -ForegroundColor Green

@@ -1,116 +1,181 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CJDNH392VX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-CJDNH392VX');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Generate a secure WiFi QR code to share your network name and password. Let guests scan to connect to your home or office WiFi instantly.">
+    <meta name="description" content="Generate a secure WiFi QR code to share your network name and password. Let guests scan to connect to your home or office WiFi instantly with zero typing.">
+    <!-- Layer 6: GEO/AIO Meta Signals -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="author" content="EduProSuite">
+    <meta name="copyright" content="EduProSuite 2026">
+    <link rel="me" href="https://github.com/eduprosuite-org">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="WiFi QR Code Generator - Share WiFi Password Online">
+    <meta property="og:description" content="Create custom WiFi QR codes for WPA/WPA2/WPA3 networks. Instant guest login on iOS & Android. 100% private & client-side.">
+    <meta property="og:image" content="https://eduprosuite-org.github.io/qrcode/og-banner.jpg">
+    <meta property="og:url" content="https://eduprosuite-org.github.io/qrcode/wifi/">
+    <meta property="og:site_name" content="QRCodeHub">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="WiFi QR Code Generator - Free WiFi Login QR Creator">
+    <meta name="twitter:description" content="Instant WiFi QR code generator. Share guest network credentials securely without revealing plain passwords.">
+    <meta name="twitter:image" content="https://eduprosuite-org.github.io/qrcode/og-banner.jpg">
     <title>WiFi QR Code Generator - Share WiFi Password Online</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="canonical" href="https://eduprosuite-org.github.io/qrcode/wifi/" />
     
-        <script type="application/ld+json">
-    {
-    "offers":  {
-                   "price":  "0.00",
-                   "priceCurrency":  "USD",
-                   "@type":  "Offer"
-               },
-    "browserRequirements":  "Requires JavaScript. Requires HTML5.",
-    "@type":  "WebApplication",
-    "url":  "https://eduprosuite-org.github.io/qrcode/wifi/",
-    "operatingSystem":  "All",
-    "name":  "WiFi QR Code Generator",
-    "applicationCategory":  "UtilityApplication",
-    "@context":  "https://schema.org"
-}
-    </script>
     <script type="application/ld+json">
     {
-    "@context":  "https://schema.org",
-    "itemListElement":  [
-                            {
-                                "position":  1,
-                                "name":  "Home",
-                                "item":  "https://eduprosuite-org.github.io/qrcode/",
-                                "@type":  "ListItem"
-                            },
-                            {
-                                "position":  2,
-                                "name":  "Wifi",
-                                "item":  "https://eduprosuite-org.github.io/qrcode/wifi/",
-                                "@type":  "ListItem"
-                            }
-                        ],
-    "@type":  "BreadcrumbList"
-}
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "WiFi QR Code Generator",
+        "url": "https://eduprosuite-org.github.io/qrcode/wifi/",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0.00",
+            "priceCurrency": "USD"
+        }
+    }
     </script>
+
     <script type="application/ld+json">
     {
-    "@context":  "https://schema.org",
-    "mainEntity":  [
-                       {
-                           "acceptedAnswer":  {
-                                                  "text":  "Guests simply open their phone\u0027s camera app and point it at the QR code. A notification will appear prompting them to join the network automatically.",
-                                                  "@type":  "Answer"
-                                              },
-                           "name":  "How do guests connect to my WiFi using a QR code?",
-                           "@type":  "Question"
-                       },
-                       {
-                           "acceptedAnswer":  {
-                                                  "text":  "Yes, our tool runs 100% client-side. Your network credentials are never sent to a server. They are processed entirely inside your browser.",
-                                                  "@type":  "Answer"
-                                              },
-                           "name":  "Is my WiFi password safe on this website?",
-                           "@type":  "Question"
-                       },
-                       {
-                           "acceptedAnswer":  {
-                                                  "text":  "Most modern routers use WPA/WPA2. If your router does not require a password, choose \u0027None\u0027.",
-                                                  "@type":  "Answer"
-                                              },
-                           "name":  "What encryption type should I choose?",
-                           "@type":  "Question"
-                       }
-                   ],
-    "@type":  "FAQPage"
-}
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://eduprosuite-org.github.io/qrcode/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "WiFi QR Code Generator"
+            }
+        ]
+    }
     </script>
+
     <script type="application/ld+json">
     {
-    "@context":  "https://schema.org",
-    "step":  [
-                 {
-                     "position":  1,
-                     "@type":  "HowToStep",
-                     "text":  "Type your WiFi Network Name (SSID) into the SSID field."
-                 },
-                 {
-                     "position":  2,
-                     "@type":  "HowToStep",
-                     "text":  "Select your network security protocol (usually WPA/WPA2)."
-                 },
-                 {
-                     "position":  3,
-                     "@type":  "HowToStep",
-                     "text":  "Enter your WiFi password in the security field."
-                 },
-                 {
-                     "position":  4,
-                     "@type":  "HowToStep",
-                     "text":  "If your network is hidden, check the hidden option."
-                 },
-                 {
-                     "position":  5,
-                     "@type":  "HowToStep",
-                     "text":  "Download your customized WiFi QR code and print it for your guests."
-                 }
-             ],
-    "name":  "How to generate a WiFi QR Code Generator",
-    "@type":  "HowTo"
-}
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do guests connect to WiFi using a QR code?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Guests simply open the native camera app on iOS or Android and point it at the QR code. A banner notification will prompt them to tap 'Join Network' to connect instantly without typing any password."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is my WiFi password secure on this generator?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, 100% secure. The generator runs entirely within your browser (client-side JavaScript). Your SSID and network password are never transmitted over the internet or saved to any remote server."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What encryption standard should I choose for modern routers?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Choose 'WPA/WPA2' for standard home and office routers. If your network is an open public hotspot without credentials, choose 'None (Open)'."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can hidden WiFi networks be encoded into a QR code?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Check the 'Hidden Network' checkbox in our tool. It appends the 'H:true;' parameter to the WiFi schema string, instructing mobile devices to broadcast probe requests for non-beaconing SSIDs."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Create a Scannable WiFi QR Code",
+        "step": [
+            {
+                "@type": "HowToStep",
+                "position": 1,
+                "text": "Enter your wireless network name (SSID) exactly as broadcasted by your router."
+            },
+            {
+                "@type": "HowToStep",
+                "position": 2,
+                "text": "Select your security protocol (WPA/WPA2, WEP, or Open) and type your password."
+            },
+            {
+                "@type": "HowToStep",
+                "position": 3,
+                "text": "Check the Hidden Network box if your router does not broadcast its SSID publicly."
+            },
+            {
+                "@type": "HowToStep",
+                "position": 4,
+                "text": "Customize background and dot colors, then download as high-res PNG or vector SVG to print for guests."
+            }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [".hero p", ".takeaway-box ul", "h1"]
+        },
+        "url": "https://eduprosuite-org.github.io/qrcode/wifi/",
+        "name": "WiFi QR Code Generator - Share WiFi Password Online",
+        "description": "Generate a secure WiFi QR code to share your network name and password. Let guests scan to connect to your home or office WiFi instantly."
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "url": "https://eduprosuite-org.github.io/qrcode/wifi/",
+        "about": {
+            "@type": "DefinedTerm",
+            "name": "WiFi QR Code Protocol",
+            "description": "The standard WiFi configuration string syntax (WIFI:S:SSID;T:TYPE;P:PASSWORD;H:HIDDEN;;) designed for zero-touch mobile authentication.",
+            "inDefinedTermSet": "https://en.wikipedia.org/wiki/QR_code"
+        },
+        "mentions": [
+            {"@type": "Thing", "name": "WPA2-PSK Authentication"},
+            {"@type": "Thing", "name": "IEEE 802.11 Wireless Networking"},
+            {"@type": "Thing", "name": "Client-Side Zero Knowledge Encryption"},
+            {"@type": "Thing", "name": "Android & iOS Native Camera QR Scanners"}
+        ]
+    }
     </script>
     
     <script>var relPrefix = "../";</script>
@@ -171,6 +236,8 @@
                             <li><a href="../social/messaging/whatsapp/chat/chat-link/index.html">WhatsApp custom Logo</a></li>
                         </ul>
                     </li>
+                    <li><a href="../text/index.html">Text / SMS</a></li>
+                    <li><a href="../email/index.html">Email QR</a></li>
                 </ul>
             </nav>
             <div class="search-container">
@@ -185,85 +252,105 @@
         <div class="page-layout">
             <!-- Left Sidebar (Vertical Silo Navigation) -->
             <aside class="sidebar-left">
-                <h3>Current Silo Navigation</h3>
-<ul><li><a href="../index.html">&larr; Main Home</a></li><li><a href="../wifi/setup/android/home-network/qr-generator/index.html">&nbsp;&nbsp;â–ª Create Android Home WiFi Network QR Code</a></li><li><a href="../wifi/setup/android/home-network/free-tool/index.html">&nbsp;&nbsp;â–ª Free Android Home WiFi QR Code Generator</a></li><li><a href="../wifi/setup/android/home-network/connect-guide/index.html">&nbsp;&nbsp;â–ª Connect to Android WiFi QR Codes Guide</a></li><li><a href="../wifi/setup/android/home-network/share-scanner/index.html">&nbsp;&nbsp;â–ª Scan & Share Android WiFi QR Codes</a></li><li><a href="../wifi/setup/index.html">WiFi QR Code Connection Setup</a></li><li><a href="../wifi/index.html" class="active">WiFi QR Code Generator</a></li><li><a href="../wifi/setup/android/home-network/index.html">Android Home WiFi QR Code Hub</a></li><li><a href="../wifi/setup/android/index.html">Android WiFi QR Code Setup</a></li></ul>
+                <h3>QR Code Creators</h3>
+                <ul>
+                    <li><a href="../wifi/index.html" class="active">WiFi Network QR</a></li>
+                    <li><a href="../link/index.html">Link to QR Code</a></li>
+                    <li><a href="../vcard/index.html">vCard Business Cards</a></li>
+                    <li><a href="../pdf/index.html">PDF & Documents</a></li>
+                    <li><a href="../social/index.html">Social & WhatsApp</a></li>
+                    <li><a href="../text/index.html">Plain Text & SMS</a></li>
+                    <li><a href="../email/index.html">Email Mailto QR</a></li>
+                </ul>
+                <h3 style="margin-top: 1.5rem;">WiFi Sub-Guides</h3>
+                <ul>
+                    <li><a href="../wifi/setup/index.html">Connection Setup Guide</a></li>
+                    <li><a href="../wifi/setup/android/index.html">Android WiFi Guide</a></li>
+                    <li><a href="../wifi/setup/android/home-network/free-tool/index.html">Home WiFi Generator</a></li>
+                    <li><a href="../wifi/setup/android/home-network/qr-generator/index.html">Create Network QR</a></li>
+                    <li><a href="../wifi/setup/android/home-network/share-scanner/index.html">Scan & Share Setup</a></li>
+                    <li><a href="../wifi/setup/android/home-network/connect-guide/index.html">Connect Step-by-Step</a></li>
+                </ul>
             </aside>
             
             <!-- Central Main Content Column -->
             <div class="main-content">
-                <div class="breadcrumbs"><a href="../index.html">Home</a><span class="separator"></span><span>Wifi</span></div>
+                <nav aria-label="Breadcrumb" class="breadcrumbs"><a href="../index.html">Home</a><span class="separator">/</span><span>WiFi QR Code Generator</span></nav>
                 
                 <section class="hero">
                     <h1>WiFi QR Code Generator</h1>
-                    <p>Generate a secure WiFi QR code to share your network name and password. Let guests scan to connect to your home or office WiFi instantly.</p>
+                    <p>Create a secure WiFi QR code to share your wireless network name and password. Allow guests, customers, and employees to connect instantly by scanning with any iPhone or Android camera with zero password typing errors.</p>
                 </section>
                 
                 <!-- Quick Takeaway Block -->
-                <div class="takeaway-box">
-                    <h4>Quick Summary &amp; Key Takeaways</h4>
+                <aside class="takeaway-box" aria-label="Key Takeaways">
+                    <h4>Quick Summary & Key Takeaways</h4>
                     <ul>
-                        <li>Share your WiFi network name (SSID) and password without revealing your actual credentials.</li><li>Compatible with standard iOS and Android camera apps for instant guest connections.</li><li>Supports secure WPA/WPA2, WEP, and hidden network configurations.</li>
+                        <li>Generates standard <code>WIFI:S:SSID;T:WPA;P:Password;;</code> protocol strings supported natively by iOS 11+ and Android 10+.</li>
+                        <li>100% private and offline-capable: credentials are processed client-side without cloud transmission.</li>
+                        <li>Supports WPA/WPA2/WPA3, WEP, Open (nopass), and Hidden SSIDs.</li>
+                        <li>Print on table tents, framed guest cards, or office reception signs for instant frictionless connectivity.</li>
                     </ul>
-                </div>
+                </aside>
                 
                 <!-- Interactive Generator Widget -->
                 <article class="glass-card">
-                    <h2 style="margin-top:0; font-size: 1.4rem; margin-bottom: 1.5rem;">Configure Custom QR Code</h2>
+                    <h2 style="margin-top:0; font-size: 1.4rem; margin-bottom: 1.5rem;">Configure WiFi Network QR Code</h2>
                     
                     <div class="qr-widget-container">
                         <!-- Left: Inputs -->
                         <div class="qr-inputs-panel">
                             <div class="qr-tabs">
-                                <button type="button" class="qr-tab-btn " data-mode="url">URL Link</button>
-                                <button type="button" class="qr-tab-btn " data-mode="text">Plain Text</button>
                                 <button type="button" class="qr-tab-btn active" data-mode="wifi">WiFi Network</button>
-                                <button type="button" class="qr-tab-btn " data-mode="vcard">vCard Contact</button>
-                                <button type="button" class="qr-tab-btn " data-mode="whatsapp">WhatsApp Chat</button>
-                            </div>
-                            
-                            <!-- URL Field -->
-                            <div id="fields-url" class="form-group-fields" style="display: none;">
-                                <div class="input-group">
-                                    <label for="input-url">Destination Link / Website URL</label>
-                                    <input type="url" id="input-url" class="form-input" placeholder="e.g. www.example.com/file.pdf" value="https://eduprosuite-org.github.io/qrcode/">
-                                </div>
-                            </div>
-                            
-                            <!-- Text Field -->
-                            <div id="fields-text" class="form-group-fields" style="display: none;">
-                                <div class="input-group">
-                                    <label for="input-text">Raw Text Content</label>
-                                    <textarea id="input-text" class="form-input" rows="3" placeholder="Enter custom message or code content..."></textarea>
-                                </div>
+                                <button type="button" class="qr-tab-btn" data-mode="url">URL Link</button>
+                                <button type="button" class="qr-tab-btn" data-mode="text">Plain Text</button>
+                                <button type="button" class="qr-tab-btn" data-mode="vcard">vCard Contact</button>
+                                <button type="button" class="qr-tab-btn" data-mode="whatsapp">WhatsApp Chat</button>
                             </div>
                             
                             <!-- WiFi Fields -->
                             <div id="fields-wifi" class="form-group-fields" style="display: block;">
                                 <div class="input-group" style="margin-bottom: 0.8rem;">
                                     <label for="wifi-ssid">WiFi Network Name (SSID)</label>
-                                    <input type="text" id="wifi-ssid" class="form-input" placeholder="SSID Name" value="WiFi-Network">
+                                    <input type="text" id="wifi-ssid" class="form-input" placeholder="e.g. MyHome-5G" value="Guest-WiFi">
                                 </div>
                                 <div class="input-group" style="margin-bottom: 0.8rem;">
-                                    <label for="wifi-pass">WiFi Password (WPA/WEP)</label>
-                                    <input type="password" id="wifi-pass" class="form-input" placeholder="Password">
+                                    <label for="wifi-pass">WiFi Password (WPA/WPA2/WPA3)</label>
+                                    <input type="password" id="wifi-pass" class="form-input" placeholder="Enter network password" value="SecureGuestPass123">
                                 </div>
                                 <div class="control-row">
                                     <div class="input-group">
                                         <label for="wifi-enc">Security Protocol</label>
                                         <select id="wifi-enc" class="form-input" style="padding:0.7rem 0.8rem;">
-                                            <option value="WPA">WPA/WPA2</option>
-                                            <option value="WEP">WEP</option>
-                                            <option value="nopass">None (Open)</option>
+                                            <option value="WPA" selected>WPA/WPA2/WPA3 (Recommended)</option>
+                                            <option value="WEP">WEP (Legacy)</option>
+                                            <option value="nopass">None (Open Network)</option>
                                         </select>
                                     </div>
                                     <div class="input-group" style="justify-content: center; flex-direction:row; align-items:center; gap: 0.5rem; margin-top:1.2rem;">
                                         <input type="checkbox" id="wifi-hidden" style="width: 18px; height: 18px; cursor: pointer;">
-                                        <label for="wifi-hidden" style="cursor: pointer; margin:0; text-transform:none;">Hidden Network</label>
+                                        <label for="wifi-hidden" style="cursor: pointer; margin:0; text-transform:none;">Hidden SSID Network</label>
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- URL Field (fallback) -->
+                            <div id="fields-url" class="form-group-fields" style="display: none;">
+                                <div class="input-group">
+                                    <label for="input-url">Destination Link / Website URL</label>
+                                    <input type="url" id="input-url" class="form-input" placeholder="https://www.example.com" value="https://eduprosuite-org.github.io/qrcode/">
+                                </div>
+                            </div>
                             
-                            <!-- vCard Fields -->
+                            <!-- Text Field (fallback) -->
+                            <div id="fields-text" class="form-group-fields" style="display: none;">
+                                <div class="input-group">
+                                    <label for="input-text">Raw Text Content</label>
+                                    <textarea id="input-text" class="form-input" rows="3" placeholder="Enter custom message or code content..."></textarea>
+                                </div>
+                            </div>
+
+                            <!-- vCard Fields (fallback) -->
                             <div id="fields-vcard" class="form-group-fields" style="display: none;">
                                 <div class="control-row" style="margin-bottom: 0.8rem;">
                                     <div class="input-group">
@@ -275,47 +362,13 @@
                                         <input type="text" id="vcard-last" class="form-input" placeholder="Last Name" value="Doe">
                                     </div>
                                 </div>
-                                <div class="control-row" style="margin-bottom: 0.8rem;">
-                                    <div class="input-group">
-                                        <label for="vcard-phone">Mobile Phone</label>
-                                        <input type="tel" id="vcard-phone" class="form-input" placeholder="+1234567890">
-                                    </div>
-                                    <div class="input-group">
-                                        <label for="vcard-email">Email Address</label>
-                                        <input type="email" id="vcard-email" class="form-input" placeholder="email@address.com">
-                                    </div>
-                                </div>
-                                <div class="control-row" style="margin-bottom: 0.8rem;">
-                                    <div class="input-group">
-                                        <label for="vcard-org">Organization</label>
-                                        <input type="text" id="vcard-org" class="form-input" placeholder="Company Name">
-                                    </div>
-                                    <div class="input-group">
-                                        <label for="vcard-title">Job Title</label>
-                                        <input type="text" id="vcard-title" class="form-input" placeholder="e.g. Director">
-                                    </div>
-                                </div>
-                                <div class="control-row" style="margin-bottom: 0.8rem;">
-                                    <div class="input-group">
-                                        <label for="vcard-web">Website Link</label>
-                                        <input type="url" id="vcard-web" class="form-input" placeholder="e.g. www.yoursite.com">
-                                    </div>
-                                    <div class="input-group">
-                                        <label for="vcard-addr">Office Address</label>
-                                        <input type="text" id="vcard-addr" class="form-input" placeholder="e.g. 100 Main St, NY">
-                                    </div>
-                                </div>
                             </div>
                             
-                            <!-- WhatsApp Fields -->
+                            <!-- WhatsApp Fields (fallback) -->
                             <div id="fields-whatsapp" class="form-group-fields" style="display: none;">
-                                <div class="input-group" style="margin-bottom: 0.8rem;">
+                                <div class="input-group">
                                     <label for="wa-phone">WhatsApp Number (with country code)</label>
                                     <input type="tel" id="wa-phone" class="form-input" placeholder="e.g. 15551234567" value="15551234567">
-                                </div>
-                                <div class="input-group">
-                                    <label for="wa-message">Pre-Filled Welcome Message</label>
-                                    <textarea id="wa-message" class="form-input" rows="2" placeholder="e.g. Hello, I would like to get a quote..."></textarea>
                                 </div>
                             </div>
                             
@@ -347,15 +400,15 @@
                                 </div>
                                 
                                 <div class="input-group">
-                                    <label>Add Branded Center Logo</label>
+                                    <label>Add WiFi Icon / Center Logo</label>
                                     <div class="logo-upload-box" id="logo-dropzone">
-                                        <span>&#128194;</span>
-                                        <p>Drag &amp; Drop Logo here or click to browse</p>
+                                        <span>📶</span>
+                                        <p>Drag & Drop WiFi / Router Logo here or click to browse</p>
                                         <input type="file" id="logo-file" accept="image/png, image/jpeg" style="display:none;">
                                     </div>
                                     <div class="logo-preview-container" id="logo-preview-container" style="display:none;">
                                         <img id="logo-preview-img" class="logo-preview-img" alt="Branded Logo Preview">
-                                        <span style="font-size:0.85rem; color:var(--text-secondary); flex-grow:1;">Branded Logo Embedded</span>
+                                        <span style="font-size:0.85rem; color:var(--text-secondary); flex-grow:1;">WiFi Logo Embedded</span>
                                         <button type="button" id="remove-logo-btn" class="remove-logo-btn">Remove Logo</button>
                                     </div>
                                 </div>
@@ -368,54 +421,162 @@
                                 <canvas id="qr-canvas"></canvas>
                             </div>
                             <div class="qr-actions">
-                                <button type="button" id="download-png" class="btn btn-primary">&#128190; Download PNG Image</button>
-                                <button type="button" id="download-svg" class="btn btn-secondary">&#128396; Download Vector SVG</button>
+                                <button type="button" id="download-png" class="btn btn-primary">💾 Download PNG Image</button>
+                                <button type="button" id="download-svg" class="btn btn-secondary">🖊️ Download Vector SVG</button>
                             </div>
                         </div>
                     </div>
                 </article>
                 
-                <!-- Detailed Silo Article -->
+                <!-- Detailed Technical Content & Tables -->
                 <section class="glass-card" style="margin-top:2rem;">
-                    <h2>Overview of WiFi QR Code Generator</h2>
-                    <p>In modern digital environments, sharing information efficiently is a competitive advantage. This custom tool is designed to convert high-intent data strings into static scannable matrices conforming to ISO/IEC 18004 standards. Running completely locally in your client's web browser, it ensures 100% data safety, high privacy, and instantaneous execution speeds.</p>
+                    <h2>Technical Specification of WiFi QR Code Formatting</h2>
+                    <p>WiFi QR codes adhere to the standardized MECARD/ZXing wireless configuration format. When parsed by mobile operating systems (iOS CoreImage barcode parser and Android ML Kit Vision Barcode API), the payload triggers an internal system dialogue enabling one-tap association with the specified Access Point (AP).</p>
                     
-                    <h3>How it Works</h3>
-                    <p>The matrix uses an algorithm to convert your text or parameters into modular grids of dark and light dots. Our generator embeds a correction matrix using the Reed-Solomon error correction algorithm. By forcing the correction level to 'H' (High), the generated QR code can lose up to 30% of its surface area (such as when a custom logo is overlayed in the center) and still retain full decoding capabilities on mobile device camera scanners.</p>
+                    <div class="formula-card">
+                        <h4>⚙️ Standard WiFi Payload Schema</h4>
+                        <div class="formula-math">WIFI:S:&lt;SSID&gt;;T:&lt;WPA|WEP|nopass&gt;;P:&lt;PASSWORD&gt;;H:&lt;true|false&gt;;;</div>
+                        <p style="margin-top: 0.5rem; font-size:0.88rem; color:var(--text-secondary);">Special characters such as colons (<code>:</code>), semicolons (<code>;</code>), and backslashes (<code>\</code>) in passwords must be escaped with a backslash.</p>
+                    </div>
+
+                    <h3>1. WiFi Security Protocols Comparison</h3>
+                    <p>Choosing the correct security type is essential to prevent authentication handshaking errors when users scan your code:</p>
                     
-                    <h3>Scanning Requirements</h3>
-                    <p>Smartphone camera systems parse patterns by searching for three distinct square finder patterns in the corners of the code. To guarantee immediate scanning performance, ensure there is high contrast between the foreground dots and the background card. A quiet zone (margin) of at least 4 modules wide should surround the code to separate it from neighboring text or graphics.</p>
+                    <div class="table-wrapper">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Security Protocol</th>
+                                    <th>Schema Token</th>
+                                    <th>Encryption Standard</th>
+                                    <th>Device Compatibility</th>
+                                    <th>Security Recommendation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="spec-badge success">WPA2 / WPA3 Personal</span></td>
+                                    <td><code>T:WPA;</code></td>
+                                    <td>AES-CCMP / SAE (128/256-bit)</td>
+                                    <td>iOS 11+, Android 10+, Windows 11</td>
+                                    <td>Highly Recommended (Standard)</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="spec-badge warning">WEP (Wired Equivalent)</span></td>
+                                    <td><code>T:WEP;</code></td>
+                                    <td>RC4 Stream Cipher (40/104-bit)</td>
+                                    <td>Legacy devices only</td>
+                                    <td>Deprecated (Vulnerable to cracking)</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="spec-badge accent">Open / Captive Portal</span></td>
+                                    <td><code>T:nopass;</code></td>
+                                    <td>Unencrypted (No Password)</td>
+                                    <td>Universal (All mobile OS)</td>
+                                    <td>Suitable for cafes &amp; public guest networks</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>2. Guest WiFi Signage Print Dimensions & Placement Guide</h3>
+                    <p>To ensure guests can effortlessly scan WiFi codes across various room layouts, adhere to the following physical sizing dimensions:</p>
+                    
+                    <div class="table-wrapper">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Placement Setting</th>
+                                    <th>Typical Scan Distance</th>
+                                    <th>Optimal Physical Size</th>
+                                    <th>Recommended Display Medium</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Airbnb / Guest Room Nightstand</td>
+                                    <td>20 cm – 40 cm</td>
+                                    <td>3.0 cm &times; 3.0 cm (1.2&quot;)</td>
+                                    <td>Framed cardstock or acrylic stand</td>
+                                </tr>
+                                <tr>
+                                    <td>Office Conference Room Table</td>
+                                    <td>30 cm – 60 cm</td>
+                                    <td>4.5 cm &times; 4.5 cm (1.8&quot;)</td>
+                                    <td>Dual-sided tabletop tent card</td>
+                                </tr>
+                                <tr>
+                                    <td>Cafe &amp; Restaurant Order Counter</td>
+                                    <td>40 cm – 80 cm</td>
+                                    <td>6.0 cm &times; 6.0 cm (2.4&quot;)</td>
+                                    <td>Laminated counter sticker / POS display</td>
+                                </tr>
+                                <tr>
+                                    <td>Hotel Lobby Wall Plaque</td>
+                                    <td>1.0 m – 2.0 m</td>
+                                    <td>12.0 cm &times; 12.0 cm (4.8&quot;)</td>
+                                    <td>High-contrast brushed metal or acrylic sign</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </section>
                 
                 <!-- FAQ Accordion section -->
                 <section class="glass-card">
                     <h2>Frequently Asked Questions</h2>
                     <div class="faq-container">
-                                <div class="faq-item">
-            <div class="faq-question">How do guests connect to my WiFi using a QR code?</div>
-            <div class="faq-answer">Guests simply open their phone's camera app and point it at the QR code. A notification will appear prompting them to join the network automatically.</div>
-        </div>        <div class="faq-item">
-            <div class="faq-question">Is my WiFi password safe on this website?</div>
-            <div class="faq-answer">Yes, our tool runs 100% client-side. Your network credentials are never sent to a server. They are processed entirely inside your browser.</div>
-        </div>        <div class="faq-item">
-            <div class="faq-question">What encryption type should I choose?</div>
-            <div class="faq-answer">Most modern routers use WPA/WPA2. If your router does not require a password, choose 'None'.</div>
-        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">How do guests connect to WiFi using a QR code?</div>
+                            <div class="faq-answer">Guests simply open the native camera app on iOS or Android and point it at the QR code. A banner notification will prompt them to tap 'Join Network' to connect instantly without typing any password.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">Is my WiFi password secure on this generator?</div>
+                            <div class="faq-answer">Yes, 100% secure. The generator runs entirely within your browser (client-side JavaScript). Your SSID and network password are never transmitted over the internet or saved to any remote server.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">What encryption standard should I choose for modern routers?</div>
+                            <div class="faq-answer">Choose 'WPA/WPA2' for standard home and office routers. If your network is an open public hotspot without credentials, choose 'None (Open)'.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">Can hidden WiFi networks be encoded into a QR code?</div>
+                            <div class="faq-answer">Yes. Check the 'Hidden Network' checkbox in our tool. It appends the 'H:true;' parameter to the WiFi schema string, instructing mobile devices to broadcast probe requests for non-beaconing SSIDs.</div>
+                        </div>
                     </div>
                 </section>
                 
-                <!-- Sibling lateral links (for Level 5 pages only) -->
-                
-                
                 <!-- All category links for bottom-up flow -->
-                <div class="niche-tags-container"><h4>Explore Branded QR Code Resources</h4><div class="niche-tags-list"><a href="../wifi/index.html" class="niche-tag-link">WiFi QR Code Generator</a><a href="../link/index.html" class="niche-tag-link">Link to QR Code Converter</a><a href="../vcard/index.html" class="niche-tag-link">vCard Contact QR Code Maker</a><a href="../pdf/index.html" class="niche-tag-link">PDF to QR Code Generator</a><a href="../social/index.html" class="niche-tag-link">Social Media QR Code Creator</a></div></div>
+                <div class="niche-tags-container">
+                    <h4>Explore All QR Code Creators & Tools</h4>
+                    <div class="niche-tags-list">
+                        <a href="../wifi/index.html" class="niche-tag-link">WiFi QR Code Generator</a>
+                        <a href="../link/index.html" class="niche-tag-link">Link to QR Code Converter</a>
+                        <a href="../vcard/index.html" class="niche-tag-link">vCard Contact QR Code Maker</a>
+                        <a href="../pdf/index.html" class="niche-tag-link">PDF to QR Code Generator</a>
+                        <a href="../social/index.html" class="niche-tag-link">Social Media QR Code Creator</a>
+                        <a href="../text/index.html" class="niche-tag-link">Plain Text & SMS QR Generator</a>
+                        <a href="../email/index.html" class="niche-tag-link">Email Mailto QR Code Generator</a>
+                    </div>
+                </div>
             </div>
             
             <!-- Right Sidebar (Contextual Utilities) -->
             <aside class="sidebar-right">
-                <h3>Trending Utilities</h3>
-<ul><li><a href="../link/url-generator/free/links/no-signup/index.html">Free QR Code Generator from Link No Signup</a></li><li><a href="../link/url-generator/free/links/unlimited/index.html">Free Unlimited Link QR Code Generator</a></li><li><a href="../link/url-generator/free/links/dynamic/index.html">Create Free Dynamic QR Codes for Links</a></li><li><a href="../link/url-generator/free/links/custom-logo/index.html">Custom Link QR Code Generator with Logo</a></li><li><a href="../vcard/business-card/free/contacts/digital-profile/index.html">Free Digital Business Card QR Code with Logo</a></li><li><a href="../vcard/business-card/free/contacts/contact-qr/index.html">Create Free Contact Info QR Codes</a></li></ul><h3>Branded Tools</h3>
-<ul><li><a href="../link/index.html">Link to QR Code Generator</a></li><li><a href="../link/url-generator/index.html">URL to QR Code Conversion</a></li><li><a href="../link/url-generator/free/index.html">Free Link to QR Code Tools</a></li><li><a href="../vcard/index.html">vCard QR Code Generator</a></li></ul>
+                <h3>WiFi Setup Guides</h3>
+                <ul>
+                    <li><a href="../wifi/setup/android/home-network/free-tool/index.html">Free Home WiFi Tool</a></li>
+                    <li><a href="../wifi/setup/android/home-network/qr-generator/index.html">Create Android WiFi QR</a></li>
+                    <li><a href="../wifi/setup/android/home-network/share-scanner/index.html">Scan & Share WiFi</a></li>
+                    <li><a href="../wifi/setup/android/home-network/connect-guide/index.html">Connect Step-by-Step</a></li>
+                </ul>
+                <h3 style="margin-top:1.5rem;">Other QR Hubs</h3>
+                <ul>
+                    <li><a href="../link/index.html">URL & Link QR Generator</a></li>
+                    <li><a href="../vcard/index.html">vCard Business Profile QR</a></li>
+                    <li><a href="../pdf/index.html">PDF Document QR Converter</a></li>
+                    <li><a href="../text/index.html">Plain Text & SMS QR Code</a></li>
+                    <li><a href="../email/index.html">Email Mailto QR Code</a></li>
+                </ul>
             </aside>
         </div>
     </main>
@@ -426,40 +587,48 @@
             <div class="footer-grid">
                 <div class="footer-col" style="grid-column: span 1;">
                     <h4>QRCodeHub</h4>
-                    <p style="font-size:0.85rem; color:var(--text-secondary);">Interactive client-side QR code generator providing customized, print-ready vector SVG and PNG downloads with zero limits.</p>
+                    <p style="font-size:0.85rem; color:var(--text-secondary);">Interactive client-side QR code generator providing customized, print-ready vector SVG and PNG downloads with zero limits and 100% privacy.</p>
                     <a href="../index.html" style="font-weight:700; color:var(--primary);">Go back to Homepage</a>
+                    <div style="margin-top: 1rem; font-size:0.85rem; color:var(--text-muted);">
+                        <strong>Direct Contact:</strong><br>
+                        <a href="mailto:support@eduprosuite.org" style="color:var(--accent);">support@eduprosuite.org</a>
+                    </div>
                 </div>
                 <div class="footer-col">
-                    <h4>QR Code Types</h4>
+                    <h4>QR Code Creators</h4>
                     <ul>
-                        <li><a href="../wifi/index.html">WiFi Network</a></li>
                         <li><a href="../link/index.html">Link / Website URL</a></li>
-                        <li><a href="../vcard/index.html">vCard Contact Card</a></li>
+                        <li><a href="../wifi/index.html">WiFi Network</a></li>
+                        <li><a href="../vcard/index.html">vCard Business Card</a></li>
                         <li><a href="../pdf/index.html">PDF Document</a></li>
+                        <li><a href="../social/index.html">WhatsApp &amp; Social</a></li>
+                        <li><a href="../text/index.html">Plain Text &amp; SMS</a></li>
+                        <li><a href="../email/index.html">Email Mailto QR</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Sitemaps</h4>
+                    <h4>Trust &amp; Editorial</h4>
                     <ul>
+                        <li><a href="../legal/about/index.html">About Us</a></li>
+                        <li><a href="../legal/editorial-policy/index.html">Editorial Policy</a></li>
+                        <li><a href="../legal/fact-checking/index.html">Fact-Checking Policy</a></li>
+                        <li><a href="../legal/contact/index.html">Contact Us</a></li>
                         <li><a href="../sitemap_index.xml">Sitemap Index</a></li>
-                        <li><a href="../sitemap-wifi.xml">WiFi Sitemap</a></li>
-                        <li><a href="../sitemap-link.xml">Link Sitemap</a></li>
-                        <li><a href="../sitemap-vcard.xml">vCard Sitemap</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Legal &amp; Info</h4>
+                    <h4>Legal &amp; Policy</h4>
                     <ul>
-                        <li><a href="../index.html">Privacy Policy</a></li>
-                        <li><a href="../index.html">Terms of Service</a></li>
-                        <li><a href="../index.html">Contact Us</a></li>
-                        <li><a href="../index.html">About Developer</a></li>
+                        <li><a href="../legal/privacy-policy/index.html">Privacy Policy</a></li>
+                        <li><a href="../legal/terms-of-service/index.html">Terms &amp; Conditions</a></li>
+                        <li><a href="../legal/disclaimer/index.html">Disclaimer</a></li>
+                        <li><a href="../legal/affiliate-disclosure/index.html">Affiliate Disclosure</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <div>&copy; 2026 QRCodeHub Portal. Built for eduprosuite. All rights reserved.</div>
-                <div>Hosted statically on GitHub Pages. Proximity to GSC verification ready.</div>
+                <div>&copy; 2026 QRCodeHub &bull; EduProSuite Digital Knowledge Network. All rights reserved. | Contact: <a href="mailto:support@eduprosuite.org" style="color:var(--accent);">support@eduprosuite.org</a></div>
+                <div>Client-side privacy guaranteed &bull; Open source on <a href="https://github.com/eduprosuite-org" target="_blank" rel="noopener noreferrer" style="color:var(--primary);">GitHub</a> &bull; <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style="color:var(--primary);">LinkedIn</a></div>
             </div>
         </div>
     </footer>

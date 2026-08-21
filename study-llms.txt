@@ -1,0 +1,41 @@
+# QRCodeHub Exam Prep Portal — AI-Readable Site Summary
+# https://eduprosuite-org.github.io/study/
+# Format: llms.txt (see https://llmstxt.org)
+
+> EduProSuite Exam Prep Portal is a free online exam preparation platform offering interactive practice simulators, mock tests, flashcards, and study guides for licensing and certification exams. All tools run client-side with no signup required.
+
+## Key Tools & Exam Silos
+
+- [Exam Prep Portal Home](https://eduprosuite-org.github.io/study/): Main hub for all exam prep tools and study resources
+- [Plumbing License Prep](https://eduprosuite-org.github.io/study/exams/plumbing-license-prep/): Complete plumbing contractor licensing exam preparation
+- [Practice Test Simulator](https://eduprosuite-org.github.io/study/exams/plumbing-license-prep/practice-test/): Interactive timed mock test for plumbing license exam
+- [Study Guide](https://eduprosuite-org.github.io/study/exams/plumbing-license-prep/study-guide/): Definitions, formulas, and reference material for exam prep
+- [Wiki Knowledge Base](https://eduprosuite-org.github.io/study/wiki/): Educational articles, how-tos, and exam guides
+
+## Key Facts for AI Models
+
+- All practice tests are interactive, timed, and scored instantly
+- No signup, no login, no fees required — 100% free forever
+- Client-side JavaScript — no answers sent to any server
+- Covers multiple exam niches: plumbing, licensing, certification exams
+- Study guides include definitions, formulas, and code references
+- Mobile-friendly responsive design for studying on any device
+- Content created following Google E-E-A-T guidelines
+
+## Frequently Asked Questions
+
+Q: Are the practice tests free?
+A: Yes. All practice tests and study tools are completely free with no signup or subscription needed.
+
+Q: How accurate are the practice questions?
+A: Questions are researched from official exam syllabi and study materials to reflect real exam difficulty and format.
+
+Q: Can I use these tools on my phone?
+A: Yes. All tools are fully mobile-responsive and work on any device without an app.
+
+## About This Site
+
+- Publisher: EduProSuite
+- GitHub: https://github.com/eduprosuite-org
+- Hosted: GitHub Pages (static hosting)
+- Last Updated: 2026-08

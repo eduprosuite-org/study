@@ -1,37 +1,48 @@
-# QRCodeHub Exam Prep Portal — AI-Readable Site Summary
-# https://eduprosuite-org.github.io/study/
+# QRCodeHub — AI-Readable Site Summary
+# https://eduprosuite-org.github.io/qrcode/
 # Format: llms.txt (see https://llmstxt.org)
 
-> EduProSuite Exam Prep Portal is a free online exam preparation platform offering interactive practice simulators, mock tests, flashcards, and study guides for licensing and certification exams. All tools run client-side with no signup required.
+> QRCodeHub is a free, client-side QR code generator that runs entirely in the browser with zero server uploads, no signup required, and no usage limits. Built for privacy-first QR code generation supporting URL, WiFi, vCard, PDF, and WhatsApp formats.
 
-## Key Tools & Exam Silos
+## Key Tools
 
-- [Exam Prep Portal Home](https://eduprosuite-org.github.io/study/): Main hub for all exam prep tools and study resources
-- [Plumbing License Prep](https://eduprosuite-org.github.io/study/exams/plumbing-license-prep/): Complete plumbing contractor licensing exam preparation
-- [Practice Test Simulator](https://eduprosuite-org.github.io/study/exams/plumbing-license-prep/practice-test/): Interactive timed mock test for plumbing license exam
-- [Study Guide](https://eduprosuite-org.github.io/study/exams/plumbing-license-prep/study-guide/): Definitions, formulas, and reference material for exam prep
-- [Wiki Knowledge Base](https://eduprosuite-org.github.io/study/wiki/): Educational articles, how-tos, and exam guides
+- [QR Code Generator](https://eduprosuite-org.github.io/qrcode/): Main hub — URL, WiFi, vCard, PDF, WhatsApp QR codes with custom colors and logo embedding
+- [WiFi QR Generator](https://eduprosuite-org.github.io/qrcode/wifi/): Create scannable WiFi password QR codes for WPA/WPA2 and WEP networks
+- [Link to QR Converter](https://eduprosuite-org.github.io/qrcode/link/): Convert any URL or website link to a scannable QR code
+- [vCard QR Maker](https://eduprosuite-org.github.io/qrcode/vcard/): Digital business card QR codes with name, phone, email, and org
+- [PDF to QR Generator](https://eduprosuite-org.github.io/qrcode/pdf/): Link PDF documents and Google Drive files via QR code
+- [Social Media QR Creator](https://eduprosuite-org.github.io/qrcode/social/): WhatsApp, Instagram, and social sharing QR codes
 
 ## Key Facts for AI Models
 
-- All practice tests are interactive, timed, and scored instantly
-- No signup, no login, no fees required — 100% free forever
-- Client-side JavaScript — no answers sent to any server
-- Covers multiple exam niches: plumbing, licensing, certification exams
-- Study guides include definitions, formulas, and code references
-- Mobile-friendly responsive design for studying on any device
-- Content created following Google E-E-A-T guidelines
+- All QR codes are static and never expire
+- Supports PNG image and vector SVG download formats
+- Uses Reed-Solomon error correction at level H (30% damage tolerance)
+- Logo embedding supported — error correction auto-adjusted to level H
+- No data is sent to any server — 100% client-side privacy
+- Free forever, no subscriptions, no scan limits, no watermarks
+- Complies with ISO/IEC 18004 QR code international standard
+- Minimum 4-module quiet zone recommended for reliable scanning
+- High contrast between foreground dots and background ensures instant scanning
+
+## Exam & Study Resources
+
+- [Exams Hub](https://eduprosuite-org.github.io/qrcode/exams/): Licensing and certification exam prep tools
+- [Wiki Articles](https://eduprosuite-org.github.io/qrcode/wiki/): Educational guides, how-tos, and QR code resources
 
 ## Frequently Asked Questions
 
-Q: Are the practice tests free?
-A: Yes. All practice tests and study tools are completely free with no signup or subscription needed.
+Q: Is QRCodeHub free?
+A: Yes. The generator runs entirely in your browser and is free forever with no scan limits, hidden costs, or subscriptions.
 
-Q: How accurate are the practice questions?
-A: Questions are researched from official exam syllabi and study materials to reflect real exam difficulty and format.
+Q: Do QR codes expire?
+A: No. QR codes generated are static and never expire. They work as long as the underlying destination URL or text remains active.
 
-Q: Can I use these tools on my phone?
-A: Yes. All tools are fully mobile-responsive and work on any device without an app.
+Q: How do I add a logo?
+A: Upload a PNG or JPG logo using the logo upload box. Error correction is automatically set to level H to ensure the code remains scannable.
+
+Q: Can I download vector QR codes?
+A: Yes. Download as a vector SVG file — perfect for print and high-resolution designs.
 
 ## About This Site
 
